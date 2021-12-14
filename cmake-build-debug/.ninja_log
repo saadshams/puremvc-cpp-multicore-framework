@@ -25,3 +25,13 @@
 1016	1094	1639459618874096804	TestNotification	65e094983a3e16fc
 4	1020	1639459624122108491	CMakeFiles/TestProxy.dir/test/Patterns/Proxy/ProxyTest.cpp.o	e49af834a152bfde
 1020	1100	1639459624205832717	TestProxy	48841b54a972fa5e
+6	1039	1639464106851972419	CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o	ec9b59db36243843
+6	1045	1639464106859593411	CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o	612bd8835bfe4fbc
+6	1049	1639464106867009639	CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o	b122d1344f267943
+5	1083	1639464106901180494	CMakeFiles/TestProxy.dir/test/Patterns/Proxy/ProxyTest.cpp.o	e49af834a152bfde
+1049	1097	1639464106923504000	libPureMVC.a	df72dd6eee90aab8
+1097	1182	1639464107006101321	TestProxy	48841b54a972fa5e
+6	1530	1639464115125167728	CMakeFiles/TestMediator.dir/test/Patterns/Mediator/MediatorTest.cpp.o	6ebee125db91926b
+1530	1618	1639464115217691827	TestMediator	608f83f76115df24
+4	1107	1639464120405940814	CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cpp.o	ec7caa13bfaf6c52
+1107	1184	1639464120486088099	TestNotification	65e094983a3e16fc

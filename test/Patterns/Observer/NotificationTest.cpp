@@ -15,7 +15,7 @@ int main() {
 }
 
 void testNameAccessors() {
-    Notification *note = new Notification("TestNote");
+    auto *note = new Notification("TestNote");
 
     assert(note->getName() == "TestNote");
 
