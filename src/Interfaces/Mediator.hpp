@@ -17,11 +17,11 @@ namespace PureMVC::Patterns {
 
         virtual const char * const *listNotificationInterests();
 
-        std::string getMediatorName();
+        std::string getMediatorName() const;
 
         void setViewComponent(const void* viewComponent);
 
-        const void* getViewComponent();
+        const void* getViewComponent() const;
 
         virtual ~Mediator();
 

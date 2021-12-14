@@ -15,7 +15,7 @@ void Proxy::onRemove() {
 
 }
 
-std::string Proxy::getProxyName() {
+std::string Proxy::getProxyName() const {
     return this->_proxyName;
 }
 
@@ -23,7 +23,7 @@ void Proxy::setData(const void* data) {
     this->_data = data;
 }
 
-void const *Proxy::getData() {
+void const *Proxy::getData() const {
     return this->_data;
 }
 

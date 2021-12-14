@@ -8,7 +8,7 @@ Notification::Notification(const std::string &name, const void *body, const std:
     this->_type = type;
 }
 
-std::string const& Notification::getName() {
+std::string const& Notification::getName() const {
     return this->_name;
 }
 
@@ -16,7 +16,7 @@ void Notification::setBody(const void *body) {
     this->_body = body;
 }
 
-void const* Notification::getBody() {
+void const* Notification::getBody() const {
     return this->_body;
 }
 
@@ -24,7 +24,7 @@ void Notification::setType(std::string const& type) {
     this->_type = type;
 }
 
-std::string const& Notification::getType() {
+std::string const& Notification::getType() const {
     return this->_type;
 }
 

@@ -20,7 +20,7 @@ const char *const *Mediator::listNotificationInterests() {
     return interests;
 }
 
-std::string Mediator::getMediatorName() {
+std::string Mediator::getMediatorName() const {
     return this->_mediatorName;
 }
 
@@ -28,7 +28,7 @@ void Mediator::setViewComponent(const void *viewComponent) {
     this->_viewComponent = viewComponent;
 }
 
-const void *Mediator::getViewComponent() {
+const void *Mediator::getViewComponent() const {
     return this->_viewComponent;
 }
 
