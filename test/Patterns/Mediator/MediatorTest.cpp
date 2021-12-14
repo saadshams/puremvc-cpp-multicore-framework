@@ -12,7 +12,7 @@ int main() {
 }
 
 void testNameAccessor() {
-    Mediator *mediator = new Mediator();
+    auto *mediator = new Mediator();
     assert(mediator->getMediatorName() == Mediator::NAME);
     mediator->onRegister();
     mediator->onRemove();
@@ -22,7 +22,7 @@ void testNameAccessor() {
 
 void testViewAccessor() {
     struct View {} view;
-    Mediator *mediator = new Mediator(Mediator::NAME, &view);
+    auto *mediator = new Mediator(Mediator::NAME, &view);
     assert(mediator->getViewComponent() == &view);
 
     struct View2 {} view2;
@@ -34,7 +34,7 @@ void testViewAccessor() {
 
 void testListNotificationInterests() {
     struct View {} view;
-    Mediator *mediator = new Mediator(Mediator::NAME, &view);
+    auto *mediator = new Mediator(Mediator::NAME, &view);
 
     const char * const *interests = mediator->listNotificationInterests();
 

@@ -19,3 +19,9 @@
 981	1064	1639458748256663432	TestNotification	65e094983a3e16fc
 4	1025	1639458758413205153	CMakeFiles/TestProxy.dir/test/Patterns/Proxy/ProxyTest.cpp.o	e49af834a152bfde
 1025	1105	1639458758495997549	TestProxy	48841b54a972fa5e
+4	1071	1639459613363590587	CMakeFiles/TestMediator.dir/test/Patterns/Mediator/MediatorTest.cpp.o	6ebee125db91926b
+1072	1177	1639459613473464703	TestMediator	608f83f76115df24
+3	1016	1639459618791825833	CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cpp.o	ec7caa13bfaf6c52
+1016	1094	1639459618874096804	TestNotification	65e094983a3e16fc
+4	1020	1639459624122108491	CMakeFiles/TestProxy.dir/test/Patterns/Proxy/ProxyTest.cpp.o	e49af834a152bfde
+1020	1100	1639459624205832717	TestProxy	48841b54a972fa5e

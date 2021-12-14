@@ -14,7 +14,7 @@ int main() {
 }
 
 void testNameAccessor() {
-    Proxy *proxy = new Proxy("TestProxy");
+    auto *proxy = new Proxy("TestProxy");
     assert(proxy->getProxyName() == "TestProxy");
     proxy->onRegister();
     proxy->onRemove();
@@ -23,7 +23,7 @@ void testNameAccessor() {
 }
 
 void testDataAccessors() {
-    Proxy *proxy = new Proxy("colors", nullptr);
+    auto *proxy = new Proxy("colors", nullptr);
 
     proxy->setData(new std::string[3]{"red", "green", "blue"});
 
@@ -37,7 +37,7 @@ void testDataAccessors() {
 }
 
 void testConstructor() {
-    Proxy *proxy = new Proxy("colors", new std::string[3]{"red", "green", "blue"});
+    auto *proxy = new Proxy("colors", new std::string[3]{"red", "green", "blue"});
 
     auto* colors = (std::string *) proxy->getData();
     assert(colors[0] == "red");

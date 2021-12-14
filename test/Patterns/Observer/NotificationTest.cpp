@@ -24,7 +24,7 @@ void testNameAccessors() {
 
 void testBodyAccessors() {
     int value = 5;
-    Notification *note = new Notification("");
+    auto *note = new Notification("");
 
     note->setBody(&value);
 
@@ -35,7 +35,7 @@ void testBodyAccessors() {
 
 void testConstructor() {
     int value = 5;
-    Notification *note = new Notification("TestNote", &value, "TestNoteType");
+    auto *note = new Notification("TestNote", &value, "TestNoteType");
 
     assert(note->getName() == "TestNote");
     assert(*(int *)note->getBody() == 5);
@@ -46,7 +46,7 @@ void testConstructor() {
 
 void testToString() {
     int value[] = {1, 3, 5};
-    Notification *note = new Notification("TestNote", value, "TestType");
+    auto *note = new Notification("TestNote", value, "TestType");
     std::string msg = "Notification Name: TestNote\nBody: ";
     msg += typeid(void const*).name();
     msg += "\nType: TestType";
