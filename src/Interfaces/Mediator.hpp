@@ -1,17 +1,15 @@
-#ifndef PUREMVC_MEDIATOR_H
-#define PUREMVC_MEDIATOR_H
+#ifndef PUREMVC_MEDIATOR_HPP
+#define PUREMVC_MEDIATOR_HPP
 
 #include <iostream>
-
-using std::string;
 
 namespace PureMVC::Patterns {
     class Mediator {
     protected:
-        string _mediatorName;
+        std::string _mediatorName;
         void const* _viewComponent;
     public:
-        explicit Mediator(string const& mediatorName = NAME, void const* viewComponent = nullptr);
+        explicit Mediator(std::string const& mediatorName = NAME, void const* viewComponent = nullptr);
 
         virtual void onRegister();
 
@@ -19,7 +17,7 @@ namespace PureMVC::Patterns {
 
         virtual const char * const *listNotificationInterests();
 
-        string getMediatorName();
+        std::string getMediatorName();
 
         void setViewComponent(const void* viewComponent);
 
@@ -31,4 +29,4 @@ namespace PureMVC::Patterns {
     };
 }
 
-#endif //PUREMVC_MEDIATOR_H
+#endif //PUREMVC_MEDIATOR_HPP

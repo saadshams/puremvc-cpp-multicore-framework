@@ -1,23 +1,21 @@
-#ifndef PUREMVC_PROXY_H
-#define PUREMVC_PROXY_H
+#ifndef PUREMVC_PROXY_HPP
+#define PUREMVC_PROXY_HPP
 
 #include <iostream>
-
-using std::string;
 
 namespace PureMVC::Patterns {
     class Proxy {
     protected:
-        string _proxyName;
+        std::string _proxyName;
         void const* _data;
     public:
-        explicit Proxy(string const& proxyName = NAME, void const* data = nullptr);
+        explicit Proxy(std::string const& proxyName = NAME, void const* data = nullptr);
 
         virtual void onRegister();
 
         virtual void onRemove();
 
-        string proxyName();
+        std::string getProxyName();
 
         void setData(const void* data);
 
@@ -29,4 +27,4 @@ namespace PureMVC::Patterns {
     };
 }
 
-#endif //PUREMVC_PROXY_H
+#endif //PUREMVC_PROXY_HPP

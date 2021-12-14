@@ -1,5 +1,5 @@
-#ifndef PUREMVC_TESTPROXY_H
-#define PUREMVC_TESTPROXY_H
+#ifndef PUREMVC_PROXYTEST_HPP
+#define PUREMVC_PROXYTEST_HPP
 
 int main();
 
@@ -9,4 +9,4 @@ void testDataAccessors();
 
 void testConstructor();
 
-#endif //PUREMVC_TESTPROXY_H
+#endif //PUREMVC_PROXYTEST_HPP

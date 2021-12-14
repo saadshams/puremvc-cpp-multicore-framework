@@ -40,6 +40,95 @@ include CMakeFiles/rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug/
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework -B/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+# =============================================================================
+# Object build statements for EXECUTABLE target TestProxy
+
+
+#############################################
+# Order-only phony target for TestProxy
+
+build cmake_object_order_depends_target_TestProxy: phony || cmake_object_order_depends_target_PureMVC
+
+build CMakeFiles/TestProxy.dir/test/Patterns/Proxy/ProxyTest.cpp.o: CXX_COMPILER__TestProxy_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Proxy/ProxyTest.cpp || cmake_object_order_depends_target_TestProxy
+  DEP_FILE = CMakeFiles/TestProxy.dir/test/Patterns/Proxy/ProxyTest.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestProxy.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestProxy.dir/test/Patterns/Proxy
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target TestProxy
+
+
+#############################################
+# Link the executable TestProxy
+
+build TestProxy: CXX_EXECUTABLE_LINKER__TestProxy_Debug CMakeFiles/TestProxy.dir/test/Patterns/Proxy/ProxyTest.cpp.o | libPureMVC.a || libPureMVC.a
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
+  LINK_LIBRARIES = libPureMVC.a
+  OBJECT_DIR = CMakeFiles/TestProxy.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = TestProxy
+  TARGET_PDB = TestProxy.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target TestNotification
+
+
+#############################################
+# Order-only phony target for TestNotification
+
+build cmake_object_order_depends_target_TestNotification: phony || cmake_object_order_depends_target_PureMVC
+
+build CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cpp.o: CXX_COMPILER__TestNotification_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Observer/NotificationTest.cpp || cmake_object_order_depends_target_TestNotification
+  DEP_FILE = CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestNotification.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestNotification.dir/test/Patterns/Observer
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target TestNotification
+
+
+#############################################
+# Link the executable TestNotification
+
+build TestNotification: CXX_EXECUTABLE_LINKER__TestNotification_Debug CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cpp.o | libPureMVC.a || libPureMVC.a
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
+  LINK_LIBRARIES = libPureMVC.a
+  OBJECT_DIR = CMakeFiles/TestNotification.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = TestNotification
+  TARGET_PDB = TestNotification.dbg
+
 # =============================================================================
 # Object build statements for EXECUTABLE target TestMediator
 
@@ -74,62 +163,6 @@ build TestMediator: CXX_EXECUTABLE_LINKER__TestMediator_Debug CMakeFiles/TestMed
   TARGET_PDB = TestMediator.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target TestProxy
-
-
-#############################################
-# Order-only phony target for TestProxy
-
-build cmake_object_order_depends_target_TestProxy: phony || cmake_object_order_depends_target_PureMVC
-
-build CMakeFiles/TestProxy.dir/test/Patterns/Proxy/TestProxy.cpp.o: CXX_COMPILER__TestProxy_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Proxy/TestProxy.cpp || cmake_object_order_depends_target_TestProxy
-  DEP_FILE = CMakeFiles/TestProxy.dir/test/Patterns/Proxy/TestProxy.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/TestProxy.dir
-  OBJECT_FILE_DIR = CMakeFiles/TestProxy.dir/test/Patterns/Proxy
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target TestProxy
-
-
-#############################################
-# Link the executable TestProxy
-
-build TestProxy: CXX_EXECUTABLE_LINKER__TestProxy_Debug CMakeFiles/TestProxy.dir/test/Patterns/Proxy/TestProxy.cpp.o | libPureMVC.a || libPureMVC.a
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
-  LINK_LIBRARIES = libPureMVC.a
-  OBJECT_DIR = CMakeFiles/TestProxy.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = TestProxy
-  TARGET_PDB = TestProxy.dbg
-
-
-#############################################
-# Utility command for rebuild_cache
-
-build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework -B/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build rebuild_cache: phony CMakeFiles/rebuild_cache.util
-
-
-#############################################
-# Utility command for edit_cache
-
-build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
-  restat = 1
-
-build edit_cache: phony CMakeFiles/edit_cache.util
-
-# =============================================================================
 # Object build statements for STATIC_LIBRARY target PureMVC
 
 
@@ -144,6 +177,20 @@ build CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o: CXX_COMPILER__PureM
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/PureMVC.dir
   OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Proxy
+
+build CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Observer/Notification.cpp || cmake_object_order_depends_target_PureMVC
+  DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/PureMVC.dir
+  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Observer
+
+build CMakeFiles/PureMVC.dir/src/Patterns/Observer/Observer.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Observer/Observer.cpp || cmake_object_order_depends_target_PureMVC
+  DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Observer/Observer.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/PureMVC.dir
+  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Observer
 
 build CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Mediator/Mediator.cpp || cmake_object_order_depends_target_PureMVC
   DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o.d
@@ -160,7 +207,7 @@ build CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o: CXX_COMPILER_
 #############################################
 # Link the static library libPureMVC.a
 
-build libPureMVC.a: CXX_STATIC_LIBRARY_LINKER__PureMVC_Debug CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o
+build libPureMVC.a: CXX_STATIC_LIBRARY_LINKER__PureMVC_Debug CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Observer/Observer.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o
   ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/PureMVC.dir
@@ -182,7 +229,7 @@ build PureMVC: phony libPureMVC.a
 #############################################
 # Folder: /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug
 
-build all: phony TestMediator TestProxy libPureMVC.a
+build all: phony TestProxy TestNotification TestMediator libPureMVC.a
 
 # =============================================================================
 # Built-in targets

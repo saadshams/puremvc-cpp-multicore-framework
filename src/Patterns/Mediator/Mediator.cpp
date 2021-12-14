@@ -1,10 +1,10 @@
-#include "Interfaces/Mediator.h"
+#include "Interfaces/Mediator.hpp"
 
 using PureMVC::Patterns::Mediator;
 
-Mediator::Mediator(const string& mediatorName, const void* viewComponent) {
-    _mediatorName = mediatorName;
-    _viewComponent = viewComponent;
+Mediator::Mediator(const std::string& mediatorName, const void* viewComponent) {
+    this->_mediatorName = mediatorName;
+    this->_viewComponent = viewComponent;
 }
 
 void Mediator::onRegister() {
@@ -20,16 +20,16 @@ const char *const *Mediator::listNotificationInterests() {
     return interests;
 }
 
-string Mediator::getMediatorName() {
-    return _mediatorName;
+std::string Mediator::getMediatorName() {
+    return this->_mediatorName;
 }
 
 void Mediator::setViewComponent(const void *viewComponent) {
-    _viewComponent = viewComponent;
+    this->_viewComponent = viewComponent;
 }
 
 const void *Mediator::getViewComponent() {
-    return _viewComponent;
+    return this->_viewComponent;
 }
 
 Mediator::~Mediator() = default;

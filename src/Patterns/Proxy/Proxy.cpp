@@ -1,10 +1,10 @@
-#include "../../Interfaces/Proxy.h"
+#include "../../Interfaces/Proxy.hpp"
 
 using PureMVC::Patterns::Proxy;
 
-Proxy::Proxy(const string& proxyName, const void* data) {
-    _proxyName = proxyName;
-    _data = data;
+Proxy::Proxy(const std::string& proxyName, const void* data) {
+    this->_proxyName = proxyName;
+    this->_data = data;
 }
 
 void Proxy::onRegister() {
@@ -15,16 +15,16 @@ void Proxy::onRemove() {
 
 }
 
-string Proxy::proxyName() {
-    return _proxyName;
+std::string Proxy::getProxyName() {
+    return this->_proxyName;
 }
 
 void Proxy::setData(const void* data) {
-    _data = data;
+    this->_data = data;
 }
 
 void const *Proxy::getData() {
-    return _data;
+    return this->_data;
 }
 
 Proxy::~Proxy() = default;
