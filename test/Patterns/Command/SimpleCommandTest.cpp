@@ -17,7 +17,7 @@ void testSimpleCommandExecute() {
 
     auto *notification = new Notification("SimpleCommentTestNote", &vo);
 
-    auto command = new SimpleCommandTestCommand();
+    auto *command = new SimpleCommandTestCommand();
 
     command->execute(notification);
 

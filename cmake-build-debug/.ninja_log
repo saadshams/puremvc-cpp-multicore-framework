@@ -39,3 +39,12 @@
 872	946	1639562370318351485	TestSimpleCommand	3446d39862d7c9ad
 4	888	1639562374320545983	CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTest.cpp.o	72f6e22ae228e81d
 889	957	1639562374390928409	TestSimpleCommand	3446d39862d7c9ad
+3	903	1639562662497730578	CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTest.cpp.o	72f6e22ae228e81d
+903	980	1639562662577121835	TestSimpleCommand	3446d39862d7c9ad
+5	97	1639562666598865706	TestMediator	608f83f76115df24
+5	97	1639562670499144077	TestNotification	65e094983a3e16fc
+4	90	1639562674924403382	TestObserver	a2256d9fb008b18c
+3	1074	1639562680569385886	CMakeFiles/TestProxy.dir/test/Patterns/Proxy/ProxyTest.cpp.o	e49af834a152bfde
+1075	1151	1639562680652719517	TestProxy	48841b54a972fa5e
+4	932	1639562767242622603	CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTest.cpp.o	72f6e22ae228e81d
+932	1004	1639562767319113921	TestSimpleCommand	3446d39862d7c9ad

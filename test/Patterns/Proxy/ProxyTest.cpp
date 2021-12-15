@@ -27,7 +27,7 @@ void testDataAccessors() {
 
     proxy->setData(new std::string[3]{"red", "green", "blue"});
 
-    auto* colors = (std::string *) proxy->getData();
+    auto *colors = (std::string *) proxy->getData();
 
     assert(colors[0] == "red");
     assert(colors[1] == "green");
@@ -39,7 +39,7 @@ void testDataAccessors() {
 void testConstructor() {
     auto *proxy = new Proxy("colors", new std::string[3]{"red", "green", "blue"});
 
-    auto* colors = (std::string *) proxy->getData();
+    auto *colors = (std::string *) proxy->getData();
     assert(colors[0] == "red");
     assert(colors[1] == "green");
     assert(colors[2] == "blue");
