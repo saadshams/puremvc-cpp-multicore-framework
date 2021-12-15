@@ -1,6 +1,5 @@
 #include "NotificationTest.hpp"
 #include "Interfaces/Notification.hpp"
-
 #include <iostream>
 
 using PureMVC::Patterns::Observer::Notification;
@@ -27,8 +26,10 @@ void testBodyAccessors() {
     auto *note = new Notification("");
 
     note->setBody(&value);
-
     assert(*(int *)note->getBody() == 5);
+
+    note->setType("TestNoteType");
+    assert(note->getType() == "TestNoteType");
 
     delete note;
 }

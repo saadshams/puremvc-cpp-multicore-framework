@@ -52,6 +52,39 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+# =============================================================================
+# Object build statements for EXECUTABLE target TestObserver
+
+
+#############################################
+# Order-only phony target for TestObserver
+
+build cmake_object_order_depends_target_TestObserver: phony || cmake_object_order_depends_target_PureMVC
+
+build CMakeFiles/TestObserver.dir/test/Patterns/Observer/ObserverTest.cpp.o: CXX_COMPILER__TestObserver_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Observer/ObserverTest.cpp || cmake_object_order_depends_target_TestObserver
+  DEP_FILE = CMakeFiles/TestObserver.dir/test/Patterns/Observer/ObserverTest.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestObserver.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestObserver.dir/test/Patterns/Observer
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target TestObserver
+
+
+#############################################
+# Link the executable TestObserver
+
+build TestObserver: CXX_EXECUTABLE_LINKER__TestObserver_Debug CMakeFiles/TestObserver.dir/test/Patterns/Observer/ObserverTest.cpp.o | libPureMVC.a || libPureMVC.a
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
+  LINK_LIBRARIES = libPureMVC.a
+  OBJECT_DIR = CMakeFiles/TestObserver.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = TestObserver
+  TARGET_PDB = TestObserver.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -229,7 +262,7 @@ build PureMVC: phony libPureMVC.a
 #############################################
 # Folder: /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug
 
-build all: phony TestProxy TestNotification TestMediator libPureMVC.a
+build all: phony TestObserver TestProxy TestNotification TestMediator libPureMVC.a
 
 # =============================================================================
 # Built-in targets

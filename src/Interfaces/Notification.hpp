@@ -12,17 +12,17 @@ namespace PureMVC::Patterns::Observer {
     public:
         explicit Notification(std::string const& name, void const*body = nullptr, std::string const&type = "");
 
-        [[nodiscard]] virtual std::string const& getName() const;
+        [[nodiscard]] std::string const& getName() const;
 
-        virtual void setBody(void const* body);
+        void setBody(void const* body);
 
-        [[nodiscard]] virtual void const* getBody() const;
+        [[nodiscard]] void const* getBody() const;
 
-        virtual void setType(std::string const& type);
+        void setType(std::string const& type);
 
-        [[nodiscard]] virtual std::string const& getType() const;
+        [[nodiscard]] std::string const& getType() const;
 
-        [[nodiscard]] virtual std::string toString() const;
+        [[nodiscard]] std::string toString() const;
 
         virtual ~Notification();
     };

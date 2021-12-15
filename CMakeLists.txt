@@ -18,5 +18,8 @@ target_link_libraries(TestMediator PureMVC)
 add_executable(TestNotification test/Patterns/Observer/NotificationTest.cpp)
 target_link_libraries(TestNotification PureMVC)
 
+add_executable(TestObserver test/Patterns/Observer/ObserverTest.cpp)
+target_link_libraries(TestObserver PureMVC)
+
 add_executable(TestProxy test/Patterns/Proxy/ProxyTest.cpp)
 target_link_libraries(TestProxy PureMVC)
