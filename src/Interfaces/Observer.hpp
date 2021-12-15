@@ -19,9 +19,9 @@ namespace PureMVC::Patterns::Observer {
 
         void setNotifyMethod(void (*notify)(Notification *notification));
 
-        [[nodiscard]] void const* getNotifyContext();
+        [[nodiscard]] void const* getNotifyContext() const;
 
-        [[nodiscard]] void (*getNotifyMethod())(Notification *note);
+        [[nodiscard]] void (*getNotifyMethod() const)(Notification *note);
 
         virtual ~Observer();
     };

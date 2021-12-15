@@ -16,11 +16,11 @@ void Observer::setNotifyMethod(void (*notify)(Notification *notification)) {
     this->_notify = notify;
 }
 
-const void* Observer::getNotifyContext() {
+const void* Observer::getNotifyContext() const {
     return this->_context;
 }
 
-void (*Observer::getNotifyMethod())(Notification*) {
+void (*Observer::getNotifyMethod() const)(Notification*) {
     return this->_notify;
 }
 

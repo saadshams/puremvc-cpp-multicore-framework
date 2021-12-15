@@ -52,39 +52,6 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
-# =============================================================================
-# Object build statements for EXECUTABLE target TestObserver
-
-
-#############################################
-# Order-only phony target for TestObserver
-
-build cmake_object_order_depends_target_TestObserver: phony || cmake_object_order_depends_target_PureMVC
-
-build CMakeFiles/TestObserver.dir/test/Patterns/Observer/ObserverTest.cpp.o: CXX_COMPILER__TestObserver_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Observer/ObserverTest.cpp || cmake_object_order_depends_target_TestObserver
-  DEP_FILE = CMakeFiles/TestObserver.dir/test/Patterns/Observer/ObserverTest.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/TestObserver.dir
-  OBJECT_FILE_DIR = CMakeFiles/TestObserver.dir/test/Patterns/Observer
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target TestObserver
-
-
-#############################################
-# Link the executable TestObserver
-
-build TestObserver: CXX_EXECUTABLE_LINKER__TestObserver_Debug CMakeFiles/TestObserver.dir/test/Patterns/Observer/ObserverTest.cpp.o | libPureMVC.a || libPureMVC.a
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
-  LINK_LIBRARIES = libPureMVC.a
-  OBJECT_DIR = CMakeFiles/TestObserver.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = TestObserver
-  TARGET_PDB = TestObserver.dbg
-
 
 #############################################
 # Utility command for edit_cache
@@ -130,37 +97,37 @@ build TestProxy: CXX_EXECUTABLE_LINKER__TestProxy_Debug CMakeFiles/TestProxy.dir
   TARGET_PDB = TestProxy.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target TestNotification
+# Object build statements for EXECUTABLE target TestObserver
 
 
 #############################################
-# Order-only phony target for TestNotification
+# Order-only phony target for TestObserver
 
-build cmake_object_order_depends_target_TestNotification: phony || cmake_object_order_depends_target_PureMVC
+build cmake_object_order_depends_target_TestObserver: phony || cmake_object_order_depends_target_PureMVC
 
-build CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cpp.o: CXX_COMPILER__TestNotification_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Observer/NotificationTest.cpp || cmake_object_order_depends_target_TestNotification
-  DEP_FILE = CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cpp.o.d
+build CMakeFiles/TestObserver.dir/test/Patterns/Observer/ObserverTest.cpp.o: CXX_COMPILER__TestObserver_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Observer/ObserverTest.cpp || cmake_object_order_depends_target_TestObserver
+  DEP_FILE = CMakeFiles/TestObserver.dir/test/Patterns/Observer/ObserverTest.cpp.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/TestNotification.dir
-  OBJECT_FILE_DIR = CMakeFiles/TestNotification.dir/test/Patterns/Observer
+  OBJECT_DIR = CMakeFiles/TestObserver.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestObserver.dir/test/Patterns/Observer
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target TestNotification
+# Link build statements for EXECUTABLE target TestObserver
 
 
 #############################################
-# Link the executable TestNotification
+# Link the executable TestObserver
 
-build TestNotification: CXX_EXECUTABLE_LINKER__TestNotification_Debug CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cpp.o | libPureMVC.a || libPureMVC.a
+build TestObserver: CXX_EXECUTABLE_LINKER__TestObserver_Debug CMakeFiles/TestObserver.dir/test/Patterns/Observer/ObserverTest.cpp.o | libPureMVC.a || libPureMVC.a
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
   LINK_LIBRARIES = libPureMVC.a
-  OBJECT_DIR = CMakeFiles/TestNotification.dir
+  OBJECT_DIR = CMakeFiles/TestObserver.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = TestNotification
-  TARGET_PDB = TestNotification.dbg
+  TARGET_FILE = TestObserver
+  TARGET_PDB = TestObserver.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target TestMediator
@@ -196,6 +163,86 @@ build TestMediator: CXX_EXECUTABLE_LINKER__TestMediator_Debug CMakeFiles/TestMed
   TARGET_PDB = TestMediator.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target TestNotification
+
+
+#############################################
+# Order-only phony target for TestNotification
+
+build cmake_object_order_depends_target_TestNotification: phony || cmake_object_order_depends_target_PureMVC
+
+build CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cpp.o: CXX_COMPILER__TestNotification_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Observer/NotificationTest.cpp || cmake_object_order_depends_target_TestNotification
+  DEP_FILE = CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestNotification.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestNotification.dir/test/Patterns/Observer
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target TestNotification
+
+
+#############################################
+# Link the executable TestNotification
+
+build TestNotification: CXX_EXECUTABLE_LINKER__TestNotification_Debug CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cpp.o | libPureMVC.a || libPureMVC.a
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
+  LINK_LIBRARIES = libPureMVC.a
+  OBJECT_DIR = CMakeFiles/TestNotification.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = TestNotification
+  TARGET_PDB = TestNotification.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target TestSimpleCommand
+
+
+#############################################
+# Order-only phony target for TestSimpleCommand
+
+build cmake_object_order_depends_target_TestSimpleCommand: phony || cmake_object_order_depends_target_PureMVC
+
+build CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTest.cpp.o: CXX_COMPILER__TestSimpleCommand_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/patterns/command/SimpleCommandTest.cpp || cmake_object_order_depends_target_TestSimpleCommand
+  DEP_FILE = CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTest.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestSimpleCommand.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestSimpleCommand.dir/test/patterns/command
+
+build CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestCommand.cpp.o: CXX_COMPILER__TestSimpleCommand_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/patterns/command/SimpleCommandTestCommand.cpp || cmake_object_order_depends_target_TestSimpleCommand
+  DEP_FILE = CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestCommand.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestSimpleCommand.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestSimpleCommand.dir/test/patterns/command
+
+build CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestVO.cpp.o: CXX_COMPILER__TestSimpleCommand_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/patterns/command/SimpleCommandTestVO.cpp || cmake_object_order_depends_target_TestSimpleCommand
+  DEP_FILE = CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestVO.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestSimpleCommand.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestSimpleCommand.dir/test/patterns/command
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target TestSimpleCommand
+
+
+#############################################
+# Link the executable TestSimpleCommand
+
+build TestSimpleCommand: CXX_EXECUTABLE_LINKER__TestSimpleCommand_Debug CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTest.cpp.o CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestCommand.cpp.o CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestVO.cpp.o | libPureMVC.a || libPureMVC.a
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
+  LINK_LIBRARIES = libPureMVC.a
+  OBJECT_DIR = CMakeFiles/TestSimpleCommand.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = TestSimpleCommand
+  TARGET_PDB = TestSimpleCommand.dbg
+
+# =============================================================================
 # Object build statements for STATIC_LIBRARY target PureMVC
 
 
@@ -210,6 +257,13 @@ build CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o: CXX_COMPILER__PureM
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/PureMVC.dir
   OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Proxy
+
+build CMakeFiles/PureMVC.dir/src/Patterns/Command/SimpleCommand.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Command/SimpleCommand.cpp || cmake_object_order_depends_target_PureMVC
+  DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Command/SimpleCommand.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/PureMVC.dir
+  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Command
 
 build CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Observer/Notification.cpp || cmake_object_order_depends_target_PureMVC
   DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o.d
@@ -240,7 +294,7 @@ build CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o: CXX_COMPILER_
 #############################################
 # Link the static library libPureMVC.a
 
-build libPureMVC.a: CXX_STATIC_LIBRARY_LINKER__PureMVC_Debug CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Observer/Observer.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o
+build libPureMVC.a: CXX_STATIC_LIBRARY_LINKER__PureMVC_Debug CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Command/SimpleCommand.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Observer/Observer.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o
   ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/PureMVC.dir
@@ -262,7 +316,7 @@ build PureMVC: phony libPureMVC.a
 #############################################
 # Folder: /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug
 
-build all: phony TestObserver TestProxy TestNotification TestMediator libPureMVC.a
+build all: phony TestProxy TestObserver TestMediator TestNotification TestSimpleCommand libPureMVC.a
 
 # =============================================================================
 # Built-in targets
