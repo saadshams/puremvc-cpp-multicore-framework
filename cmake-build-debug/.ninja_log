@@ -48,3 +48,9 @@
 1075	1151	1639562680652719517	TestProxy	48841b54a972fa5e
 4	932	1639562767242622603	CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTest.cpp.o	72f6e22ae228e81d
 932	1004	1639562767319113921	TestSimpleCommand	3446d39862d7c9ad
+4	858	1639563103324794268	CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestCommand.cpp.o	d8f01dad557ef913
+3	886	1639563103352743763	CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTest.cpp.o	72f6e22ae228e81d
+886	952	1639563103421861503	TestSimpleCommand	3446d39862d7c9ad
+9	3152	1639832507145575208	CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestCommand.cpp.o	d8f01dad557ef913
+5	3160	1639832507155003828	CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTest.cpp.o	72f6e22ae228e81d
+3160	3572	1639832507572452294	TestSimpleCommand	3446d39862d7c9ad
