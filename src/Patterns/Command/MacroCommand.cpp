@@ -8,7 +8,7 @@ void MacroCommand::initializeMacroCommand() {
 
 }
 
-void MacroCommand::addSubCommand(SimpleCommand* (*factory)()) {
+void MacroCommand::addSubCommand(SimpleCommand *(*factory)()) {
     _subcommands.push_back(factory);
 }
 

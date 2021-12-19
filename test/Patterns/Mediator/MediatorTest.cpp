@@ -21,11 +21,13 @@ void testNameAccessor() {
 }
 
 void testViewAccessor() {
-    struct View {} view;
+    struct View {
+    } view;
     auto *mediator = new Mediator(Mediator::NAME, &view);
     assert(mediator->getViewComponent() == &view);
 
-    struct View2 {} view2;
+    struct View2 {
+    } view2;
     mediator->setViewComponent(&view2);
     assert(mediator->getViewComponent() == &view2);
 
@@ -33,13 +35,14 @@ void testViewAccessor() {
 }
 
 void testListNotificationInterests() {
-    struct View {} view;
+    struct View {
+    } view;
     auto *mediator = new Mediator(Mediator::NAME, &view);
 
-    const char * const *interests = mediator->listNotificationInterests();
+    const char *const *interests = mediator->listNotificationInterests();
 
     int i = 0;
-    for (const char * const *cursor = interests; *cursor != nullptr; cursor++) {
+    for (const char *const *cursor = interests; *cursor != nullptr; cursor++) {
         i++;
     }
 

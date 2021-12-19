@@ -8,7 +8,7 @@ using PureMVC::Patterns::Observer::Notification;
 int value = 5;
 
 static void handleNotification(Notification *notification) {
-    *(int *)notification->getBody() = 10;
+    *(int *) notification->getBody() = 10;
 }
 
 int main() {
@@ -20,7 +20,8 @@ int main() {
 }
 
 void testObserverAccessors() {
-    struct Object {} object;
+    struct Object {
+    } object;
     auto *observer = new Observer(nullptr, nullptr);
     observer->setNotifyMethod(handleNotification);
     observer->setNotifyContext(&object);
@@ -36,7 +37,8 @@ void testObserverAccessors() {
 }
 
 void testObserverConstructor() {
-    struct Object {} object;
+    struct Object {
+    } object;
     auto *observer = new Observer(handleNotification, &object);
     auto *notification = new Notification("ObserverTestNote", &value);
 
@@ -53,7 +55,8 @@ void testObserverConstructor() {
 }
 
 void testCompareNotifyContext() {
-    struct Object {} object, negTestObj;
+    struct Object {
+    } object, negTestObj;
     auto *observer = new Observer(handleNotification, &object);
 
     assert(observer->compareNotifyContext(&negTestObj) == false);

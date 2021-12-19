@@ -2,7 +2,7 @@
 
 using PureMVC::Patterns::Mediator;
 
-Mediator::Mediator(const std::string& mediatorName, const void* viewComponent) {
+Mediator::Mediator(const std::string &mediatorName, const void *viewComponent) {
     this->_mediatorName = mediatorName;
     this->_viewComponent = viewComponent;
 }
@@ -16,7 +16,7 @@ void Mediator::onRemove() {
 }
 
 const char *const *Mediator::listNotificationInterests() {
-    static const char * const interests[] = {nullptr};
+    static const char *const interests[] = {nullptr};
     return interests;
 }
 

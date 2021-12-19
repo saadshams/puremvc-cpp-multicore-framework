@@ -2,7 +2,7 @@
 
 using PureMVC::Patterns::Proxy;
 
-Proxy::Proxy(const std::string& proxyName, const void* data) {
+Proxy::Proxy(const std::string &proxyName, const void *data) {
     this->_proxyName = proxyName;
     this->_data = data;
 }
@@ -19,7 +19,7 @@ std::string Proxy::getProxyName() const {
     return this->_proxyName;
 }
 
-void Proxy::setData(const void* data) {
+void Proxy::setData(const void *data) {
     this->_data = data;
 }
 

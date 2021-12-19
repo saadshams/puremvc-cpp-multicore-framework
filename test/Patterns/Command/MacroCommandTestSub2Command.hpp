@@ -5,7 +5,7 @@
 
 using PureMVC::Patterns::Command::SimpleCommand;
 
-class MacroCommandTestSub2Command:public SimpleCommand {
+class MacroCommandTestSub2Command : public SimpleCommand {
 public:
     void execute(Notification *notification) override;
 };

@@ -7,9 +7,9 @@ namespace PureMVC::Patterns {
     class Proxy {
     protected:
         std::string _proxyName;
-        void const* _data;
+        void const *_data;
     public:
-        explicit Proxy(std::string const& proxyName = NAME, void const* data = nullptr);
+        explicit Proxy(std::string const &proxyName = NAME, void const *data = nullptr);
 
         virtual void onRegister();
 
@@ -17,13 +17,13 @@ namespace PureMVC::Patterns {
 
         [[nodiscard]] std::string getProxyName() const;
 
-        void setData(const void* data);
+        void setData(const void *data);
 
-        [[nodiscard]] void const* getData() const;
+        [[nodiscard]] void const *getData() const;
 
         virtual ~Proxy();
 
-        constexpr static char const* const NAME = "Proxy";
+        constexpr static char const *const NAME = "Proxy";
     };
 }
 

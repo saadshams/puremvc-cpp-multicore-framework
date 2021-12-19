@@ -5,7 +5,7 @@
 
 using PureMVC::Patterns::Command::MacroCommand;
 
-class MacroCommandTestCommand:public MacroCommand {
+class MacroCommandTestCommand : public MacroCommand {
 public:
     void initializeMacroCommand() override;
 };
