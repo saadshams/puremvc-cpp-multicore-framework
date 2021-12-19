@@ -28,5 +28,3 @@ void MacroCommand::execute(Notification *notification) {
 }
 
 MacroCommand::~MacroCommand() = default;
-
-

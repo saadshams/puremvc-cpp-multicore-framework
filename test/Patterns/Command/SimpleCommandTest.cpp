@@ -24,6 +24,5 @@ void testSimpleCommandExecute() {
     assert(vo.result == 10);
 
     delete notification;
-
     delete command;
 }

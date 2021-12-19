@@ -15,12 +15,15 @@ int main() {
 void testMacroCommandExecute() {
     auto vo = MacroCommandTestVO{5};
 
-    auto note = new Notification("MacroCommandTest", &vo);
+    auto notification = new Notification("MacroCommandTest", &vo);
 
     auto command = new MacroCommandTestCommand();
 
-    command->execute(note);
+    command->execute(notification);
 
     assert(vo.result1 == 10);
     assert(vo.result2 == 25);
+
+    delete notification;
+    delete command;
 }
