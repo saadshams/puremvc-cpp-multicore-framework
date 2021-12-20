@@ -6,7 +6,7 @@
 
 using PureMVC::Patterns::Proxy;
 
-class ModelTestProxy: public Proxy {
+class ModelTestProxy : public Proxy {
 public:
     explicit ModelTestProxy();
 

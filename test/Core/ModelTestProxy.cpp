@@ -1,6 +1,6 @@
 #include "ModelTestProxy.hpp"
 
-ModelTestProxy::ModelTestProxy(): Proxy(NAME, "") {
+ModelTestProxy::ModelTestProxy() : Proxy(NAME, "") {
 
 }
 
