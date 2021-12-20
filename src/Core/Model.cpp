@@ -7,8 +7,8 @@ Model::Model(const std::string &key) {
     _multitonKey = key;
 }
 
-Model *Model::getInstance(const std::string &key) {
-    if (!_instanceMap.contains(key)) _instanceMap[key] = new Model(key);
+Model *Model::getInstance(const std::string &key, Model *(*factory)(std::string)) {
+    if (!_instanceMap.contains(key)) _instanceMap[key] = factory(key);
     _instanceMap[key]->initializeModel();
     return Model::_instanceMap[key];
 }

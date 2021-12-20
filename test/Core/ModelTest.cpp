@@ -16,13 +16,13 @@ int main() {
 }
 
 void testGetInstance() {
-    auto *model = Model::getInstance("ModelTestKey1");
+    auto *model = Model::getInstance("ModelTestKey1", [](std::string k) { return new Model(k); });
 
     assert(model != nullptr);
 }
 
 void testRegisterAndRetrieveProxy() {
-    auto *model = Model::getInstance("ModelTestKey2");
+    auto *model = Model::getInstance("ModelTestKey2", [](std::string k) { return new Model(k); });
     model->registerProxy(new Proxy("colors", new std::string[3]{"red", "green", "blue"}));
     auto *proxy = model->retrieveProxy("colors");
 
@@ -36,7 +36,7 @@ void testRegisterAndRetrieveProxy() {
 }
 
 void testRegisterAndRemoveProxy() {
-    auto *model = Model::getInstance("ModelTestKey3");
+    auto *model = Model::getInstance("ModelTestKey3", [](std::string k) { return new Model(k); });
 
     auto *proxy = new Proxy("sizes", new std::string[3]{"7", "13", "21"});
     model->registerProxy(proxy);
@@ -52,7 +52,7 @@ void testRegisterAndRemoveProxy() {
 }
 
 void testHasProxy() {
-    auto *model = Model::getInstance("ModelTestKey4");
+    auto *model = Model::getInstance("ModelTestKey4", [](std::string k) { return new Model(k); });
     auto *proxy = new Proxy("aces", new std::string[4]{"clubs", "spades", "hearts", "diamonds"});
     model->registerProxy(proxy);
 
@@ -66,7 +66,7 @@ void testHasProxy() {
 }
 
 void testOnRegisterAndOnRemove() {
-    auto *model = Model::getInstance("ModelTestKey5");
+    auto *model = Model::getInstance("ModelTestKey5", [](std::string k) { return new Model(k); });
     Proxy *proxy = new ModelTestProxy();
     model->registerProxy(proxy);
 
