@@ -27,4 +27,8 @@ void const *Proxy::getData() const {
     return this->_data;
 }
 
+void Proxy::initializeNotifier(std::string key) {
+
+}
+
 Proxy::~Proxy() = default;

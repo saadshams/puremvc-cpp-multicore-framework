@@ -6,4 +6,5 @@
 /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug/CMakeFiles/TestMacroCommand.dir
 /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug/CMakeFiles/TestNotification.dir
 /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug/CMakeFiles/TestSimpleCommand.dir
+/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug/CMakeFiles/TestModel.dir
 /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug/CMakeFiles/PureMVC.dir
