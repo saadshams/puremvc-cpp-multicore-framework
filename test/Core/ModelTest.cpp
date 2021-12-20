@@ -19,6 +19,9 @@ void testGetInstance() {
     auto *model = Model::getInstance("ModelTestKey1", [](std::string k) { return new Model(k); });
 
     assert(model != nullptr);
+
+    delete model;
+    Model::removeModel("ModelTestKey1");
 }
 
 void testRegisterAndRetrieveProxy() {
@@ -32,7 +35,10 @@ void testRegisterAndRetrieveProxy() {
     assert(colors[1] == "green");
     assert(colors[2] == "blue");
 
+    model->removeProxy("colors");
     delete proxy;
+    Model::removeModel("ModelTestKey2");
+    delete model;
 }
 
 void testRegisterAndRemoveProxy() {
@@ -49,6 +55,8 @@ void testRegisterAndRemoveProxy() {
     assert(proxy == nullptr);
 
     delete proxy;
+    Model::removeModel("ModelTestKey3");
+    delete model;
 }
 
 void testHasProxy() {
@@ -63,6 +71,8 @@ void testHasProxy() {
     assert(model->hasProxy("aces") == false);
 
     delete proxy;
+    Model::removeModel("ModelTestKey4");
+    delete model;
 }
 
 void testOnRegisterAndOnRemove() {
@@ -75,4 +85,8 @@ void testOnRegisterAndOnRemove() {
     model->removeProxy(ModelTestProxy::NAME);
 
     assert(proxy->getData() == ModelTestProxy::ON_REMOVE_CALLED);
+
+    delete proxy;
+    Model::removeModel("ModelTestKey5");
+    delete model;
 }

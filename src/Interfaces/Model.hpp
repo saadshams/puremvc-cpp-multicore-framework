@@ -28,9 +28,11 @@ namespace PureMVC::Core {
 
         bool hasProxy(const std::string &proxyName);
 
-        constexpr static char const *const MULTITON_MSG = "Model instance for this Multiton key already constructed!";
+        static void removeModel(const std::string &key);
 
         ~Model();
+
+        constexpr static char const *const MULTITON_MSG = "Model instance for this Multiton key already constructed!";
     };
 }
 

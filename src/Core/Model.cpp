@@ -40,7 +40,11 @@ Proxy *Model::removeProxy(const std::string &proxyName) {
     return proxy;
 }
 
+void Model::removeModel(const std::string& key) {
+    _instanceMap.erase(key);
+}
+
 Model::~Model() {
-    // removeModel(_multitonKey);
+    removeModel(_multitonKey);
     _proxyMap.clear();
 }
