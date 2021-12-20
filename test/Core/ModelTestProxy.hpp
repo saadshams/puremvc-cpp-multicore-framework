@@ -15,7 +15,9 @@ public:
     void onRemove() override;
 
     constexpr static char const *const NAME = "ModelTestProxy";
+
     constexpr static char const *const ON_REGISTER_CALLED = "onRegister Called";
+
     constexpr static char const *const ON_REMOVE_CALLED = "onRemove Called";
 };
 
