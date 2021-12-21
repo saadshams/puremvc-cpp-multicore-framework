@@ -5,6 +5,7 @@ using PureMVC::Core::Model;
 Model::Model(const std::string &key) {
     if (_instanceMap.contains(key)) throw std::runtime_error(MULTITON_MSG);
     _multitonKey = key;
+    _instanceMap[key] = this;
 }
 
 Model *Model::getInstance(const std::string &key, Model *(*factory)(std::string)) {

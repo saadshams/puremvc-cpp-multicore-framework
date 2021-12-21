@@ -3,6 +3,6 @@
 #include "MacroCommandTestSub2Command.hpp"
 
 void MacroCommandTestCommand::initializeMacroCommand() {
-    addSubCommand([]() { return (SimpleCommand *) new MacroCommandTestSub1Command(); });
-    addSubCommand([]() { return (SimpleCommand *) new MacroCommandTestSub2Command(); });
+    addSubCommand([]() -> SimpleCommand * { return new MacroCommandTestSub1Command(); });
+    addSubCommand([]() -> SimpleCommand * { return new MacroCommandTestSub2Command(); });
 }

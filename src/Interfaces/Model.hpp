@@ -16,9 +16,9 @@ namespace PureMVC::Core {
     public:
         explicit Model(const std::string &key);
 
-        void initializeModel();
-
         static Model *getInstance(const std::string &key, Model *(*factory)(std::string k));
+
+        void initializeModel();
 
         void registerProxy(Proxy *proxy);
 
