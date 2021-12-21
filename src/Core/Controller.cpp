@@ -3,7 +3,7 @@
 using PureMVC::Core::Controller;
 
 Controller::Controller(const std::string &key) {
-    if(_instanceMap.contains(key)) throw std::runtime_error(MULTITON_MSG);
+    if (_instanceMap.contains(key)) throw std::runtime_error(MULTITON_MSG);
     _multitonKey = key;
     _instanceMap[key] = this;
 }

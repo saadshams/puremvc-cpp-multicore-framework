@@ -1,9 +1,9 @@
 #ifndef PUREMVC_MODEL_HPP
 #define PUREMVC_MODEL_HPP
 
-#include "Interfaces/Proxy.hpp"
 #include <iostream>
 #include <map>
+#include "Interfaces/Proxy.hpp"
 
 using PureMVC::Patterns::Proxy;
 

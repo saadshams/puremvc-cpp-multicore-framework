@@ -41,7 +41,7 @@ Proxy *Model::removeProxy(const std::string &proxyName) {
     return proxy;
 }
 
-void Model::removeModel(const std::string& key) {
+void Model::removeModel(const std::string &key) {
     _instanceMap.erase(key);
 }
 
