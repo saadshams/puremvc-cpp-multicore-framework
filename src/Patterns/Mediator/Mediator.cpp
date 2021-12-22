@@ -20,7 +20,7 @@ const char *const *Mediator::listNotificationInterests() {
     return interests;
 }
 
-std::string Mediator::getMediatorName() const {
+const std::string &Mediator::getMediatorName() const {
     return this->_mediatorName;
 }
 

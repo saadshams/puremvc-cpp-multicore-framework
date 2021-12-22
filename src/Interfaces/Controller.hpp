@@ -16,23 +16,23 @@ namespace PureMVC::Core {
     public:
         explicit Controller(const std::string &key);
 
-        static Controller *getInstance(const std::string &key, Controller *(*factory)(std::string k));
+        static Controller *getInstance(const std::string &key, Controller *(*factory)(const std::string &k));
 
-        void initializeController();
+        virtual void initializeController();
 
-        void executeCommand(Notification *notification);
+        virtual void executeCommand(Notification *notification);
 
-        void registerCommand(const std::string &notificationName, SimpleCommand *(*factory)());
+        virtual void registerCommand(const std::string &notificationName, SimpleCommand *(*factory)());
 
-        bool hasCommand(const std::string &notificationName);
+        virtual bool hasCommand(const std::string &notificationName);
 
-        void removeCommand(const std::string &notificationName);
+        virtual void removeCommand(const std::string &notificationName);
 
         static void removeController(const std::string &key);
 
-        ~Controller();
+        virtual ~Controller();
 
-        constexpr static char const *const MULTITON_MSG = "Controller instance for this Multiton key already constructed!";
+        static constexpr const char *MULTITON_MSG = "Controller instance for this Multiton key already constructed!";
     };
 }
 

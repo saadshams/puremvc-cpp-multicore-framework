@@ -8,7 +8,7 @@ Model::Model(const std::string &key) {
     _instanceMap[key] = this;
 }
 
-Model *Model::getInstance(const std::string &key, Model *(*factory)(std::string)) {
+Model *Model::getInstance(const std::string &key, Model *(*factory)(const std::string &k)) {
     if (!_instanceMap.contains(key)) _instanceMap[key] = factory(key);
     _instanceMap[key]->initializeModel();
     return Model::_instanceMap[key];

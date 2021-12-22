@@ -8,7 +8,7 @@ Controller::Controller(const std::string &key) {
     _instanceMap[key] = this;
 }
 
-Controller *Controller::getInstance(const std::string &key, Controller *(*factory)(std::string)) {
+Controller *Controller::getInstance(const std::string &key, Controller *(*factory)(const std::string &k)) {
     if (!_instanceMap.contains(key)) _instanceMap[key] = factory(key);
     _instanceMap[key]->initializeController();
     return Controller::_instanceMap[key];

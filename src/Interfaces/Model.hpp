@@ -16,23 +16,23 @@ namespace PureMVC::Core {
     public:
         explicit Model(const std::string &key);
 
-        static Model *getInstance(const std::string &key, Model *(*factory)(std::string k));
+        static Model *getInstance(const std::string &key, Model *(*factory)(const std::string &k));
 
-        void initializeModel();
+        virtual void initializeModel();
 
-        void registerProxy(Proxy *proxy);
+        virtual void registerProxy(Proxy *proxy);
 
-        Proxy *retrieveProxy(const std::string &proxyName);
+        virtual Proxy *retrieveProxy(const std::string &proxyName);
 
-        Proxy *removeProxy(const std::string &proxyName);
+        virtual Proxy *removeProxy(const std::string &proxyName);
 
-        bool hasProxy(const std::string &proxyName);
+        virtual bool hasProxy(const std::string &proxyName);
 
         static void removeModel(const std::string &key);
 
-        ~Model();
+        virtual ~Model();
 
-        constexpr static char const *const MULTITON_MSG = "Model instance for this Multiton key already constructed!";
+        static constexpr const char *MULTITON_MSG = "Model instance for this Multiton key already constructed!";
     };
 }
 
