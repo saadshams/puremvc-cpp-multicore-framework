@@ -24,7 +24,7 @@ namespace PureMVC::Core {
 
         virtual void registerCommand(const std::string &notificationName, SimpleCommand *(*factory)());
 
-        virtual bool hasCommand(const std::string &notificationName);
+        virtual bool hasCommand(const std::string &notificationName) const;
 
         virtual void removeCommand(const std::string &notificationName);
 

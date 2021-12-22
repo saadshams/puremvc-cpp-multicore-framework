@@ -2,6 +2,9 @@
 #define PUREMVC_MEDIATOR_HPP
 
 #include <iostream>
+#include "Interfaces/Notification.hpp"
+
+using PureMVC::Patterns::Observer::Notification;
 
 namespace PureMVC::Patterns {
     class Mediator {
@@ -16,6 +19,8 @@ namespace PureMVC::Patterns {
         virtual void onRemove();
 
         virtual const char *const *listNotificationInterests();
+
+        virtual void handleNotification(Notification *notification);
 
         [[nodiscard]] virtual const std::string &getMediatorName() const;
 

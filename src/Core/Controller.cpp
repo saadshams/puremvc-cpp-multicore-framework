@@ -31,7 +31,7 @@ void Controller::registerCommand(const std::string &notificationName, SimpleComm
     _commandMap[notificationName] = factory;
 }
 
-bool Controller::hasCommand(const std::string &notificationName) {
+bool Controller::hasCommand(const std::string &notificationName) const {
     return _commandMap.contains(notificationName);
 }
 

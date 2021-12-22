@@ -7,6 +7,7 @@ namespace PureMVC::Patterns::Observer {
     class Observer {
     protected:
         void (*_notify)(Notification *notification);
+
         const void *_context;
     public:
         Observer(void (*notify)(Notification *notification), const void *context);

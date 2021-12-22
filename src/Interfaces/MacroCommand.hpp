@@ -1,9 +1,9 @@
 #ifndef PUREMVC_MACROCOMMAND_HPP
 #define PUREMVC_MACROCOMMAND_HPP
 
-#include "SimpleCommand.hpp"
-#include "Notification.hpp"
 #include <list>
+#include "Notification.hpp"
+#include "SimpleCommand.hpp"
 
 using PureMVC::Patterns::Command::SimpleCommand;
 using PureMVC::Patterns::Observer::Notification;
