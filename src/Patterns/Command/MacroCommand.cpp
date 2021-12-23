@@ -27,4 +27,6 @@ void MacroCommand::execute(Notification *notification) {
     }
 }
 
-MacroCommand::~MacroCommand() = default;
+MacroCommand::~MacroCommand() {
+    _subcommands.clear();
+}

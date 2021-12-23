@@ -42,22 +42,10 @@ include CMakeFiles/rules.ninja
 cmake_ninja_workdir = /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug/
 
 #############################################
-# Utility command for rebuild_cache
-
-build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework -B/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build rebuild_cache: phony CMakeFiles/rebuild_cache.util
-
-
-#############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -163,6 +151,86 @@ build TestObserver: CXX_EXECUTABLE_LINKER__TestObserver_Debug CMakeFiles/TestObs
   TARGET_PDB = TestObserver.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target TestSimpleCommand
+
+
+#############################################
+# Order-only phony target for TestSimpleCommand
+
+build cmake_object_order_depends_target_TestSimpleCommand: phony || cmake_object_order_depends_target_PureMVC
+
+build CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTest.cpp.o: CXX_COMPILER__TestSimpleCommand_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/patterns/command/SimpleCommandTest.cpp || cmake_object_order_depends_target_TestSimpleCommand
+  DEP_FILE = CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTest.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestSimpleCommand.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestSimpleCommand.dir/test/patterns/command
+
+build CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestCommand.cpp.o: CXX_COMPILER__TestSimpleCommand_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/patterns/command/SimpleCommandTestCommand.cpp || cmake_object_order_depends_target_TestSimpleCommand
+  DEP_FILE = CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestCommand.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestSimpleCommand.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestSimpleCommand.dir/test/patterns/command
+
+build CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestVO.cpp.o: CXX_COMPILER__TestSimpleCommand_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/patterns/command/SimpleCommandTestVO.cpp || cmake_object_order_depends_target_TestSimpleCommand
+  DEP_FILE = CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestVO.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestSimpleCommand.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestSimpleCommand.dir/test/patterns/command
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target TestSimpleCommand
+
+
+#############################################
+# Link the executable TestSimpleCommand
+
+build TestSimpleCommand: CXX_EXECUTABLE_LINKER__TestSimpleCommand_Debug CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTest.cpp.o CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestCommand.cpp.o CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestVO.cpp.o | libPureMVC.a || libPureMVC.a
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
+  LINK_LIBRARIES = libPureMVC.a
+  OBJECT_DIR = CMakeFiles/TestSimpleCommand.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = TestSimpleCommand
+  TARGET_PDB = TestSimpleCommand.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target TestNotification
+
+
+#############################################
+# Order-only phony target for TestNotification
+
+build cmake_object_order_depends_target_TestNotification: phony || cmake_object_order_depends_target_PureMVC
+
+build CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cpp.o: CXX_COMPILER__TestNotification_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Observer/NotificationTest.cpp || cmake_object_order_depends_target_TestNotification
+  DEP_FILE = CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestNotification.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestNotification.dir/test/Patterns/Observer
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target TestNotification
+
+
+#############################################
+# Link the executable TestNotification
+
+build TestNotification: CXX_EXECUTABLE_LINKER__TestNotification_Debug CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cpp.o | libPureMVC.a || libPureMVC.a
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
+  LINK_LIBRARIES = libPureMVC.a
+  OBJECT_DIR = CMakeFiles/TestNotification.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = TestNotification
+  TARGET_PDB = TestNotification.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target TestMacroCommand
 
 
@@ -224,86 +292,6 @@ build TestMacroCommand: CXX_EXECUTABLE_LINKER__TestMacroCommand_Debug CMakeFiles
   TARGET_PDB = TestMacroCommand.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target TestNotification
-
-
-#############################################
-# Order-only phony target for TestNotification
-
-build cmake_object_order_depends_target_TestNotification: phony || cmake_object_order_depends_target_PureMVC
-
-build CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cpp.o: CXX_COMPILER__TestNotification_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Observer/NotificationTest.cpp || cmake_object_order_depends_target_TestNotification
-  DEP_FILE = CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/TestNotification.dir
-  OBJECT_FILE_DIR = CMakeFiles/TestNotification.dir/test/Patterns/Observer
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target TestNotification
-
-
-#############################################
-# Link the executable TestNotification
-
-build TestNotification: CXX_EXECUTABLE_LINKER__TestNotification_Debug CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cpp.o | libPureMVC.a || libPureMVC.a
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
-  LINK_LIBRARIES = libPureMVC.a
-  OBJECT_DIR = CMakeFiles/TestNotification.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = TestNotification
-  TARGET_PDB = TestNotification.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target TestSimpleCommand
-
-
-#############################################
-# Order-only phony target for TestSimpleCommand
-
-build cmake_object_order_depends_target_TestSimpleCommand: phony || cmake_object_order_depends_target_PureMVC
-
-build CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTest.cpp.o: CXX_COMPILER__TestSimpleCommand_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/patterns/command/SimpleCommandTest.cpp || cmake_object_order_depends_target_TestSimpleCommand
-  DEP_FILE = CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTest.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/TestSimpleCommand.dir
-  OBJECT_FILE_DIR = CMakeFiles/TestSimpleCommand.dir/test/patterns/command
-
-build CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestCommand.cpp.o: CXX_COMPILER__TestSimpleCommand_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/patterns/command/SimpleCommandTestCommand.cpp || cmake_object_order_depends_target_TestSimpleCommand
-  DEP_FILE = CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestCommand.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/TestSimpleCommand.dir
-  OBJECT_FILE_DIR = CMakeFiles/TestSimpleCommand.dir/test/patterns/command
-
-build CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestVO.cpp.o: CXX_COMPILER__TestSimpleCommand_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/patterns/command/SimpleCommandTestVO.cpp || cmake_object_order_depends_target_TestSimpleCommand
-  DEP_FILE = CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestVO.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/TestSimpleCommand.dir
-  OBJECT_FILE_DIR = CMakeFiles/TestSimpleCommand.dir/test/patterns/command
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target TestSimpleCommand
-
-
-#############################################
-# Link the executable TestSimpleCommand
-
-build TestSimpleCommand: CXX_EXECUTABLE_LINKER__TestSimpleCommand_Debug CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTest.cpp.o CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestCommand.cpp.o CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestVO.cpp.o | libPureMVC.a || libPureMVC.a
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
-  LINK_LIBRARIES = libPureMVC.a
-  OBJECT_DIR = CMakeFiles/TestSimpleCommand.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = TestSimpleCommand
-  TARGET_PDB = TestSimpleCommand.dbg
-
-# =============================================================================
 # Object build statements for EXECUTABLE target TestModel
 
 
@@ -343,6 +331,65 @@ build TestModel: CXX_EXECUTABLE_LINKER__TestModel_Debug CMakeFiles/TestModel.dir
   TARGET_FILE = TestModel
   TARGET_PDB = TestModel.dbg
 
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework -B/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Object build statements for EXECUTABLE target TestController
+
+
+#############################################
+# Order-only phony target for TestController
+
+build cmake_object_order_depends_target_TestController: phony || cmake_object_order_depends_target_PureMVC
+
+build CMakeFiles/TestController.dir/test/Core/ControllerTest.cpp.o: CXX_COMPILER__TestController_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Core/ControllerTest.cpp || cmake_object_order_depends_target_TestController
+  DEP_FILE = CMakeFiles/TestController.dir/test/Core/ControllerTest.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestController.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestController.dir/test/Core
+
+build CMakeFiles/TestController.dir/test/Core/ControllerTestCommand.cpp.o: CXX_COMPILER__TestController_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Core/ControllerTestCommand.cpp || cmake_object_order_depends_target_TestController
+  DEP_FILE = CMakeFiles/TestController.dir/test/Core/ControllerTestCommand.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestController.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestController.dir/test/Core
+
+build CMakeFiles/TestController.dir/test/Core/ControllerTestCommand2.cpp.o: CXX_COMPILER__TestController_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Core/ControllerTestCommand2.cpp || cmake_object_order_depends_target_TestController
+  DEP_FILE = CMakeFiles/TestController.dir/test/Core/ControllerTestCommand2.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestController.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestController.dir/test/Core
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target TestController
+
+
+#############################################
+# Link the executable TestController
+
+build TestController: CXX_EXECUTABLE_LINKER__TestController_Debug CMakeFiles/TestController.dir/test/Core/ControllerTest.cpp.o CMakeFiles/TestController.dir/test/Core/ControllerTestCommand.cpp.o CMakeFiles/TestController.dir/test/Core/ControllerTestCommand2.cpp.o | libPureMVC.a || libPureMVC.a
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
+  LINK_LIBRARIES = libPureMVC.a
+  OBJECT_DIR = CMakeFiles/TestController.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = TestController
+  TARGET_PDB = TestController.dbg
+
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target PureMVC
 
@@ -351,6 +398,13 @@ build TestModel: CXX_EXECUTABLE_LINKER__TestModel_Debug CMakeFiles/TestModel.dir
 # Order-only phony target for PureMVC
 
 build cmake_object_order_depends_target_PureMVC: phony || CMakeFiles/PureMVC.dir
+
+build CMakeFiles/PureMVC.dir/src/Core/Controller.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Core/Controller.cpp || cmake_object_order_depends_target_PureMVC
+  DEP_FILE = CMakeFiles/PureMVC.dir/src/Core/Controller.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/PureMVC.dir
+  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Core
 
 build CMakeFiles/PureMVC.dir/src/Core/Model.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Core/Model.cpp || cmake_object_order_depends_target_PureMVC
   DEP_FILE = CMakeFiles/PureMVC.dir/src/Core/Model.cpp.o.d
@@ -401,13 +455,6 @@ build CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o: CXX_COMPILER_
   OBJECT_DIR = CMakeFiles/PureMVC.dir
   OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Mediator
 
-build CMakeFiles/PureMVC.dir/src/Core/Controller.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Core/Controller.cpp || cmake_object_order_depends_target_PureMVC
-  DEP_FILE = CMakeFiles/PureMVC.dir/src/Core/Controller.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/PureMVC.dir
-  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Core
-
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target PureMVC
@@ -416,7 +463,7 @@ build CMakeFiles/PureMVC.dir/src/Core/Controller.cpp.o: CXX_COMPILER__PureMVC_De
 #############################################
 # Link the static library libPureMVC.a
 
-build libPureMVC.a: CXX_STATIC_LIBRARY_LINKER__PureMVC_Debug CMakeFiles/PureMVC.dir/src/Core/Model.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Command/MacroCommand.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Command/SimpleCommand.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Observer/Observer.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o CMakeFiles/PureMVC.dir/src/Core/Controller.cpp.o
+build libPureMVC.a: CXX_STATIC_LIBRARY_LINKER__PureMVC_Debug CMakeFiles/PureMVC.dir/src/Core/Controller.cpp.o CMakeFiles/PureMVC.dir/src/Core/Model.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Command/MacroCommand.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Command/SimpleCommand.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Observer/Observer.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o
   ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/PureMVC.dir
@@ -438,7 +485,7 @@ build PureMVC: phony libPureMVC.a
 #############################################
 # Folder: /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug
 
-build all: phony TestProxy TestMediator TestObserver TestMacroCommand TestNotification TestSimpleCommand TestModel libPureMVC.a
+build all: phony TestProxy TestMediator TestObserver TestSimpleCommand TestNotification TestMacroCommand TestModel TestController libPureMVC.a
 
 # =============================================================================
 # Built-in targets
@@ -447,14 +494,14 @@ build all: phony TestProxy TestMediator TestObserver TestMacroCommand TestNotifi
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckIncludeFile.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckLibraryExists.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Clang.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GNU.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageMessage.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindThreads.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin-Initialize.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckIncludeFile.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckLibraryExists.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Clang.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GNU.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageMessage.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindThreads.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin-Initialize.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckIncludeFile.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckLibraryExists.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Clang.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GNU.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageMessage.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindThreads.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin-Initialize.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.5744.254/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake: phony
+build ../CMakeLists.txt /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckIncludeFile.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckLibraryExists.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Clang.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GNU.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageMessage.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindThreads.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin-Initialize.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake: phony
 
 
 #############################################

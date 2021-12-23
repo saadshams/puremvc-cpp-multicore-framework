@@ -19,9 +19,11 @@ void Controller::initializeController() {
 }
 
 void Controller::executeCommand(Notification *notification) {
-    auto *commandInstance = _commandMap[notification->getName()]();
-    // commandInstance.initializeNotifier(_multitonKey);
-    commandInstance->execute(notification);
+    if (_commandMap.contains(notification->getName())) {
+        auto *commandInstance = _commandMap[notification->getName()]();
+        // commandInstance.initializeNotifier(_multitonKey);
+        commandInstance->execute(notification);
+    }
 }
 
 void Controller::registerCommand(const std::string &notificationName, SimpleCommand *(*factory)()) {

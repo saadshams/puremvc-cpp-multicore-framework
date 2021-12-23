@@ -3,7 +3,8 @@ project(PureMVC)
 
 set(CMAKE_CXX_STANDARD 23)
 
-set(SOURCES src/Core/Model.cpp)
+set(SOURCES src/Core/Controller.cpp)
+list(APPEND SOURCES src/Core/Model.cpp)
 list(APPEND SOURCES src/Patterns/Proxy/Proxy.cpp)
 list(APPEND SOURCES src/Patterns/Command/MacroCommand.cpp)
 list(APPEND SOURCES src/Patterns/Command/SimpleCommand.cpp)
@@ -15,7 +16,10 @@ find_package(Threads)
 target_link_libraries(PureMVC ${CMAKE_THREAD_LIBS_INIT})
 target_include_directories(PureMVC PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
-add_executable(TestModel test/Core/ModelTest.cpp test/Core/ModelTest.hpp test/Core/ModelTestProxy.cpp test/Core/ModelTestProxy.hpp)
+add_executable(TestController test/Core/ControllerTest.cpp test/Core/ControllerTestCommand.cpp test/Core/ControllerTestCommand2.cpp test/Core/ControllerTestVO.hpp)
+target_link_libraries(TestController PureMVC)
+
+add_executable(TestModel test/Core/ModelTest.cpp test/Core/ModelTestProxy.cpp)
 target_link_libraries(TestModel PureMVC)
 
 set(TestMacroCommand test/Patterns/Command/MacroCommandTest.cpp)
