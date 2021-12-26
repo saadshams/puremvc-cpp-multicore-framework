@@ -23,6 +23,9 @@ target_link_libraries(TestController PureMVC)
 add_executable(TestModel test/Core/ModelTest.cpp test/Core/ModelTestProxy.cpp)
 target_link_libraries(TestModel PureMVC)
 
+add_executable(TestView test/Core/ViewTest.cpp)
+target_link_libraries(TestView PureMVC)
+
 set(TestMacroCommand test/Patterns/Command/MacroCommandTest.cpp)
 list(APPEND TestMacroCommand test/Patterns/Command/MacroCommandTestCommand.cpp)
 list(APPEND TestMacroCommand test/Patterns/Command/MacroCommandTestSub1Command.cpp)

@@ -2,14 +2,20 @@
 #include "Interfaces/Observer.hpp"
 #include <iostream>
 
-using PureMVC::Patterns::Observer::Observer;
+using PureMVC::Patterns::Mediator;
 using PureMVC::Patterns::Observer::Notification;
+using PureMVC::Patterns::Observer::Observer;
 
-int value = 5;
+struct Object {
+    int value;
+};
 
-static void handleNotification(Notification *notification) {
-    *(int *) notification->getBody() = 10;
-}
+class TestMediator : Mediator {
+public:
+    void handleNotification(Notification *notification) override {
+        *(int *) notification->getBody() = 10;
+    }
+};
 
 int main() {
     testObserverAccessors();
@@ -20,34 +26,33 @@ int main() {
 }
 
 void testObserverAccessors() {
-    struct Object {
-    } object;
+    auto *mediator = new TestMediator();
     auto *observer = new Observer(nullptr, nullptr);
-    observer->setNotifyMethod(handleNotification);
-    observer->setNotifyContext(&object);
 
-    auto *notification = new Notification("ObserverTestNote", &value);
+    observer->setNotifyMethod([mediator](Notification* note){mediator->handleNotification(note);});
+    observer->setNotifyContext(&mediator);
+
+    auto object = Object{5};
+    auto *notification = new Notification("ObserverTestNote", &object);
     observer->notifyObserver(notification);
 
-    assert(value == 10);
-    value = 5;
+    assert(object.value == 10);
 
     delete notification;
     delete observer;
 }
 
 void testObserverConstructor() {
-    struct Object {
-    } object;
-    auto *observer = new Observer(handleNotification, &object);
-    auto *notification = new Notification("ObserverTestNote", &value);
+    auto object = Object{5};
+    auto *mediator = new TestMediator();
+
+    auto *observer = new Observer([mediator](Notification *note) { mediator->handleNotification(note); }, &object);
+    auto *notification = new Notification("ObserverTestNote", &object);
 
     observer->notifyObserver(notification);
 
-    assert(value == 10);
-    value = 5;
-
-    assert(observer->getNotifyMethod() == handleNotification);
+    assert(object.value == 10);
+    assert(observer->getNotifyMethod());
     assert(observer->getNotifyContext() == &object);
 
     delete notification;
@@ -55,9 +60,9 @@ void testObserverConstructor() {
 }
 
 void testCompareNotifyContext() {
-    struct Object {
-    } object, negTestObj;
-    auto *observer = new Observer(handleNotification, &object);
+    auto object = Object{}, negTestObj = Object{};
+
+    auto *observer = new Observer(nullptr, &object);
 
     assert(observer->compareNotifyContext(&negTestObj) == false);
     assert(observer->compareNotifyContext(&object) == true);

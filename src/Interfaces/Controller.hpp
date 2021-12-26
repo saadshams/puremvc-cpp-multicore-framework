@@ -16,7 +16,8 @@ namespace PureMVC::Core {
     public:
         explicit Controller(const std::string &key);
 
-        static Controller *getInstance(const std::string &key, Controller *(*factory)(const std::string &k));
+//        static Controller *getInstance(const std::string &key, Controller *(*factory)(const std::string &k));
+        static Controller *getInstance(const std::string &key, const std::function<Controller *(const std::string &k)>& factory);
 
         virtual void initializeController();
 

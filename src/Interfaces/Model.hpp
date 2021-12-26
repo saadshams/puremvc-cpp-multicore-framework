@@ -16,7 +16,7 @@ namespace PureMVC::Core {
     public:
         explicit Model(const std::string &key);
 
-        static Model *getInstance(const std::string &key, Model *(*factory)(const std::string &k));
+        static Model *getInstance(const std::string &key, const std::function<Model *(const std::string &k)> &factory);
 
         virtual void initializeModel();
 

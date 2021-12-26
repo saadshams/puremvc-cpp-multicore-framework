@@ -42,6 +42,18 @@ include CMakeFiles/rules.ninja
 cmake_ninja_workdir = /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug/
 
 #############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework -B/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+
+#############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
@@ -118,6 +130,95 @@ build TestMediator: CXX_EXECUTABLE_LINKER__TestMediator_Debug CMakeFiles/TestMed
   TARGET_PDB = TestMediator.dbg
 
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target PureMVC
+
+
+#############################################
+# Order-only phony target for PureMVC
+
+build cmake_object_order_depends_target_PureMVC: phony || CMakeFiles/PureMVC.dir
+
+build CMakeFiles/PureMVC.dir/src/Core/Controller.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Core/Controller.cpp || cmake_object_order_depends_target_PureMVC
+  DEP_FILE = CMakeFiles/PureMVC.dir/src/Core/Controller.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/PureMVC.dir
+  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Core
+
+build CMakeFiles/PureMVC.dir/src/Core/Model.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Core/Model.cpp || cmake_object_order_depends_target_PureMVC
+  DEP_FILE = CMakeFiles/PureMVC.dir/src/Core/Model.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/PureMVC.dir
+  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Core
+
+build CMakeFiles/PureMVC.dir/src/Core/View.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Core/View.cpp || cmake_object_order_depends_target_PureMVC
+  DEP_FILE = CMakeFiles/PureMVC.dir/src/Core/View.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/PureMVC.dir
+  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Core
+
+build CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Proxy/Proxy.cpp || cmake_object_order_depends_target_PureMVC
+  DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/PureMVC.dir
+  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Proxy
+
+build CMakeFiles/PureMVC.dir/src/Patterns/Command/MacroCommand.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Command/MacroCommand.cpp || cmake_object_order_depends_target_PureMVC
+  DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Command/MacroCommand.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/PureMVC.dir
+  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Command
+
+build CMakeFiles/PureMVC.dir/src/Patterns/Command/SimpleCommand.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Command/SimpleCommand.cpp || cmake_object_order_depends_target_PureMVC
+  DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Command/SimpleCommand.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/PureMVC.dir
+  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Command
+
+build CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Observer/Notification.cpp || cmake_object_order_depends_target_PureMVC
+  DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/PureMVC.dir
+  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Observer
+
+build CMakeFiles/PureMVC.dir/src/Patterns/Observer/Observer.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Observer/Observer.cpp || cmake_object_order_depends_target_PureMVC
+  DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Observer/Observer.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/PureMVC.dir
+  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Observer
+
+build CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Mediator/Mediator.cpp || cmake_object_order_depends_target_PureMVC
+  DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/PureMVC.dir
+  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Mediator
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target PureMVC
+
+
+#############################################
+# Link the static library libPureMVC.a
+
+build libPureMVC.a: CXX_STATIC_LIBRARY_LINKER__PureMVC_Debug CMakeFiles/PureMVC.dir/src/Core/Controller.cpp.o CMakeFiles/PureMVC.dir/src/Core/Model.cpp.o CMakeFiles/PureMVC.dir/src/Core/View.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Command/MacroCommand.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Command/SimpleCommand.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Observer/Observer.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o
+  ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles/PureMVC.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = libPureMVC.a
+  TARGET_PDB = PureMVC.a.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target TestObserver
 
 
@@ -149,6 +250,39 @@ build TestObserver: CXX_EXECUTABLE_LINKER__TestObserver_Debug CMakeFiles/TestObs
   PRE_LINK = :
   TARGET_FILE = TestObserver
   TARGET_PDB = TestObserver.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target TestView
+
+
+#############################################
+# Order-only phony target for TestView
+
+build cmake_object_order_depends_target_TestView: phony || cmake_object_order_depends_target_PureMVC
+
+build CMakeFiles/TestView.dir/test/Core/ViewTest.cpp.o: CXX_COMPILER__TestView_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Core/ViewTest.cpp || cmake_object_order_depends_target_TestView
+  DEP_FILE = CMakeFiles/TestView.dir/test/Core/ViewTest.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestView.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestView.dir/test/Core
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target TestView
+
+
+#############################################
+# Link the executable TestView
+
+build TestView: CXX_EXECUTABLE_LINKER__TestView_Debug CMakeFiles/TestView.dir/test/Core/ViewTest.cpp.o | libPureMVC.a || libPureMVC.a
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
+  LINK_LIBRARIES = libPureMVC.a
+  OBJECT_DIR = CMakeFiles/TestView.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = TestView
+  TARGET_PDB = TestView.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target TestSimpleCommand
@@ -331,18 +465,6 @@ build TestModel: CXX_EXECUTABLE_LINKER__TestModel_Debug CMakeFiles/TestModel.dir
   TARGET_FILE = TestModel
   TARGET_PDB = TestModel.dbg
 
-
-#############################################
-# Utility command for rebuild_cache
-
-build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework -B/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build rebuild_cache: phony CMakeFiles/rebuild_cache.util
-
 # =============================================================================
 # Object build statements for EXECUTABLE target TestController
 
@@ -391,95 +513,6 @@ build TestController: CXX_EXECUTABLE_LINKER__TestController_Debug CMakeFiles/Tes
   TARGET_PDB = TestController.dbg
 
 # =============================================================================
-# Object build statements for STATIC_LIBRARY target PureMVC
-
-
-#############################################
-# Order-only phony target for PureMVC
-
-build cmake_object_order_depends_target_PureMVC: phony || CMakeFiles/PureMVC.dir
-
-build CMakeFiles/PureMVC.dir/src/Core/Controller.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Core/Controller.cpp || cmake_object_order_depends_target_PureMVC
-  DEP_FILE = CMakeFiles/PureMVC.dir/src/Core/Controller.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/PureMVC.dir
-  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Core
-
-build CMakeFiles/PureMVC.dir/src/Core/Model.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Core/Model.cpp || cmake_object_order_depends_target_PureMVC
-  DEP_FILE = CMakeFiles/PureMVC.dir/src/Core/Model.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/PureMVC.dir
-  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Core
-
-build CMakeFiles/PureMVC.dir/src/Core/View.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Core/View.cpp || cmake_object_order_depends_target_PureMVC
-  DEP_FILE = CMakeFiles/PureMVC.dir/src/Core/View.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/PureMVC.dir
-  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Core
-
-build CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Proxy/Proxy.cpp || cmake_object_order_depends_target_PureMVC
-  DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/PureMVC.dir
-  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Proxy
-
-build CMakeFiles/PureMVC.dir/src/Patterns/Command/MacroCommand.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Command/MacroCommand.cpp || cmake_object_order_depends_target_PureMVC
-  DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Command/MacroCommand.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/PureMVC.dir
-  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Command
-
-build CMakeFiles/PureMVC.dir/src/Patterns/Command/SimpleCommand.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Command/SimpleCommand.cpp || cmake_object_order_depends_target_PureMVC
-  DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Command/SimpleCommand.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/PureMVC.dir
-  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Command
-
-build CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Observer/Notification.cpp || cmake_object_order_depends_target_PureMVC
-  DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/PureMVC.dir
-  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Observer
-
-build CMakeFiles/PureMVC.dir/src/Patterns/Observer/Observer.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Observer/Observer.cpp || cmake_object_order_depends_target_PureMVC
-  DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Observer/Observer.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/PureMVC.dir
-  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Observer
-
-build CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Mediator/Mediator.cpp || cmake_object_order_depends_target_PureMVC
-  DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/PureMVC.dir
-  OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Mediator
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target PureMVC
-
-
-#############################################
-# Link the static library libPureMVC.a
-
-build libPureMVC.a: CXX_STATIC_LIBRARY_LINKER__PureMVC_Debug CMakeFiles/PureMVC.dir/src/Core/Controller.cpp.o CMakeFiles/PureMVC.dir/src/Core/Model.cpp.o CMakeFiles/PureMVC.dir/src/Core/View.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Command/MacroCommand.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Command/SimpleCommand.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Observer/Observer.cpp.o CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o
-  ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
-  LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = CMakeFiles/PureMVC.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = libPureMVC.a
-  TARGET_PDB = PureMVC.a.dbg
-
-# =============================================================================
 # Target aliases.
 
 build PureMVC: phony libPureMVC.a
@@ -492,7 +525,7 @@ build PureMVC: phony libPureMVC.a
 #############################################
 # Folder: /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug
 
-build all: phony TestProxy TestMediator TestObserver TestSimpleCommand TestNotification TestMacroCommand TestModel TestController libPureMVC.a
+build all: phony TestProxy TestMediator libPureMVC.a TestObserver TestView TestSimpleCommand TestNotification TestMacroCommand TestModel TestController
 
 # =============================================================================
 # Built-in targets

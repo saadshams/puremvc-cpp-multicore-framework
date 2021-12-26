@@ -1,16 +1,16 @@
 #ifndef PUREMVC_OBSERVER_HPP
 #define PUREMVC_OBSERVER_HPP
 
+#include "Mediator.hpp"
 #include "Notification.hpp"
 
 namespace PureMVC::Patterns::Observer {
     class Observer {
     protected:
-        void (*_notify)(Notification *notification);
-
+        std::function<void(Notification *)> _notify;
         const void *_context;
     public:
-        Observer(void (*notify)(Notification *notification), const void *context);
+        explicit Observer(std::function<void(Notification *)> notify, const void *context);
 
         virtual void notifyObserver(Notification *notification);
 
@@ -18,11 +18,11 @@ namespace PureMVC::Patterns::Observer {
 
         virtual void setNotifyContext(const void *context);
 
-        virtual void setNotifyMethod(void (*notify)(Notification *notification));
+        virtual void setNotifyMethod(std::function<void(Notification *)> notify);
 
         [[nodiscard]] virtual const void *getNotifyContext() const;
 
-        [[nodiscard]] virtual void (*getNotifyMethod())(Notification *notification);
+        [[nodiscard]] virtual std::function<void(Notification *)> getNotifyMethod();
 
         virtual ~Observer();
     };

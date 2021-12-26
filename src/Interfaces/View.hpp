@@ -14,14 +14,20 @@ namespace PureMVC::Core {
     protected:
         std::string _multitonKey;
         std::map<std::string, Mediator *> _mediatorMap;
-        std::map<std::string, Observer *> _observerMap;
+        std::map<std::string, std::vector<Observer *>> _observerMap;
         inline static std::map<std::string, View *> _instanceMap;
     public:
         explicit View(const std::string &key);
 
-        static View *getInstance(const std::string &key, View *(*factory)(const std::string &));
+        static View *getInstance(const std::string &key, const std::function<View *(const std::string &k)> &factory);
 
         virtual void initializeView();
+
+        void registerObserver(const std::string &notificationName, Observer *observer);
+
+        void notifyObservers(Notification *notification);
+
+        void removeObserver(const std::string &notificationName, const void *notifyContext);
 
         virtual void registerMediator(Mediator *mediator);
 
@@ -30,6 +36,8 @@ namespace PureMVC::Core {
         virtual Mediator *removeMediator(const std::string &mediatorName);
 
         virtual bool hasMediator(const std::string &mediatorName);
+
+        static void removeView(const std::string &key);
 
         virtual ~View();
 
