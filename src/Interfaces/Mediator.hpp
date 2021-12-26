@@ -2,6 +2,7 @@
 #define PUREMVC_MEDIATOR_HPP
 
 #include <iostream>
+#include <vector>
 #include "Interfaces/Notification.hpp"
 
 using PureMVC::Patterns::Observer::Notification;
@@ -18,7 +19,7 @@ namespace PureMVC::Patterns {
 
         virtual void onRemove();
 
-        virtual const char *const *listNotificationInterests();
+        virtual std::vector<std::string> listNotificationInterests();
 
         virtual void handleNotification(Notification *notification);
 

@@ -15,9 +15,8 @@ void Mediator::onRemove() {
 
 }
 
-const char *const *Mediator::listNotificationInterests() {
-    static const char *const interests[] = {nullptr};
-    return interests;
+std::vector<std::string> Mediator::listNotificationInterests() {
+    return {};
 }
 
 void Mediator::handleNotification(Notification *notification) {

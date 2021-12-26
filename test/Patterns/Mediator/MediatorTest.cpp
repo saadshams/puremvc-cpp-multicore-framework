@@ -39,15 +39,9 @@ void testListNotificationInterests() {
     } view;
     auto *mediator = new Mediator(Mediator::NAME, &view);
 
-    const char *const *interests = mediator->listNotificationInterests();
+    std::vector<std::string> interests = mediator->listNotificationInterests();
 
-    int i = 0;
-    for (const char *const *cursor = interests; *cursor != nullptr; cursor++) {
-        i++;
-    }
-
-    // test assertions
-    assert(i == 0);
+    assert(interests.empty());
 
     delete mediator;
 }
