@@ -84,7 +84,8 @@ void testHasCommand() {
 }
 
 void testReregisterAndExecuteCommand() {
-    auto *controller = Controller::getInstance("ControllerTestKey5", [](const std::string &k) { return new Controller(k); });
+    auto *controller = Controller::getInstance("ControllerTestKey5",
+                                               [](const std::string &k) { return new Controller(k); });
 
     controller->registerCommand("ControllerTest2", []() -> SimpleCommand * { return new ControllerTestCommand2(); });
 
@@ -95,13 +96,13 @@ void testReregisterAndExecuteCommand() {
     auto vo = ControllerTestVO{12};
     auto *notification = new Notification("ControllerTest2", &vo);
 
-     auto *_view = View::getInstance("ControllerTestKey5", [](const std::string &k) {return new View(k); });
+    auto *_view = View::getInstance("ControllerTestKey5", [](const std::string &k) { return new View(k); });
 
-     _view->notifyObservers(notification);
+    _view->notifyObservers(notification);
 
-     assert(vo.result == 24);
+    assert(vo.result == 24);
 
-     _view->notifyObservers(notification);
+    _view->notifyObservers(notification);
 
-     assert(vo.result == 48);
+    assert(vo.result == 48);
 }

@@ -14,7 +14,7 @@ public:
 
     void handleNotification(Notification *notification) override;
 
-    [[nodiscard]] const ViewTestObject * getViewTestObject() const;
+    [[nodiscard]] const ViewTestObject *getViewTestObject() const;
 
     static constexpr const char *NAME = "ViewTestMediator";
 };

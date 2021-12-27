@@ -1,6 +1,6 @@
 #include "ViewTestMediator.hpp"
 
-ViewTestMediator::ViewTestMediator(const ViewTestObject *object) : Mediator(NAME, object)  {
+ViewTestMediator::ViewTestMediator(const ViewTestObject *object) : Mediator(NAME, object) {
 
 }
 
@@ -13,5 +13,5 @@ void ViewTestMediator::handleNotification(Notification *notification) {
 }
 
 const ViewTestObject *ViewTestMediator::getViewTestObject() const {
-    return (ViewTestObject *)_viewComponent;
+    return (ViewTestObject *) _viewComponent;
 }

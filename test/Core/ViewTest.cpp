@@ -37,7 +37,7 @@ void testRegisterAndNotifyObserver() {
     auto viewTestObject = ViewTestObject{5};
     auto *testMediator = new ViewTestMediator(&viewTestObject);
 
-    std::function<void(Notification*)> handler = [testMediator](Notification *note) {
+    std::function<void(Notification *)> handler = [testMediator](Notification *note) {
         testMediator->handleNotification(note);
     };
     auto *observer = new Observer(handler, testMediator);
@@ -51,14 +51,14 @@ void testRegisterAndNotifyObserver() {
 }
 
 void testRegisterAndRetrieveMediator() {
-    auto *view = View::getInstance("ViewTestKey3", [](const std::string &k){ return new View(k); });
+    auto *view = View::getInstance("ViewTestKey3", [](const std::string &k) { return new View(k); });
 
     auto object = ViewTestObject{5};
     auto *viewTestMediator = new ViewTestMediator(&object);
     view->registerMediator(viewTestMediator);
-    
+
     auto *mediator = view->retrieveMediator(ViewTestMediator::NAME);
-    
+
     assert(viewTestMediator == mediator);
 }
 
@@ -105,13 +105,13 @@ void testOnRegisterAndOnRemove() {
 }
 
 void testSuccessiveRegisterAndRemoveMediator() {
-    auto *view = View::getInstance("ViewTestKey7", [](const std::string &k) {return new View(k); });
+    auto *view = View::getInstance("ViewTestKey7", [](const std::string &k) { return new View(k); });
 
     auto object = ViewTestObject{};
 
     view->registerMediator(new ViewTestMediator(&object));
 
-    assert(dynamic_cast<ViewTestMediator*>(view->retrieveMediator(ViewTestMediator::NAME)) != nullptr);
+    assert(dynamic_cast<ViewTestMediator *>(view->retrieveMediator(ViewTestMediator::NAME)) != nullptr);
 
     view->removeMediator(ViewTestMediator::NAME);
 
@@ -121,7 +121,7 @@ void testSuccessiveRegisterAndRemoveMediator() {
 
     view->registerMediator(new ViewTestMediator(&object));
 
-    assert(dynamic_cast<ViewTestMediator*>(view->retrieveMediator(ViewTestMediator::NAME)) != nullptr);
+    assert(dynamic_cast<ViewTestMediator *>(view->retrieveMediator(ViewTestMediator::NAME)) != nullptr);
 
     view->removeMediator(ViewTestMediator::NAME);
 
@@ -129,7 +129,7 @@ void testSuccessiveRegisterAndRemoveMediator() {
 }
 
 void testRemoveMediatorAndSubsequentNotify() {
-    auto *view = View::getInstance("ViewTestKey8", [](const std::string &k){return new View(k);});
+    auto *view = View::getInstance("ViewTestKey8", [](const std::string &k) { return new View(k); });
 
     auto object = ViewTestObject{};
     view->registerMediator(new ViewTestMediator2(&object));

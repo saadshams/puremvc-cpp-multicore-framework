@@ -32,7 +32,7 @@ void View::notifyObservers(Notification *notification) {
     if (_observerMap.contains(notification->getName())) {
         auto observers = _observerMap[notification->getName()];
 
-        std::for_each(observers.begin(), observers.end(),[notification](auto *observer) {
+        std::for_each(observers.begin(), observers.end(), [notification](auto *observer) {
             observer->notifyObserver(notification);
         });
     }
@@ -49,7 +49,7 @@ void View::removeObserver(const std::string &notificationName, const void *notif
     }
 
     if (observers.empty()) {
-        _observerMap.erase(notificationName);
+        _observerMap.erase(_observerMap.find(notificationName));
     }
 }
 
