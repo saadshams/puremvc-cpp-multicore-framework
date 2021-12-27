@@ -1,5 +1,7 @@
 #include "Interfaces/Observer.hpp"
 
+#include <utility>
+
 using PureMVC::Patterns::Observer::Observer;
 using PureMVC::Patterns::Observer::Notification;
 
@@ -13,7 +15,7 @@ void Observer::setNotifyContext(const void *context) {
 }
 
 void Observer::setNotifyMethod(std::function<void(Notification *)> notify) {
-    this->_notify = std::move(notify);
+    this->_notify = notify;
 }
 
 const void *Observer::getNotifyContext() const {
@@ -25,7 +27,7 @@ std::function<void(Notification *)> Observer::getNotifyMethod() {
 }
 
 void Observer::notifyObserver(Notification *notification) {
-    this->_notify(notification);
+    _notify(notification);
 }
 
 bool Observer::compareNotifyContext(const void *object) const {

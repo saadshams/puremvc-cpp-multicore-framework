@@ -6,6 +6,7 @@ Controller::Controller(const std::string &key) {
     if (_instanceMap.contains(key)) throw std::runtime_error(MULTITON_MSG);
     _multitonKey = key;
     _instanceMap[key] = this;
+    _view = nullptr;
 }
 
 Controller *Controller::getInstance(const std::string &key, const std::function<Controller *(const std::string &k)> &factory) {
@@ -15,7 +16,7 @@ Controller *Controller::getInstance(const std::string &key, const std::function<
 }
 
 void Controller::initializeController() {
-    // view.getInstance
+    _view = View::getInstance(_multitonKey, [](const std::string &k) { return new View(k); });
 }
 
 void Controller::executeCommand(Notification *notification) {
@@ -28,7 +29,8 @@ void Controller::executeCommand(Notification *notification) {
 
 void Controller::registerCommand(const std::string &notificationName, SimpleCommand *(*factory)()) {
     if (!_commandMap.contains(notificationName)) {
-        // view.registerObserver
+        std::function<void(Notification *)> handler = [this](Notification *note) { executeCommand(note); };
+        _view->registerObserver(notificationName, new Observer(handler, this));
     }
     _commandMap[notificationName] = factory;
 }
@@ -39,8 +41,7 @@ bool Controller::hasCommand(const std::string &notificationName) const {
 
 void Controller::removeCommand(const std::string &notificationName) {
     if (hasCommand(notificationName)) {
-        // view.removeObserver();
-
+        _view->removeObserver(notificationName, this);
         _commandMap.erase(notificationName);
     }
 }

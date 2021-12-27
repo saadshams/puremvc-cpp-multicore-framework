@@ -4,20 +4,21 @@
 #include <iostream>
 #include <map>
 #include "Interfaces/SimpleCommand.hpp"
+#include "Interfaces/View.hpp"
 
 using PureMVC::Patterns::Command::SimpleCommand;
 
 namespace PureMVC::Core {
     class Controller {
     protected:
+        View *_view;
         std::string _multitonKey;
         std::map<std::string, SimpleCommand *(*)()> _commandMap;
         inline static std::map<std::string, Controller *> _instanceMap;
     public:
         explicit Controller(const std::string &key);
 
-//        static Controller *getInstance(const std::string &key, Controller *(*factory)(const std::string &k));
-        static Controller *getInstance(const std::string &key, const std::function<Controller *(const std::string &k)>& factory);
+        static Controller *getInstance(const std::string &key, const std::function<Controller *(const std::string &k)> &factory);
 
         virtual void initializeController();
 

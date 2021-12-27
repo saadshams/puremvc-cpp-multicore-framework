@@ -267,6 +267,27 @@ build CMakeFiles/TestView.dir/test/Core/ViewTest.cpp.o: CXX_COMPILER__TestView_D
   OBJECT_DIR = CMakeFiles/TestView.dir
   OBJECT_FILE_DIR = CMakeFiles/TestView.dir/test/Core
 
+build CMakeFiles/TestView.dir/test/Core/ViewTestMediator.cpp.o: CXX_COMPILER__TestView_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Core/ViewTestMediator.cpp || cmake_object_order_depends_target_TestView
+  DEP_FILE = CMakeFiles/TestView.dir/test/Core/ViewTestMediator.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestView.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestView.dir/test/Core
+
+build CMakeFiles/TestView.dir/test/Core/ViewTestMediator2.cpp.o: CXX_COMPILER__TestView_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Core/ViewTestMediator2.cpp || cmake_object_order_depends_target_TestView
+  DEP_FILE = CMakeFiles/TestView.dir/test/Core/ViewTestMediator2.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestView.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestView.dir/test/Core
+
+build CMakeFiles/TestView.dir/test/Core/ViewTestMediator4.cpp.o: CXX_COMPILER__TestView_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Core/ViewTestMediator4.cpp || cmake_object_order_depends_target_TestView
+  DEP_FILE = CMakeFiles/TestView.dir/test/Core/ViewTestMediator4.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestView.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestView.dir/test/Core
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target TestView
@@ -275,7 +296,7 @@ build CMakeFiles/TestView.dir/test/Core/ViewTest.cpp.o: CXX_COMPILER__TestView_D
 #############################################
 # Link the executable TestView
 
-build TestView: CXX_EXECUTABLE_LINKER__TestView_Debug CMakeFiles/TestView.dir/test/Core/ViewTest.cpp.o | libPureMVC.a || libPureMVC.a
+build TestView: CXX_EXECUTABLE_LINKER__TestView_Debug CMakeFiles/TestView.dir/test/Core/ViewTest.cpp.o CMakeFiles/TestView.dir/test/Core/ViewTestMediator.cpp.o CMakeFiles/TestView.dir/test/Core/ViewTestMediator2.cpp.o CMakeFiles/TestView.dir/test/Core/ViewTestMediator4.cpp.o | libPureMVC.a || libPureMVC.a
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
   LINK_LIBRARIES = libPureMVC.a
   OBJECT_DIR = CMakeFiles/TestView.dir

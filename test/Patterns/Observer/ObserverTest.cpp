@@ -6,7 +6,7 @@ using PureMVC::Patterns::Mediator;
 using PureMVC::Patterns::Observer::Notification;
 using PureMVC::Patterns::Observer::Observer;
 
-struct Object {
+struct ViewTestObject {
     int value;
 };
 
@@ -29,7 +29,9 @@ void testObserverAccessors() {
     auto *mediator = new TestMediator();
     auto *observer = new Observer(nullptr, nullptr);
 
-    observer->setNotifyMethod([mediator](Notification* note){mediator->handleNotification(note);});
+    std::function<void(Notification*)> func = [mediator](Notification *note){mediator->handleNotification(note);};
+    observer->setNotifyMethod(&func);
+
     observer->setNotifyContext(&mediator);
 
     auto object = Object{5};
@@ -46,7 +48,8 @@ void testObserverConstructor() {
     auto object = Object{5};
     auto *mediator = new TestMediator();
 
-    auto *observer = new Observer([mediator](Notification *note) { mediator->handleNotification(note); }, &object);
+    std::function<void(Notification*)> handler = [mediator](Notification *note){mediator->handleNotification(note);};
+    auto *observer = new Observer(&handler, &object);
     auto *notification = new Notification("ObserverTestNote", &object);
 
     observer->notifyObserver(notification);
@@ -60,7 +63,7 @@ void testObserverConstructor() {
 }
 
 void testCompareNotifyContext() {
-    auto object = Object{}, negTestObj = Object{};
+    auto object = ViewTestObject{}, negTestObj = ViewTestObject{};
 
     auto *observer = new Observer(nullptr, &object);
 
@@ -69,3 +72,4 @@ void testCompareNotifyContext() {
 
     delete observer;
 }
+

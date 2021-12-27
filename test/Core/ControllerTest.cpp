@@ -3,10 +3,12 @@
 #include "ControllerTestCommand.hpp"
 #include "ControllerTestCommand2.hpp"
 #include "Interfaces/Controller.hpp"
+#include "Interfaces/View.hpp"
 #include "Interfaces/Notification.hpp"
 #include "ControllerTestVO.hpp"
 
 using PureMVC::Core::Controller;
+using PureMVC::Core::View;
 using PureMVC::Patterns::Observer::Notification;
 
 int main() {
@@ -90,16 +92,16 @@ void testReregisterAndExecuteCommand() {
 
     controller->registerCommand("ControllerTest2", []() -> SimpleCommand * { return new ControllerTestCommand2(); });
 
-//    auto vo = ControllerTestVO{12};
-//    auto *notification = new Notification("ControllerTest2", &vo);
+    auto vo = ControllerTestVO{12};
+    auto *notification = new Notification("ControllerTest2", &vo);
 
-    // auto *view = View::getInstance("ControllerTestKey5", [](const std::string &k) {return new View(k); });
+     auto *_view = View::getInstance("ControllerTestKey5", [](const std::string &k) {return new View(k); });
 
-    // view->notifyObserver(notification);
+     _view->notifyObservers(notification);
 
-    // assert(vo.result == 24);
+     assert(vo.result == 24);
 
-    // view.notifyObservers(notification);
+     _view->notifyObservers(notification);
 
-    // assert(vo.result == 48);
+     assert(vo.result == 48);
 }

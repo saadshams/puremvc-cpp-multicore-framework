@@ -19,20 +19,22 @@ void View::initializeView() {
 }
 
 void View::registerObserver(const std::string &notificationName, Observer *observer) {
-    if (_observerMap.contains(notificationName)) {
-        _observerMap[notificationName].push_back(observer);
-    } else {
-        // _observerMap[notificationName] = [observer]; // push back
-        _observerMap[notificationName].push_back(observer);
-    }
+    _observerMap[notificationName].push_back(observer);
+//    if (_observerMap.contains(notificationName)) {
+//        _observerMap[notificationName].push_back(observer);
+//    } else {
+//        // _observerMap[notificationName] = [observer]; // push back
+//        _observerMap[notificationName].push_back(observer);
+//    }
 }
 
 void View::notifyObservers(Notification *notification) {
     if (_observerMap.contains(notification->getName())) {
         auto observers = _observerMap[notification->getName()];
 
-        std::for_each(observers.begin(), observers.end(),
-                      [notification](auto *observer) { observer->notifyObserver(notification); });
+        std::for_each(observers.begin(), observers.end(),[notification](auto *observer) {
+            observer->notifyObserver(notification);
+        });
     }
 }
 
@@ -59,10 +61,24 @@ void View::registerMediator(Mediator *mediator) {
     _mediatorMap[mediator->getMediatorName()] = mediator;
 
     auto interests = mediator->listNotificationInterests();
+
+    std::function<void(Notification *)> handler = [mediator](Notification *notification) {
+        mediator->handleNotification(notification);
+    };
+    if (!interests.empty()) {
+        auto *observer = new Observer(handler, mediator);
+
+        for (auto &interest: interests) {
+            registerObserver(interest, observer);
+        }
+    }
+
+    mediator->onRegister();
 }
 
 Mediator *View::retrieveMediator(const std::string &mediatorName) {
-    return _mediatorMap[mediatorName];
+    auto position = _mediatorMap.find(mediatorName);
+    return position == _mediatorMap.end() ? nullptr : position->second;
 }
 
 Mediator *View::removeMediator(const std::string &mediatorName) {
@@ -72,7 +88,7 @@ Mediator *View::removeMediator(const std::string &mediatorName) {
         for (auto &interest: interests) {
             removeObserver(interest, mediator);
         }
-        _mediatorMap.erase(mediatorName);
+        _mediatorMap.erase(_mediatorMap.find(mediatorName));
         mediator->onRemove();
     }
     return mediator;

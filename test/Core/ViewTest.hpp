@@ -7,4 +7,16 @@ void testGetInstance();
 
 void testRegisterAndNotifyObserver();
 
+void testRegisterAndRetrieveMediator();
+
+void testHasMediator();
+
+void testRegisterAndRemoveMediator();
+
+void testOnRegisterAndOnRemove();
+
+void testSuccessiveRegisterAndRemoveMediator();
+
+void testRemoveMediatorAndSubsequentNotify();
+
 #endif //PUREMVC_VIEWTEST_HPP

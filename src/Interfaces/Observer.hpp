@@ -7,10 +7,10 @@
 namespace PureMVC::Patterns::Observer {
     class Observer {
     protected:
-        std::function<void(Notification *)> _notify;
+        std::function<void(Notification *notification)> _notify;
         const void *_context;
     public:
-        explicit Observer(std::function<void(Notification *)> notify, const void *context);
+        explicit Observer(std::function<void(Notification *)> notify = nullptr, const void *context = nullptr);
 
         virtual void notifyObserver(Notification *notification);
 
