@@ -13,19 +13,18 @@ namespace PureMVC::Core {
     protected:
         View *_view;
         std::string _multitonKey;
-        std::map<std::string, SimpleCommand *(*)()> _commandMap;
+        std::map<std::string, std::function<SimpleCommand *()>> _commandMap;
         inline static std::map<std::string, Controller *> _instanceMap;
     public:
         explicit Controller(const std::string &key);
 
-        static Controller *
-        getInstance(const std::string &key, const std::function<Controller *(const std::string &k)> &factory);
+        static Controller *getInstance(const std::string &key, const std::function<Controller *(const std::string &k)> &factory);
 
         virtual void initializeController();
 
         virtual void executeCommand(Notification *notification);
 
-        virtual void registerCommand(const std::string &notificationName, SimpleCommand *(*factory)());
+        virtual void registerCommand(const std::string &notificationName, std::function<SimpleCommand*()> factory);
 
         [[nodiscard]] virtual bool hasCommand(const std::string &notificationName) const;
 

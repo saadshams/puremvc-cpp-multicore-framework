@@ -19,4 +19,10 @@ void testSuccessiveRegisterAndRemoveMediator();
 
 void testRemoveMediatorAndSubsequentNotify();
 
+void testRemoveOneOfTwoMediatorsAndSubsequentNotify();
+
+void testMediatorReregistration();
+
+void testModifyObserverListDuringNotification();
+
 #endif //PUREMVC_VIEWTEST_HPP

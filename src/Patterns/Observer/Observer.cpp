@@ -15,7 +15,7 @@ void Observer::setNotifyContext(const void *context) {
 }
 
 void Observer::setNotifyMethod(std::function<void(Notification *)> notify) {
-    this->_notify = notify;
+    this->_notify = std::move(notify);
 }
 
 const void *Observer::getNotifyContext() const {
@@ -27,7 +27,7 @@ std::function<void(Notification *)> Observer::getNotifyMethod() {
 }
 
 void Observer::notifyObserver(Notification *notification) {
-    _notify(notification);
+    this->_notify(notification);
 }
 
 bool Observer::compareNotifyContext(const void *object) const {

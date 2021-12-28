@@ -28,7 +28,6 @@ void testGetInstance() {
     assert(controller != nullptr);
 
     Controller::removeController("ControllerTestKey1");
-    delete controller;
 }
 
 void testRegisterAndExecuteCommand() {
@@ -44,9 +43,8 @@ void testRegisterAndExecuteCommand() {
 
     assert(vo.result == 24);
 
-    Controller::removeController("");
+    Controller::removeController("ControllerTestKey2");
     delete notification;
-    delete controller;
 }
 
 void testRegisterAndRemoveCommand() {
@@ -69,6 +67,9 @@ void testRegisterAndRemoveCommand() {
     controller->executeCommand(notification);
 
     assert(vo.result == 0);
+
+    Controller::removeController("ControllerTestKey3");
+    delete notification;
 }
 
 void testHasCommand() {
@@ -81,6 +82,8 @@ void testHasCommand() {
     controller->removeCommand("hasCommandTest");
 
     assert(controller->hasCommand("hasCommandTest") == false);
+
+    Controller::removeController("ControllerTestKey4");
 }
 
 void testReregisterAndExecuteCommand() {
@@ -105,4 +108,7 @@ void testReregisterAndExecuteCommand() {
     _view->notifyObservers(notification);
 
     assert(vo.result == 48);
+
+    Controller::removeController("ControllerTestKey5");
+    delete notification;
 }

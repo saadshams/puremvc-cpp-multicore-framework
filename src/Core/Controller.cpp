@@ -9,8 +9,7 @@ Controller::Controller(const std::string &key) {
     _view = nullptr;
 }
 
-Controller *
-Controller::getInstance(const std::string &key, const std::function<Controller *(const std::string &k)> &factory) {
+Controller *Controller::getInstance(const std::string &key, const std::function<Controller *(const std::string &k)> &factory) {
     if (!_instanceMap.contains(key)) _instanceMap[key] = factory(key);
     _instanceMap[key]->initializeController();
     return _instanceMap[key];
@@ -28,7 +27,7 @@ void Controller::executeCommand(Notification *notification) {
     }
 }
 
-void Controller::registerCommand(const std::string &notificationName, SimpleCommand *(*factory)()) {
+void Controller::registerCommand(const std::string &notificationName, std::function<SimpleCommand *()> factory) {
     if (!_commandMap.contains(notificationName)) {
         std::function<void(Notification *)> handler = [this](Notification *note) { executeCommand(note); };
         _view->registerObserver(notificationName, new Observer(handler, this));
@@ -43,12 +42,12 @@ bool Controller::hasCommand(const std::string &notificationName) const {
 void Controller::removeCommand(const std::string &notificationName) {
     if (hasCommand(notificationName)) {
         _view->removeObserver(notificationName, this);
-        _commandMap.erase(notificationName);
+        _commandMap.erase(_commandMap.find(notificationName));
     }
 }
 
 void Controller::removeController(const std::string &key) {
-    _instanceMap.erase(key);
+    _instanceMap.erase(_instanceMap.find(key));
 }
 
 Controller::~Controller() {

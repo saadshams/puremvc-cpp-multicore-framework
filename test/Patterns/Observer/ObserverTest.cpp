@@ -30,11 +30,11 @@ void testObserverAccessors() {
     auto *observer = new Observer(nullptr, nullptr);
 
     std::function<void(Notification *)> func = [mediator](Notification *note) { mediator->handleNotification(note); };
-    observer->setNotifyMethod(&func);
+    observer->setNotifyMethod(func);
 
     observer->setNotifyContext(&mediator);
 
-    auto object = Object{5};
+    auto object = ViewTestObject{5};
     auto *notification = new Notification("ObserverTestNote", &object);
     observer->notifyObserver(notification);
 
@@ -45,13 +45,13 @@ void testObserverAccessors() {
 }
 
 void testObserverConstructor() {
-    auto object = Object{5};
+    auto object = ViewTestObject{5};
     auto *mediator = new TestMediator();
 
     std::function<void(Notification *)> handler = [mediator](Notification *note) {
         mediator->handleNotification(note);
     };
-    auto *observer = new Observer(&handler, &object);
+    auto *observer = new Observer(handler, &object);
     auto *notification = new Notification("ObserverTestNote", &object);
 
     observer->notifyObserver(notification);

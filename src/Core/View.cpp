@@ -20,12 +20,6 @@ void View::initializeView() {
 
 void View::registerObserver(const std::string &notificationName, Observer *observer) {
     _observerMap[notificationName].push_back(observer);
-//    if (_observerMap.contains(notificationName)) {
-//        _observerMap[notificationName].push_back(observer);
-//    } else {
-//        // _observerMap[notificationName] = [observer]; // push back
-//        _observerMap[notificationName].push_back(observer);
-//    }
 }
 
 void View::notifyObservers(Notification *notification) {
@@ -99,7 +93,7 @@ bool View::hasMediator(const std::string &mediatorName) {
 }
 
 void View::removeView(const std::string &key) {
-    _instanceMap.erase(key);
+    _instanceMap.erase(_instanceMap.find(key));
 }
 
 View::~View() = default;

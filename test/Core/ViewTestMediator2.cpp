@@ -9,5 +9,5 @@ std::vector<std::string> ViewTestMediator2::listNotificationInterests() {
 }
 
 void ViewTestMediator2::handleNotification(Notification *notification) {
-    ((ViewTestObject *) _viewComponent)->lastNotification = notification->getName();
+    ((ViewTestObject *)_viewComponent)->lastNotification = notification->getName();
 }

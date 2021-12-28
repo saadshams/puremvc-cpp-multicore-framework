@@ -6,6 +6,7 @@ struct ViewTestObject {
     bool onRegisterCalled = false;
     bool onRemoveCalled = false;
     std::string lastNotification;
+    int counter = 0;
 };
 
 #endif //PUREMVC_VIEWTESTOBJECT_HPP

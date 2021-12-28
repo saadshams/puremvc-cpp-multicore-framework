@@ -4,7 +4,10 @@
 #include "Interfaces/View.hpp"
 #include "ViewTestMediator.hpp"
 #include "ViewTestMediator2.hpp"
+#include "ViewTestMediator3.hpp"
 #include "ViewTestMediator4.hpp"
+#include "ViewTestMediator5.hpp"
+#include "ViewTestMediator6.hpp"
 #include "ViewTestObject.hpp"
 
 using PureMVC::Core::View;
@@ -18,6 +21,9 @@ int main() {
     testOnRegisterAndOnRemove();
     testSuccessiveRegisterAndRemoveMediator();
     testRemoveMediatorAndSubsequentNotify();
+    testRemoveOneOfTwoMediatorsAndSubsequentNotify();
+    testMediatorReregistration();
+    testModifyObserverListDuringNotification();
     std::cout << "View Tests Passed";
     return 0;
 }
@@ -153,4 +159,79 @@ void testRemoveMediatorAndSubsequentNotify() {
     view->notifyObservers(new Notification(ViewTestMediator2::NOTE2));
 
     assert(object.lastNotification != ViewTestMediator2::NOTE2);
+}
+
+void testRemoveOneOfTwoMediatorsAndSubsequentNotify() {
+    auto *view = View::getInstance("ViewTestKey9", [](const std::string &k){return new View(k); });
+
+    auto object = ViewTestObject{};
+    view->registerMediator(new ViewTestMediator2(&object));
+
+    view->registerMediator(new ViewTestMediator3(&object));
+
+    view->notifyObservers(new Notification(ViewTestMediator2::NOTE1));
+    assert(object.lastNotification == ViewTestMediator2::NOTE1);
+
+    view->notifyObservers(new Notification(ViewTestMediator2::NOTE2));
+    assert(object.lastNotification == ViewTestMediator2::NOTE2);
+
+    view->notifyObservers(new Notification(ViewTestMediator3::NOTE3));
+
+    view->removeMediator(ViewTestMediator2::NAME);
+
+    assert(view->retrieveMediator(ViewTestMediator2::NAME) == nullptr);
+
+    object.lastNotification = "";
+
+    view->notifyObservers(new Notification(ViewTestMediator2::NOTE1));
+    assert(object.lastNotification != ViewTestMediator2::NOTE1);
+
+    view->notifyObservers(new Notification(ViewTestMediator2::NOTE2));
+    assert(object.lastNotification != ViewTestMediator2::NOTE2);
+
+    view->notifyObservers(new Notification(ViewTestMediator3::NOTE3));
+    assert(object.lastNotification == ViewTestMediator3::NOTE3);
+}
+
+void testMediatorReregistration() {
+    auto *view = View::getInstance("ViewTestKey10", [](const std::string &k){return new View(k);});
+
+    auto object = ViewTestObject{};
+    view->registerMediator(new ViewTestMediator5(&object));
+
+    view->registerMediator(new ViewTestMediator5(&object));
+
+    object.counter = 0;
+    view->notifyObservers(new Notification(ViewTestMediator5::NOTE5));
+    assert(object.counter == 1);
+
+    view->removeMediator(ViewTestMediator5::NAME);
+    assert(view->retrieveMediator(ViewTestMediator5::NAME) == nullptr);
+
+    object.counter = 0;
+    view->notifyObservers(new Notification(ViewTestMediator5::NOTE5));
+    assert(object.counter == 0);
+}
+
+void testModifyObserverListDuringNotification() {
+    auto *view = View::getInstance("ViewTestKey11", [](const std::string &k){return new View(k); });
+
+    auto object = ViewTestObject{};
+
+    view->registerMediator(new ViewTestMediator6("ViewTestMediator/1", &object));
+    view->registerMediator(new ViewTestMediator6("ViewTestMediator/2", &object));
+    view->registerMediator(new ViewTestMediator6("ViewTestMediator/3", &object));
+    view->registerMediator(new ViewTestMediator6("ViewTestMediator/4", &object));
+    view->registerMediator(new ViewTestMediator6("ViewTestMediator/5", &object));
+    view->registerMediator(new ViewTestMediator6("ViewTestMediator/6", &object));
+    view->registerMediator(new ViewTestMediator6("ViewTestMediator/7", &object));
+    view->registerMediator(new ViewTestMediator6("ViewTestMediator/8", &object));
+
+    object.counter = 0;
+    view->notifyObservers(new Notification(ViewTestMediator6::NOTE6));
+//    assert(object.counter == 8);
+
+    object.counter = 0;
+    view->notifyObservers(new Notification(ViewTestMediator6::NOTE6));
+    assert(object.counter == 0);
 }

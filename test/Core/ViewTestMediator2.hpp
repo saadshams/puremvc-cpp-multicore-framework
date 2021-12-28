@@ -14,9 +14,9 @@ public:
 
     void handleNotification(Notification *notification) override;
 
-    static constexpr const char *NOTE1 = "note1";
+    static constexpr const char *NOTE1 = "Notification1";
 
-    static constexpr const char *NOTE2 = "note2";
+    static constexpr const char *NOTE2 = "Notification2";
 
     static constexpr const char *NAME = "ViewTestMediator2";
 };

@@ -20,7 +20,6 @@ void testGetInstance() {
 
     assert(model != nullptr);
 
-    delete model;
     Model::removeModel("ModelTestKey1");
 }
 
@@ -38,7 +37,6 @@ void testRegisterAndRetrieveProxy() {
     model->removeProxy("colors");
     delete proxy;
     Model::removeModel("ModelTestKey2");
-    delete model;
 }
 
 void testRegisterAndRemoveProxy() {
@@ -56,7 +54,6 @@ void testRegisterAndRemoveProxy() {
 
     delete proxy;
     Model::removeModel("ModelTestKey3");
-    delete model;
 }
 
 void testHasProxy() {
@@ -72,7 +69,6 @@ void testHasProxy() {
 
     delete proxy;
     Model::removeModel("ModelTestKey4");
-    delete model;
 }
 
 void testOnRegisterAndOnRemove() {
@@ -88,5 +84,4 @@ void testOnRegisterAndOnRemove() {
 
     delete proxy;
     Model::removeModel("ModelTestKey5");
-    delete model;
 }
