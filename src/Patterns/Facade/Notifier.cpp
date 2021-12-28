@@ -8,10 +8,12 @@ void Notifier::initializeNotifier(const std::string &key) {
     _multitonKey = key;
 }
 
-void Notifier::sendNotification(const std::string &notificationName, const void *body, const std::string &type) {
-    getFacade()->sendNotification(notificationName, body, type);
+void Notifier::sendNotification(const std::string &name, const void *body, const std::string &type) {
+    getFacade()->sendNotification(name, body, type);
 }
 
 Facade *Notifier::getFacade() {
     return Facade::getInstance(_multitonKey, [](const std::string &k) { return new Facade(k); });
 }
+
+Notifier::~Notifier() = default;

@@ -13,10 +13,11 @@ namespace PureMVC::Patterns {
     public:
         void initializeNotifier(const std::string &key);
 
-        void
-        sendNotification(const std::string &notificationName, const void *body = nullptr, const std::string &type = "");
+        void sendNotification(const std::string &name, const void *body = nullptr, const std::string &type = "");
 
         Facade *getFacade();
+
+        ~Notifier();
     };
 }
 
