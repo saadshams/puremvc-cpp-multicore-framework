@@ -13,4 +13,6 @@ void testHasCommand();
 
 void testReregisterAndExecuteCommand();
 
+void testMacroCommand();
+
 #endif //PUREMVC_CONTROLLERTEST_HPP

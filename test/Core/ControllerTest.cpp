@@ -6,6 +6,8 @@
 #include "Interfaces/View.hpp"
 #include "Interfaces/Notification.hpp"
 #include "ControllerTestVO.hpp"
+#include "../Patterns/Command/MacroCommandTestCommand.hpp"
+#include "../Patterns/Command/MacroCommandTestVO.hpp"
 
 using PureMVC::Core::Controller;
 using PureMVC::Core::View;
@@ -17,6 +19,7 @@ int main() {
     testRegisterAndRemoveCommand();
     testHasCommand();
     testReregisterAndExecuteCommand();
+    testMacroCommand();
     std::cout << "Controller Tests Passed";
     return 0;
 }
@@ -110,5 +113,26 @@ void testReregisterAndExecuteCommand() {
     assert(vo.result == 48);
 
     Controller::removeController("ControllerTestKey5");
+    delete notification;
+}
+
+void testMacroCommand() {
+    auto *controller = Controller::getInstance("ControllerTestKey6", [](const std::string &k) { return new Controller(k);});
+
+    controller->registerCommand("MacroCommandTest", [](){return new MacroCommandTestCommand();});
+
+    auto vo = MacroCommandTestVO{5};
+
+    auto notification = new Notification("MacroCommandTest", &vo);
+
+    auto *_view = View::getInstance("ControllerTestKey6", [](const std::string &k) { return new View(k); });
+
+    _view->notifyObservers(notification);
+
+    assert(vo.result1 == 10);
+    assert(vo.result2 == 25);
+
+    Controller::removeController("ControllerTestKey6");
+    View::removeView("ControllerTestKey6");
     delete notification;
 }

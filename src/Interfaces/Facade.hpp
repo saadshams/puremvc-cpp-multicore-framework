@@ -24,48 +24,49 @@ namespace PureMVC::Patterns {
     public:
         explicit Facade(const std::string &key);
 
-        static Facade *
-        getInstance(const std::string &key, const std::function<Facade *(const std::string &k)> &factory);
+        static Facade *getInstance(const std::string &key, const std::function<Facade *(const std::string &k)> &factory);
 
-        void initializeFacade();
+        virtual void initializeFacade();
 
-        void initializeModel();
+        virtual void initializeModel();
 
-        void initializeController();
+        virtual void initializeController();
 
-        void initializeView();
+        virtual void initializeView();
 
-        void registerCommand(const std::string &key, const std::function<SimpleCommand *()> &factory);
+        virtual void registerCommand(const std::string &key, const std::function<SimpleCommand *()> &factory);
 
-        void removeCommand(const std::string &notificationName);
+        virtual void removeCommand(const std::string &notificationName);
 
-        bool hasCommand(const std::string &notificationName);
+        virtual bool hasCommand(const std::string &notificationName);
 
-        void registerProxy(Proxy *proxy);
+        virtual void registerProxy(Proxy *proxy);
 
-        Proxy *retrieveProxy(const std::string &proxyName);
+        virtual Proxy *retrieveProxy(const std::string &proxyName);
 
-        Proxy *removeProxy(const std::string &proxyName);
+        virtual Proxy *removeProxy(const std::string &proxyName);
 
-        bool hasProxy(const std::string &proxyName);
+        virtual bool hasProxy(const std::string &proxyName);
 
-        void registerMediator(Mediator *mediator);
+        virtual void registerMediator(Mediator *mediator);
 
-        Mediator *retrieveMediator(const std::string &mediatorName);
+        virtual Mediator *retrieveMediator(const std::string &mediatorName);
 
-        Mediator *removeMediator(const std::string &mediatorName);
+        virtual Mediator *removeMediator(const std::string &mediatorName);
 
-        bool hasMediator(const std::string &mediatorName);
+        virtual bool hasMediator(const std::string &mediatorName);
 
-        void sendNotification(const std::string &name, const void *body = nullptr, const std::string &type = "");
+        virtual void sendNotification(const std::string &name, const void *body = nullptr, const std::string &type = "");
 
-        void notifyObservers(Notification *notification);
+        virtual void notifyObservers(Notification *notification);
 
-        void initializeNotifier(const std::string &key);
+        virtual void initializeNotifier(const std::string &key);
 
         static bool hasCore(const std::string &key);
 
         static void removeCore(const std::string &key);
+
+        virtual ~Facade();
 
         static constexpr const char *MULTITON_MSG = "Facade instance for this Multiton key already constructed!";
     };

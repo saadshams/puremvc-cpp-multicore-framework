@@ -1,6 +1,4 @@
 #include "ViewTest.hpp"
-
-#include <iostream>
 #include "Interfaces/View.hpp"
 #include "ViewTestMediator.hpp"
 #include "ViewTestMediator2.hpp"
@@ -9,6 +7,7 @@
 #include "ViewTestMediator5.hpp"
 #include "ViewTestMediator6.hpp"
 #include "ViewTestObject.hpp"
+#include <iostream>
 
 using PureMVC::Core::View;
 
@@ -34,7 +33,6 @@ void testGetInstance() {
     assert(view != nullptr);
 
     View::removeView("ViewTestKey1");
-    delete view;
 }
 
 void testRegisterAndNotifyObserver() {
@@ -43,17 +41,20 @@ void testRegisterAndNotifyObserver() {
     auto viewTestObject = ViewTestObject{5};
     auto *testMediator = new ViewTestMediator(&viewTestObject);
 
-    std::function<void(Notification *)> handler = [testMediator](Notification *note) {
+    auto *observer = new Observer([testMediator](Notification *note) {
         testMediator->handleNotification(note);
-    };
-    auto *observer = new Observer(handler, testMediator);
-    view->registerObserver("", observer);
+    }, testMediator);
+    view->registerObserver("ViewTestNote", observer);
 
     auto object = ViewTestObject{5};
-    auto *notification = new Notification("", &object);
+    auto *notification = new Notification("ViewTestNote", &object);
     view->notifyObservers(notification);
 
     assert(testMediator->getViewTestObject()->value == 10);
+
+    delete testMediator;
+    delete observer;
+    delete notification;
 }
 
 void testRegisterAndRetrieveMediator() {
@@ -66,6 +67,8 @@ void testRegisterAndRetrieveMediator() {
     auto *mediator = view->retrieveMediator(ViewTestMediator::NAME);
 
     assert(viewTestMediator == mediator);
+
+    delete viewTestMediator;
 }
 
 void testHasMediator() {
@@ -80,6 +83,8 @@ void testHasMediator() {
     view->removeMediator("hasMediatorTest");
 
     assert(!view->hasMediator("hasMediatorTest"));
+
+    delete mediator;
 }
 
 void testRegisterAndRemoveMediator() {
@@ -94,6 +99,8 @@ void testRegisterAndRemoveMediator() {
     assert(removedMediator->getMediatorName() == "testing");
 
     assert(view->retrieveMediator("testing") == nullptr);
+
+    delete mediator;
 }
 
 void testOnRegisterAndOnRemove() {
@@ -108,6 +115,8 @@ void testOnRegisterAndOnRemove() {
     view->removeMediator(ViewTestMediator4::NAME);
 
     assert(object.onRemoveCalled);
+
+    delete mediator;
 }
 
 void testSuccessiveRegisterAndRemoveMediator() {
@@ -115,7 +124,8 @@ void testSuccessiveRegisterAndRemoveMediator() {
 
     auto object = ViewTestObject{};
 
-    view->registerMediator(new ViewTestMediator(&object));
+    auto *viewTestMediator = new ViewTestMediator(&object);
+    view->registerMediator(viewTestMediator);
 
     assert(dynamic_cast<ViewTestMediator *>(view->retrieveMediator(ViewTestMediator::NAME)) != nullptr);
 
@@ -125,13 +135,15 @@ void testSuccessiveRegisterAndRemoveMediator() {
 
     assert(view->retrieveMediator(ViewTestMediator::NAME) == nullptr);
 
-    view->registerMediator(new ViewTestMediator(&object));
+    view->registerMediator(viewTestMediator);
 
     assert(dynamic_cast<ViewTestMediator *>(view->retrieveMediator(ViewTestMediator::NAME)) != nullptr);
 
     view->removeMediator(ViewTestMediator::NAME);
 
     assert(view->retrieveMediator(ViewTestMediator::NAME) == nullptr);
+
+    delete viewTestMediator;
 }
 
 void testRemoveMediatorAndSubsequentNotify() {

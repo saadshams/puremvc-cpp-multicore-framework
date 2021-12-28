@@ -28,10 +28,11 @@ void Controller::executeCommand(Notification *notification) {
     }
 }
 
-void Controller::registerCommand(const std::string &notificationName, std::function<SimpleCommand *()> factory) {
+void Controller::registerCommand(const std::string &notificationName, const std::function<SimpleCommand *()> &factory) {
     if (!_commandMap.contains(notificationName)) {
-        std::function<void(Notification *)> handler = [this](Notification *note) { executeCommand(note); };
-        _view->registerObserver(notificationName, new Observer(handler, this));
+        _view->registerObserver(notificationName, new Observer([this](Notification *notification) {
+            executeCommand(notification);
+        }, this));
     }
     _commandMap[notificationName] = factory;
 }

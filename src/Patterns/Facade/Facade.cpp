@@ -9,8 +9,11 @@ Facade::Facade(const std::string &key) {
 }
 
 Facade *Facade::getInstance(const std::string &key, const std::function<Facade *(const std::string &)> &factory) {
-    if (!_instanceMap.contains(key)) _instanceMap[key] = factory(key);
-    _instanceMap[key]->initializeFacade();
+    if (!_instanceMap.contains(key)) {
+        _instanceMap[key] = factory(key);
+        _instanceMap[key]->initializeNotifier(key);
+        _instanceMap[key]->initializeFacade();
+    }
     return _instanceMap[key];
 }
 
@@ -98,3 +101,5 @@ void Facade::removeCore(const std::string &key) {
     Controller::removeController(key);
     _instanceMap.erase(_instanceMap.find(key));
 }
+
+Facade::~Facade() = default;

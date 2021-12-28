@@ -24,7 +24,7 @@ namespace PureMVC::Patterns {
 
         [[nodiscard]] virtual const void *getData() const;
 
-        virtual ~Proxy();
+        ~Proxy() override;
 
         static constexpr const char *NAME = "Proxy";
     };

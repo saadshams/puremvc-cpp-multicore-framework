@@ -11,13 +11,13 @@ namespace PureMVC::Patterns {
     protected:
         std::string _multitonKey;
     public:
-        void initializeNotifier(const std::string &key);
+        virtual void initializeNotifier(const std::string &key);
 
-        void sendNotification(const std::string &name, const void *body = nullptr, const std::string &type = "");
+        virtual void sendNotification(const std::string &name, const void *body = nullptr, const std::string &type = "");
 
-        Facade *getFacade();
+        virtual Facade *getFacade();
 
-        ~Notifier();
+        virtual ~Notifier();
     };
 }
 

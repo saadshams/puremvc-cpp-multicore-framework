@@ -591,6 +591,34 @@ build CMakeFiles/TestController.dir/test/Core/ControllerTestCommand2.cpp.o: CXX_
   OBJECT_DIR = CMakeFiles/TestController.dir
   OBJECT_FILE_DIR = CMakeFiles/TestController.dir/test/Core
 
+build CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestCommand.cpp.o: CXX_COMPILER__TestController_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Command/MacroCommandTestCommand.cpp || cmake_object_order_depends_target_TestController
+  DEP_FILE = CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestCommand.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestController.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestController.dir/test/Patterns/Command
+
+build CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestSub1Command.cpp.o: CXX_COMPILER__TestController_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Command/MacroCommandTestSub1Command.cpp || cmake_object_order_depends_target_TestController
+  DEP_FILE = CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestSub1Command.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestController.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestController.dir/test/Patterns/Command
+
+build CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestSub2Command.cpp.o: CXX_COMPILER__TestController_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Command/MacroCommandTestSub2Command.cpp || cmake_object_order_depends_target_TestController
+  DEP_FILE = CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestSub2Command.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestController.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestController.dir/test/Patterns/Command
+
+build CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestVO.cpp.o: CXX_COMPILER__TestController_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Command/MacroCommandTestVO.cpp || cmake_object_order_depends_target_TestController
+  DEP_FILE = CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestVO.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
+  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
+  OBJECT_DIR = CMakeFiles/TestController.dir
+  OBJECT_FILE_DIR = CMakeFiles/TestController.dir/test/Patterns/Command
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target TestController
@@ -599,7 +627,7 @@ build CMakeFiles/TestController.dir/test/Core/ControllerTestCommand2.cpp.o: CXX_
 #############################################
 # Link the executable TestController
 
-build TestController: CXX_EXECUTABLE_LINKER__TestController_Debug CMakeFiles/TestController.dir/test/Core/ControllerTest.cpp.o CMakeFiles/TestController.dir/test/Core/ControllerTestCommand.cpp.o CMakeFiles/TestController.dir/test/Core/ControllerTestCommand2.cpp.o | libPureMVC.a || libPureMVC.a
+build TestController: CXX_EXECUTABLE_LINKER__TestController_Debug CMakeFiles/TestController.dir/test/Core/ControllerTest.cpp.o CMakeFiles/TestController.dir/test/Core/ControllerTestCommand.cpp.o CMakeFiles/TestController.dir/test/Core/ControllerTestCommand2.cpp.o CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestCommand.cpp.o CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestSub1Command.cpp.o CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestSub2Command.cpp.o CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestVO.cpp.o | libPureMVC.a || libPureMVC.a
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
   LINK_LIBRARIES = libPureMVC.a
   OBJECT_DIR = CMakeFiles/TestController.dir

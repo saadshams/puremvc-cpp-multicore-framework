@@ -11,7 +11,7 @@ namespace PureMVC::Patterns {
     public:
         virtual void execute(Notification *notification);
 
-        virtual ~SimpleCommand();
+        ~SimpleCommand() override;
     };
 }
 

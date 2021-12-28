@@ -28,7 +28,7 @@ namespace PureMVC::Patterns {
 
         [[nodiscard]] virtual const void *getViewComponent() const;
 
-        virtual ~Mediator();
+        ~Mediator() override;
 
         static constexpr const char *NAME = "Mediator";
     };

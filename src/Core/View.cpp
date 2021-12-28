@@ -56,11 +56,10 @@ void View::registerMediator(Mediator *mediator) {
 
     auto interests = mediator->listNotificationInterests();
 
-    std::function<void(Notification *)> handler = [mediator](Notification *notification) {
-        mediator->handleNotification(notification);
-    };
     if (!interests.empty()) {
-        auto *observer = new Observer(handler, mediator);
+        auto *observer = new Observer([mediator](Notification *notification) {
+            mediator->handleNotification(notification);
+        }, mediator);
 
         for (auto &interest: interests) {
             registerObserver(interest, observer);
@@ -96,4 +95,8 @@ void View::removeView(const std::string &key) {
     _instanceMap.erase(_instanceMap.find(key));
 }
 
-View::~View() = default;
+View::~View() {
+    removeView(_multitonKey);
+    _observerMap.clear();
+    _mediatorMap.clear();
+}
