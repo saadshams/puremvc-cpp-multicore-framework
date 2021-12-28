@@ -18,13 +18,14 @@ namespace PureMVC::Core {
     public:
         explicit Controller(const std::string &key);
 
-        static Controller *getInstance(const std::string &key, const std::function<Controller *(const std::string &k)> &factory);
+        static Controller *
+        getInstance(const std::string &key, const std::function<Controller *(const std::string &k)> &factory);
 
         virtual void initializeController();
 
         virtual void executeCommand(Notification *notification);
 
-        virtual void registerCommand(const std::string &notificationName, std::function<SimpleCommand*()> factory);
+        virtual void registerCommand(const std::string &notificationName, std::function<SimpleCommand *()> factory);
 
         [[nodiscard]] virtual bool hasCommand(const std::string &notificationName) const;
 

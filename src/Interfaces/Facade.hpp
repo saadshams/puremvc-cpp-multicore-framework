@@ -20,11 +20,12 @@ namespace PureMVC::Patterns {
         Controller *_controller = nullptr;
         Model *_model = nullptr;
         View *_view = nullptr;
-        inline static std::map<std::string, Facade *>_instanceMap;
+        inline static std::map<std::string, Facade *> _instanceMap;
     public:
         explicit Facade(const std::string &key);
 
-        static Facade *getInstance(const std::string &key, const std::function<Facade *(const std::string &k)> &factory);
+        static Facade *
+        getInstance(const std::string &key, const std::function<Facade *(const std::string &k)> &factory);
 
         void initializeFacade();
 
@@ -34,7 +35,7 @@ namespace PureMVC::Patterns {
 
         void initializeView();
 
-        void registerCommand(const std::string &key, const std::function<SimpleCommand*()> &factory);
+        void registerCommand(const std::string &key, const std::function<SimpleCommand *()> &factory);
 
         void removeCommand(const std::string &notificationName);
 

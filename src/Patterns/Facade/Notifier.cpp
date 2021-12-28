@@ -13,5 +13,5 @@ void Notifier::sendNotification(const std::string &notificationName, const void 
 }
 
 Facade *Notifier::getFacade() {
-    return Facade::getInstance(_multitonKey, [](const std::string &k){ return new Facade(k); });
+    return Facade::getInstance(_multitonKey, [](const std::string &k) { return new Facade(k); });
 }

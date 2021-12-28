@@ -18,7 +18,7 @@ public:
 
     void onRemove() override;
 
-    static constexpr const char* NOTE6 = "Notification6";
+    static constexpr const char *NOTE6 = "Notification6";
 
     static constexpr const char *NAME = "ViewTestMediator6";
 };

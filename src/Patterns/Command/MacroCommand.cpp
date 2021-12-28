@@ -8,7 +8,7 @@ void MacroCommand::initializeMacroCommand() {
 
 }
 
-void MacroCommand::addSubCommand(const std::function<SimpleCommand*()> &factory) {
+void MacroCommand::addSubCommand(const std::function<SimpleCommand *()> &factory) {
     _subcommands.push_back(factory);
 }
 

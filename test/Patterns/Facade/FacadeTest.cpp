@@ -31,7 +31,7 @@ void testGetInstance() {
 void testRegisterCommandAndSendNotification() {
     auto *facade = Facade::getInstance("FacadeTestKey2", [](const std::string &k) { return new Facade(k); });
 
-    facade->registerCommand("FacadeTestNote", []() {return new FacadeTestCommand();});
+    facade->registerCommand("FacadeTestNote", []() { return new FacadeTestCommand(); });
 
     auto vo = FacadeTestVO{32};
     facade->sendNotification("FacadeTestNote", &vo);
@@ -40,8 +40,8 @@ void testRegisterCommandAndSendNotification() {
 }
 
 void testRegisterAndRemoveCommandAndSendNotification() {
-    auto *facade = Facade::getInstance("FacadeTestKey3", [](const std::string &k){return new Facade(k);});
-    facade->registerCommand("FacadeTestNote", [](){return new FacadeTestCommand();});
+    auto *facade = Facade::getInstance("FacadeTestKey3", [](const std::string &k) { return new Facade(k); });
+    facade->registerCommand("FacadeTestNote", []() { return new FacadeTestCommand(); });
     facade->removeCommand("FacadeTestNote");
 
     auto vo = FacadeTestVO{32};
@@ -51,13 +51,13 @@ void testRegisterAndRemoveCommandAndSendNotification() {
 }
 
 void testRegisterAndRetrieveProxy() {
-    auto *facade = Facade::getInstance("FacadeTestKey4", [](const std::string &k) {return new Facade(k);});
+    auto *facade = Facade::getInstance("FacadeTestKey4", [](const std::string &k) { return new Facade(k); });
     facade->registerProxy(new Proxy("colors", new std::string[3]{"red", "green", "blue"}));
     auto *proxy = facade->retrieveProxy("colors");
 
     assert(dynamic_cast<Proxy *>(proxy) != nullptr);
 
-    auto *data = (std::string *)proxy->getData();
+    auto *data = (std::string *) proxy->getData();
     assert(data != nullptr);
     assert(data->size() == 3);
     assert(data[0] == "red");
@@ -66,7 +66,7 @@ void testRegisterAndRetrieveProxy() {
 }
 
 void testRegisterAndRemoveProxy() {
-    auto *facade = Facade::getInstance("FacadeTestKey5", [](const std::string &k) {return new Facade(k);});
+    auto *facade = Facade::getInstance("FacadeTestKey5", [](const std::string &k) { return new Facade(k); });
     facade->registerProxy(new Proxy("sizes", new std::string[]{"7", "13", "21"}));
 
     auto removedProxy = facade->removeProxy("sizes");
@@ -77,7 +77,7 @@ void testRegisterAndRemoveProxy() {
 }
 
 void testRegisterRetrieveAndRemoveMediator() {
-    auto *facade = Facade::getInstance("FacadeTestKey6", [](const std::string &k) {return new Facade(k);});
+    auto *facade = Facade::getInstance("FacadeTestKey6", [](const std::string &k) { return new Facade(k); });
     auto vo = FacadeTestVO{};
     facade->registerMediator(new Mediator(Mediator::NAME, &vo));
 
@@ -91,14 +91,14 @@ void testRegisterRetrieveAndRemoveMediator() {
 }
 
 void testHasProxy() {
-    auto *facade = Facade::getInstance("FacadeTestKey7", [](const std::string &k) {return new Facade(k);});
+    auto *facade = Facade::getInstance("FacadeTestKey7", [](const std::string &k) { return new Facade(k); });
     facade->registerProxy(new Proxy("hasProxyTest", new int[]{1, 2, 3}));
 
     assert(facade->hasProxy("hasProxyTest") == true);
 }
 
 void testHasMediator() {
-    auto *facade = Facade::getInstance("FacadeTestKey8", [](const std::string &k){return new Facade(k);});
+    auto *facade = Facade::getInstance("FacadeTestKey8", [](const std::string &k) { return new Facade(k); });
     auto vo = FacadeTestVO{};
     facade->registerMediator(new Mediator("facadeHasMediatorTest", &vo));
 
@@ -110,8 +110,8 @@ void testHasMediator() {
 }
 
 void testHasCommand() {
-    auto *facade = Facade::getInstance("FacadeTestKey10", [](const std::string &k){return new Facade(k);});
-    facade->registerCommand("facadeHasCommandTest", [](){return new FacadeTestCommand();});
+    auto *facade = Facade::getInstance("FacadeTestKey10", [](const std::string &k) { return new Facade(k); });
+    facade->registerCommand("facadeHasCommandTest", []() { return new FacadeTestCommand(); });
 
     assert(facade->hasCommand("facadeHasCommandTest"));
 
@@ -122,7 +122,7 @@ void testHasCommand() {
 
 void testHasCoreAndRemoveCore() {
     assert(Facade::hasCore("FacadeTestKey11") == false);
-    auto *facade = Facade::getInstance("FacadeTestKey11", [](const std::string &k){return new Facade(k);});
+    auto *facade = Facade::getInstance("FacadeTestKey11", [](const std::string &k) { return new Facade(k); });
 
     assert(Facade::hasCore("FacadeTestKey11") == true);
 

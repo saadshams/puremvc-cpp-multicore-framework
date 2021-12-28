@@ -162,7 +162,7 @@ void testRemoveMediatorAndSubsequentNotify() {
 }
 
 void testRemoveOneOfTwoMediatorsAndSubsequentNotify() {
-    auto *view = View::getInstance("ViewTestKey9", [](const std::string &k){return new View(k); });
+    auto *view = View::getInstance("ViewTestKey9", [](const std::string &k) { return new View(k); });
 
     auto object = ViewTestObject{};
     view->registerMediator(new ViewTestMediator2(&object));
@@ -194,7 +194,7 @@ void testRemoveOneOfTwoMediatorsAndSubsequentNotify() {
 }
 
 void testMediatorReregistration() {
-    auto *view = View::getInstance("ViewTestKey10", [](const std::string &k){return new View(k);});
+    auto *view = View::getInstance("ViewTestKey10", [](const std::string &k) { return new View(k); });
 
     auto object = ViewTestObject{};
     view->registerMediator(new ViewTestMediator5(&object));
@@ -214,7 +214,7 @@ void testMediatorReregistration() {
 }
 
 void testModifyObserverListDuringNotification() {
-    auto *view = View::getInstance("ViewTestKey11", [](const std::string &k){return new View(k); });
+    auto *view = View::getInstance("ViewTestKey11", [](const std::string &k) { return new View(k); });
 
     auto object = ViewTestObject{};
 

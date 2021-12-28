@@ -3,13 +3,13 @@
 using PureMVC::Patterns::Facade;
 
 Facade::Facade(const std::string &key) {
-    if(_instanceMap.contains(key)) throw std::runtime_error(MULTITON_MSG);
+    if (_instanceMap.contains(key)) throw std::runtime_error(MULTITON_MSG);
     _multitonKey = key;
     _instanceMap[key] = this;
 }
 
 Facade *Facade::getInstance(const std::string &key, const std::function<Facade *(const std::string &)> &factory) {
-    if(!_instanceMap.contains(key)) _instanceMap[key] = factory(key);
+    if (!_instanceMap.contains(key)) _instanceMap[key] = factory(key);
     _instanceMap[key]->initializeFacade();
     return _instanceMap[key];
 }
@@ -21,15 +21,15 @@ void Facade::initializeFacade() {
 }
 
 void Facade::initializeModel() {
-    _model = Model::getInstance(_multitonKey, [](const std::string &k){return new Model(k);});
+    _model = Model::getInstance(_multitonKey, [](const std::string &k) { return new Model(k); });
 }
 
 void Facade::initializeController() {
-    _controller = Controller::getInstance(_multitonKey, [](const std::string &k){return new Controller(k); });
+    _controller = Controller::getInstance(_multitonKey, [](const std::string &k) { return new Controller(k); });
 }
 
 void Facade::initializeView() {
-    _view = View::getInstance(_multitonKey, [](const std::string &k){return new View(k);});
+    _view = View::getInstance(_multitonKey, [](const std::string &k) { return new View(k); });
 }
 
 void Facade::registerCommand(const std::string &key, const std::function<SimpleCommand *()> &factory) {

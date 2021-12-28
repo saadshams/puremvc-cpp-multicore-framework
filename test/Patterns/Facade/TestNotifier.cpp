@@ -18,7 +18,7 @@ void testRegisterCommandAndSendNotification() {
     notifier->initializeNotifier("NotifierTestKey1");
     auto *facade = notifier->getFacade();
 
-    facade->registerCommand("NotifierTestNote", []() {return new FacadeTestCommand();});
+    facade->registerCommand("NotifierTestNote", []() { return new FacadeTestCommand(); });
 
     auto vo = FacadeTestVO{32};
     notifier->sendNotification("NotifierTestNote", &vo);
