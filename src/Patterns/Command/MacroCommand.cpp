@@ -18,10 +18,10 @@ void MacroCommand::execute(Notification *notification) {
 
     while (iterator != _subcommands.end()) {
         auto commandInstance = (*iterator)();
-        // commandInstance->initializeNotifier(multitonKey);
+        commandInstance->initializeNotifier(_multitonKey);
         commandInstance->execute(notification);
-        delete commandInstance;
 
+        delete commandInstance;
         _subcommands.erase(iterator);
         iterator = _subcommands.begin();
     }
