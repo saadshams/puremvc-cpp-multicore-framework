@@ -1,5 +1,5 @@
-
 #include "ViewTestMediator6.hpp"
+#include "Interfaces/Facade.hpp"
 
 ViewTestMediator6::ViewTestMediator6(const std::string &name, const ViewTestObject *object) : Mediator(name, object) {
 
@@ -10,7 +10,7 @@ std::vector<std::string> ViewTestMediator6::listNotificationInterests() {
 }
 
 void ViewTestMediator6::handleNotification(Notification *notification) {
-    // facade.removeMediator(getMediatorName());
+    getFacade()->removeMediator(getMediatorName());
 }
 
 void ViewTestMediator6::onRemove() {

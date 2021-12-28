@@ -1,9 +1,11 @@
+#include "Interfaces/Facade.hpp"
+#include "Interfaces/Proxy.hpp"
 #include "FacadeTest.hpp"
 #include "FacadeTestCommand.hpp"
 #include "FacadeTestVO.hpp"
-#include "Interfaces/Facade.hpp"
-#include "Interfaces/Proxy.hpp"
 #include <iostream>
+
+using PureMVC::Patterns::Facade;
 
 int main() {
     testGetInstance();

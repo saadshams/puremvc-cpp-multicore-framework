@@ -1,12 +1,13 @@
 #ifndef PUREMVC_SIMPLECOMMAND_HPP
 #define PUREMVC_SIMPLECOMMAND_HPP
 
-#include "Interfaces/Notification.hpp"
+#include "Notification.hpp"
+#include "Notifier.hpp"
 
-using PureMVC::Patterns::Observer::Notification;
+using PureMVC::Patterns::Notifier;
 
-namespace PureMVC::Patterns::Command {
-    class SimpleCommand {
+namespace PureMVC::Patterns {
+    class SimpleCommand : public Notifier {
     public:
         virtual void execute(Notification *notification);
 

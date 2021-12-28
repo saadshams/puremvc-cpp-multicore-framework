@@ -229,7 +229,7 @@ void testModifyObserverListDuringNotification() {
 
     object.counter = 0;
     view->notifyObservers(new Notification(ViewTestMediator6::NOTE6));
-//    assert(object.counter == 8);
+    assert(object.counter == 8);
 
     object.counter = 0;
     view->notifyObservers(new Notification(ViewTestMediator6::NOTE6));

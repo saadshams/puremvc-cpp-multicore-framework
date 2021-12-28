@@ -11,3 +11,4 @@
 /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug/CMakeFiles/TestSimpleCommand.dir
 /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug/CMakeFiles/TestNotification.dir
 /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug/CMakeFiles/TestController.dir
+/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug/CMakeFiles/TestNotifier.dir

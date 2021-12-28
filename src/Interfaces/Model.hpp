@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <map>
-#include "Interfaces/Proxy.hpp"
+#include "Proxy.hpp"
 
 using PureMVC::Patterns::Proxy;
 

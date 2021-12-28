@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-namespace PureMVC::Patterns::Observer {
+namespace PureMVC::Patterns {
     class Notification {
     protected:
         std::string _name;

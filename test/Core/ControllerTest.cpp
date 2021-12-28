@@ -9,7 +9,7 @@
 
 using PureMVC::Core::Controller;
 using PureMVC::Core::View;
-using PureMVC::Patterns::Observer::Notification;
+using PureMVC::Patterns::Notification;
 
 int main() {
     testGetInstance();

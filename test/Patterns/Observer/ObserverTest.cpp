@@ -1,10 +1,12 @@
 #include "ObserverTest.hpp"
+#include "Interfaces/Mediator.hpp"
+#include "Interfaces/Notification.hpp"
 #include "Interfaces/Observer.hpp"
 #include <iostream>
 
 using PureMVC::Patterns::Mediator;
-using PureMVC::Patterns::Observer::Notification;
-using PureMVC::Patterns::Observer::Observer;
+using PureMVC::Patterns::Notification;
+using PureMVC::Patterns::Observer;
 
 struct ViewTestObject {
     int value;

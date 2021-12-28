@@ -5,17 +5,17 @@
 #include "Notification.hpp"
 #include "SimpleCommand.hpp"
 
-using PureMVC::Patterns::Command::SimpleCommand;
-using PureMVC::Patterns::Observer::Notification;
+using PureMVC::Patterns::SimpleCommand;
+using PureMVC::Patterns::Notification;
 
-namespace PureMVC::Patterns::Command {
+namespace PureMVC::Patterns {
     class MacroCommand {
     private:
-        std::list<SimpleCommand *(*)()> _subcommands;
+        std::list<std::function<SimpleCommand*()>> _subcommands;
     protected:
         virtual void initializeMacroCommand();
 
-        virtual void addSubCommand(SimpleCommand *(*factory)());
+        virtual void addSubCommand(const std::function<SimpleCommand*()> &factory);
 
     public:
         explicit MacroCommand();

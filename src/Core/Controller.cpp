@@ -22,7 +22,7 @@ void Controller::initializeController() {
 void Controller::executeCommand(Notification *notification) {
     if (_commandMap.contains(notification->getName())) {
         auto *commandInstance = _commandMap[notification->getName()]();
-        // commandInstance.initializeNotifier(_multitonKey);
+        commandInstance->initializeNotifier(_multitonKey);
         commandInstance->execute(notification);
     }
 }

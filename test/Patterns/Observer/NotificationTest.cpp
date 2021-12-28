@@ -2,7 +2,7 @@
 #include "Interfaces/Notification.hpp"
 #include <iostream>
 
-using PureMVC::Patterns::Observer::Notification;
+using PureMVC::Patterns::Notification;
 
 int main() {
     testNameAccessors();

@@ -3,18 +3,20 @@
 
 #include <iostream>
 #include <map>
-#include "Interfaces/Mediator.hpp"
-#include "Interfaces/Observer.hpp"
+#include "Mediator.hpp"
+#include "Notification.hpp"
+#include "Observer.hpp"
 
 using PureMVC::Patterns::Mediator;
-using PureMVC::Patterns::Observer::Observer;
+using PureMVC::Patterns::Notification;
+using PureMVC::Patterns::Observer;
 
 namespace PureMVC::Core {
     class View {
     protected:
         std::string _multitonKey;
-        std::map<std::string, Mediator *> _mediatorMap;
-        std::map<std::string, std::vector<Observer *>> _observerMap;
+        std::map<std::string, Mediator *> _mediatorMap{};
+        std::map<std::string, std::vector<Observer *>> _observerMap{};
         inline static std::map<std::string, View *> _instanceMap;
     public:
         explicit View(const std::string &key);

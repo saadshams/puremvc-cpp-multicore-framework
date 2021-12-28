@@ -19,7 +19,7 @@ void Model::initializeModel() {
 }
 
 void Model::registerProxy(Proxy *proxy) {
-    // proxy->initializeNotifier(_multitonKey);
+     proxy->initializeNotifier(_multitonKey);
     _proxyMap[proxy->getProxyName()] = proxy;
     proxy->onRegister();
 }

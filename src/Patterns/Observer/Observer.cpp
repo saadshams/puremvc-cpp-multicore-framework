@@ -1,9 +1,8 @@
 #include "Interfaces/Observer.hpp"
-
 #include <utility>
 
-using PureMVC::Patterns::Observer::Observer;
-using PureMVC::Patterns::Observer::Notification;
+using PureMVC::Patterns::Observer;
+using PureMVC::Patterns::Notification;
 
 Observer::Observer(std::function<void(Notification *)> notify, const void *context) {
     this->_notify = std::move(notify);

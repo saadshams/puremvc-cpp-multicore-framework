@@ -2,9 +2,12 @@
 #define PUREMVC_PROXY_HPP
 
 #include <iostream>
+#include "Notifier.hpp"
+
+using PureMVC::Patterns::Notifier;
 
 namespace PureMVC::Patterns {
-    class Proxy {
+    class Proxy : public Notifier {
     protected:
         std::string _proxyName;
         const void *_data;

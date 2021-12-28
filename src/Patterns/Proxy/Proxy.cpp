@@ -1,4 +1,4 @@
-#include "../../Interfaces/Proxy.hpp"
+#include "Interfaces/Proxy.hpp"
 
 using PureMVC::Patterns::Proxy;
 

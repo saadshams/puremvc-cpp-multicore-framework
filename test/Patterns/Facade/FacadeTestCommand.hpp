@@ -2,8 +2,10 @@
 #define PUREMVC_FACADETESTCOMMAND_HPP
 
 #include "Interfaces/SimpleCommand.hpp"
+#include "Interfaces/Notification.hpp"
 
-using PureMVC::Patterns::Command::SimpleCommand;
+using PureMVC::Patterns::SimpleCommand;
+using PureMVC::Patterns::Notification;
 
 class FacadeTestCommand : public SimpleCommand {
 public:

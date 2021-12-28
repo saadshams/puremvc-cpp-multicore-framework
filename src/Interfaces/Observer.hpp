@@ -1,10 +1,9 @@
 #ifndef PUREMVC_OBSERVER_HPP
 #define PUREMVC_OBSERVER_HPP
 
-#include "Mediator.hpp"
 #include "Notification.hpp"
 
-namespace PureMVC::Patterns::Observer {
+namespace PureMVC::Patterns {
     class Observer {
     protected:
         std::function<void(Notification *notification)> _notify;

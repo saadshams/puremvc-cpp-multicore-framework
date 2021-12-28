@@ -1,6 +1,6 @@
 #include "Interfaces/MacroCommand.hpp"
 
-using PureMVC::Patterns::Command::MacroCommand;
+using PureMVC::Patterns::MacroCommand;
 
 MacroCommand::MacroCommand() = default;
 
@@ -8,7 +8,7 @@ void MacroCommand::initializeMacroCommand() {
 
 }
 
-void MacroCommand::addSubCommand(SimpleCommand *(*factory)()) {
+void MacroCommand::addSubCommand(const std::function<SimpleCommand*()> &factory) {
     _subcommands.push_back(factory);
 }
 

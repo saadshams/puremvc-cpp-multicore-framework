@@ -3,10 +3,10 @@
 
 #include <iostream>
 #include <map>
-#include "Interfaces/SimpleCommand.hpp"
-#include "Interfaces/View.hpp"
+#include "SimpleCommand.hpp"
+#include "View.hpp"
 
-using PureMVC::Patterns::Command::SimpleCommand;
+using PureMVC::Patterns::SimpleCommand;
 
 namespace PureMVC::Core {
     class Controller {

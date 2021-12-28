@@ -3,7 +3,7 @@
 
 #include "Interfaces/MacroCommand.hpp"
 
-using PureMVC::Patterns::Command::MacroCommand;
+using PureMVC::Patterns::MacroCommand;
 
 class MacroCommandTestCommand : public MacroCommand {
 public:

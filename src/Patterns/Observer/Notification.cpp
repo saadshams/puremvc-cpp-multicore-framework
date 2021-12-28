@@ -1,6 +1,6 @@
 #include "Interfaces/Notification.hpp"
 
-using PureMVC::Patterns::Observer::Notification;
+using PureMVC::Patterns::Notification;
 
 Notification::Notification(const std::string &name, const void *body, const std::string &type) {
     this->_name = name;

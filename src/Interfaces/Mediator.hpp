@@ -3,12 +3,11 @@
 
 #include <iostream>
 #include <vector>
-#include "Interfaces/Notification.hpp"
-
-using PureMVC::Patterns::Observer::Notification;
+#include "Notification.hpp"
+#include "Notifier.hpp"
 
 namespace PureMVC::Patterns {
-    class Mediator {
+    class Mediator : public Notifier {
     protected:
         std::string _mediatorName;
         const void *_viewComponent;

@@ -2,9 +2,11 @@
 #define PUREMVC_VIEWTESTMEDIATOR6_HPP
 
 #include "Interfaces/Mediator.hpp"
+#include "Interfaces/Notification.hpp"
 #include "ViewTestObject.hpp"
 
 using PureMVC::Patterns::Mediator;
+using PureMVC::Patterns::Notification;
 
 class ViewTestMediator6 : public Mediator {
 public:

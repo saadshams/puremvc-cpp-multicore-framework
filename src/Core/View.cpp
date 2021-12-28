@@ -50,7 +50,7 @@ void View::removeObserver(const std::string &notificationName, const void *notif
 void View::registerMediator(Mediator *mediator) {
     if (_mediatorMap.contains(mediator->getMediatorName())) return;
 
-    // mediator->initializeNotifier(_multitonKey);
+    mediator->initializeNotifier(_multitonKey);
 
     _mediatorMap[mediator->getMediatorName()] = mediator;
 
