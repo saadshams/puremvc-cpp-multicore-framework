@@ -62,3 +62,13 @@
 4	971	1640728809633012906	CMakeFiles/TestMacroCommand.dir/test/Patterns/Command/MacroCommandTest.cpp.o	660518fa2a6a5bff
 4	1205	1640728809867640913	CMakeFiles/TestMacroCommand.dir/test/Patterns/Command/MacroCommandTestCommand.cpp.o	1da762d2ed485d50
 1205	1313	1640728809975334153	TestMacroCommand	18ee2de1fad2185e
+6	1629	1640729571823397701	CMakeFiles/PureMVC.dir/src/Core/Model.cpp.o	7b0fba1386aafd0b
+7	1800	1640729571994036512	CMakeFiles/PureMVC.dir/src/Patterns/Facade/Notifier.cpp.o	689c29c8c4445ce2
+6	2097	1640729572288932685	CMakeFiles/PureMVC.dir/src/Core/View.cpp.o	8466e34bbaf04370
+4	2118	1640729572313727443	CMakeFiles/PureMVC.dir/src/Core/Controller.cpp.o	d1cef31b124cc996
+6	2252	1640729572438501379	CMakeFiles/PureMVC.dir/src/Patterns/Facade/Facade.cpp.o	40ef383c06ee4d41
+2252	2355	1640729572562266000	libPureMVC.a	1bcd241fba5558e
+7	3434	1640729573626163632	CMakeFiles/TestController.dir/test/Core/ControllerTest.cpp.o	966fc91482f8a403
+3434	3556	1640729573753109495	TestController	82c30da68c94da17
+4	1380	1640729578748187477	CMakeFiles/TestView.dir/test/Core/ViewTestMediator6.cpp.o	f2eb61b2b3351a90
+1380	1478	1640729578846500194	TestView	9a4f7a485e1cac3f

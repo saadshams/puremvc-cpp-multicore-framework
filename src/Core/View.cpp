@@ -9,8 +9,10 @@ View::View(const std::string &key) {
 }
 
 View *View::getInstance(const std::string &key, const std::function<View *(const std::string &k)> &factory) {
-    if (!_instanceMap.contains(key)) _instanceMap[key] = factory(key);
-    _instanceMap[key]->initializeView();
+    if (!_instanceMap.contains(key)) {
+        _instanceMap[key] = factory(key);
+        _instanceMap[key]->initializeView();
+    }
     return _instanceMap[key];
 }
 
