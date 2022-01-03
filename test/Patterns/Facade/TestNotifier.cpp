@@ -24,4 +24,9 @@ void testRegisterCommandAndSendNotification() {
     notifier->sendNotification("NotifierTestNote", &vo);
 
     assert(vo.result == 64);
+
+    notifier->sendNotification("unknown");
+    notifier->sendNotification("unknown", &vo, "unknownType");
 }
+
+

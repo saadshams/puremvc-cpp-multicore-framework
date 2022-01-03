@@ -1,4 +1,21 @@
-"/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/ninja/mac/ninja" -G Ninja /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework
+"/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/ninja/mac/ninja" -G Ninja /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework
+-- The C compiler identification is AppleClang 12.0.0.12000032
+-- The CXX compiler identification is AppleClang 12.0.0.12000032
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug

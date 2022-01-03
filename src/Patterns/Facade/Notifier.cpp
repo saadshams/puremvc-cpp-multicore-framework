@@ -12,6 +12,14 @@ void Notifier::sendNotification(const std::string &name, const void *body, const
     getFacade()->sendNotification(name, body, type);
 }
 
+void Notifier::sendNotification(const std::string &name, const void *body) {
+    getFacade()->sendNotification(name, body, "");
+}
+
+void Notifier::sendNotification(const std::string &name) {
+    getFacade()->sendNotification(name, nullptr, "");
+}
+
 Facade *Notifier::getFacade() {
     return Facade::getInstance(_multitonKey, [](const std::string &k) { return new Facade(k); });
 }

@@ -45,7 +45,7 @@ cmake_ninja_workdir = /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-fram
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework -B/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug
+  COMMAND = cd /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework -B/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -57,7 +57,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -78,6 +78,8 @@ build CMakeFiles/TestProxy.dir/test/Patterns/Proxy/ProxyTest.cpp.o: CXX_COMPILER
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestProxy.dir
   OBJECT_FILE_DIR = CMakeFiles/TestProxy.dir/test/Patterns/Proxy
+  TARGET_COMPILE_PDB = CMakeFiles/TestProxy.dir/
+  TARGET_PDB = TestProxy.pdb
 
 
 # =============================================================================
@@ -93,8 +95,9 @@ build TestProxy: CXX_EXECUTABLE_LINKER__TestProxy_Debug CMakeFiles/TestProxy.dir
   OBJECT_DIR = CMakeFiles/TestProxy.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/TestProxy.dir/
   TARGET_FILE = TestProxy
-  TARGET_PDB = TestProxy.dbg
+  TARGET_PDB = TestProxy.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target TestMediator
@@ -111,6 +114,8 @@ build CMakeFiles/TestMediator.dir/test/Patterns/Mediator/MediatorTest.cpp.o: CXX
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestMediator.dir
   OBJECT_FILE_DIR = CMakeFiles/TestMediator.dir/test/Patterns/Mediator
+  TARGET_COMPILE_PDB = CMakeFiles/TestMediator.dir/
+  TARGET_PDB = TestMediator.pdb
 
 
 # =============================================================================
@@ -126,8 +131,9 @@ build TestMediator: CXX_EXECUTABLE_LINKER__TestMediator_Debug CMakeFiles/TestMed
   OBJECT_DIR = CMakeFiles/TestMediator.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/TestMediator.dir/
   TARGET_FILE = TestMediator
-  TARGET_PDB = TestMediator.dbg
+  TARGET_PDB = TestMediator.pdb
 
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target PureMVC
@@ -144,6 +150,8 @@ build CMakeFiles/PureMVC.dir/src/Core/Controller.cpp.o: CXX_COMPILER__PureMVC_De
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/PureMVC.dir
   OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Core
+  TARGET_COMPILE_PDB = CMakeFiles/PureMVC.dir/PureMVC.pdb
+  TARGET_PDB = libPureMVC.pdb
 
 build CMakeFiles/PureMVC.dir/src/Core/Model.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Core/Model.cpp || cmake_object_order_depends_target_PureMVC
   DEP_FILE = CMakeFiles/PureMVC.dir/src/Core/Model.cpp.o.d
@@ -151,6 +159,8 @@ build CMakeFiles/PureMVC.dir/src/Core/Model.cpp.o: CXX_COMPILER__PureMVC_Debug /
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/PureMVC.dir
   OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Core
+  TARGET_COMPILE_PDB = CMakeFiles/PureMVC.dir/PureMVC.pdb
+  TARGET_PDB = libPureMVC.pdb
 
 build CMakeFiles/PureMVC.dir/src/Core/View.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Core/View.cpp || cmake_object_order_depends_target_PureMVC
   DEP_FILE = CMakeFiles/PureMVC.dir/src/Core/View.cpp.o.d
@@ -158,6 +168,8 @@ build CMakeFiles/PureMVC.dir/src/Core/View.cpp.o: CXX_COMPILER__PureMVC_Debug /U
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/PureMVC.dir
   OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Core
+  TARGET_COMPILE_PDB = CMakeFiles/PureMVC.dir/PureMVC.pdb
+  TARGET_PDB = libPureMVC.pdb
 
 build CMakeFiles/PureMVC.dir/src/Patterns/Command/MacroCommand.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Command/MacroCommand.cpp || cmake_object_order_depends_target_PureMVC
   DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Command/MacroCommand.cpp.o.d
@@ -165,6 +177,8 @@ build CMakeFiles/PureMVC.dir/src/Patterns/Command/MacroCommand.cpp.o: CXX_COMPIL
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/PureMVC.dir
   OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Command
+  TARGET_COMPILE_PDB = CMakeFiles/PureMVC.dir/PureMVC.pdb
+  TARGET_PDB = libPureMVC.pdb
 
 build CMakeFiles/PureMVC.dir/src/Patterns/Command/SimpleCommand.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Command/SimpleCommand.cpp || cmake_object_order_depends_target_PureMVC
   DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Command/SimpleCommand.cpp.o.d
@@ -172,6 +186,8 @@ build CMakeFiles/PureMVC.dir/src/Patterns/Command/SimpleCommand.cpp.o: CXX_COMPI
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/PureMVC.dir
   OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Command
+  TARGET_COMPILE_PDB = CMakeFiles/PureMVC.dir/PureMVC.pdb
+  TARGET_PDB = libPureMVC.pdb
 
 build CMakeFiles/PureMVC.dir/src/Patterns/Facade/Facade.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Facade/Facade.cpp || cmake_object_order_depends_target_PureMVC
   DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Facade/Facade.cpp.o.d
@@ -179,6 +195,8 @@ build CMakeFiles/PureMVC.dir/src/Patterns/Facade/Facade.cpp.o: CXX_COMPILER__Pur
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/PureMVC.dir
   OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Facade
+  TARGET_COMPILE_PDB = CMakeFiles/PureMVC.dir/PureMVC.pdb
+  TARGET_PDB = libPureMVC.pdb
 
 build CMakeFiles/PureMVC.dir/src/Patterns/Facade/Notifier.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Facade/Notifier.cpp || cmake_object_order_depends_target_PureMVC
   DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Facade/Notifier.cpp.o.d
@@ -186,6 +204,8 @@ build CMakeFiles/PureMVC.dir/src/Patterns/Facade/Notifier.cpp.o: CXX_COMPILER__P
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/PureMVC.dir
   OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Facade
+  TARGET_COMPILE_PDB = CMakeFiles/PureMVC.dir/PureMVC.pdb
+  TARGET_PDB = libPureMVC.pdb
 
 build CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Observer/Notification.cpp || cmake_object_order_depends_target_PureMVC
   DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o.d
@@ -193,6 +213,8 @@ build CMakeFiles/PureMVC.dir/src/Patterns/Observer/Notification.cpp.o: CXX_COMPI
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/PureMVC.dir
   OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Observer
+  TARGET_COMPILE_PDB = CMakeFiles/PureMVC.dir/PureMVC.pdb
+  TARGET_PDB = libPureMVC.pdb
 
 build CMakeFiles/PureMVC.dir/src/Patterns/Observer/Observer.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Observer/Observer.cpp || cmake_object_order_depends_target_PureMVC
   DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Observer/Observer.cpp.o.d
@@ -200,6 +222,8 @@ build CMakeFiles/PureMVC.dir/src/Patterns/Observer/Observer.cpp.o: CXX_COMPILER_
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/PureMVC.dir
   OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Observer
+  TARGET_COMPILE_PDB = CMakeFiles/PureMVC.dir/PureMVC.pdb
+  TARGET_PDB = libPureMVC.pdb
 
 build CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Mediator/Mediator.cpp || cmake_object_order_depends_target_PureMVC
   DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o.d
@@ -207,6 +231,8 @@ build CMakeFiles/PureMVC.dir/src/Patterns/Mediator/Mediator.cpp.o: CXX_COMPILER_
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/PureMVC.dir
   OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Mediator
+  TARGET_COMPILE_PDB = CMakeFiles/PureMVC.dir/PureMVC.pdb
+  TARGET_PDB = libPureMVC.pdb
 
 build CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o: CXX_COMPILER__PureMVC_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src/Patterns/Proxy/Proxy.cpp || cmake_object_order_depends_target_PureMVC
   DEP_FILE = CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o.d
@@ -214,6 +240,8 @@ build CMakeFiles/PureMVC.dir/src/Patterns/Proxy/Proxy.cpp.o: CXX_COMPILER__PureM
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/PureMVC.dir
   OBJECT_FILE_DIR = CMakeFiles/PureMVC.dir/src/Patterns/Proxy
+  TARGET_COMPILE_PDB = CMakeFiles/PureMVC.dir/PureMVC.pdb
+  TARGET_PDB = libPureMVC.pdb
 
 
 # =============================================================================
@@ -229,8 +257,9 @@ build libPureMVC.a: CXX_STATIC_LIBRARY_LINKER__PureMVC_Debug CMakeFiles/PureMVC.
   OBJECT_DIR = CMakeFiles/PureMVC.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/PureMVC.dir/PureMVC.pdb
   TARGET_FILE = libPureMVC.a
-  TARGET_PDB = PureMVC.a.dbg
+  TARGET_PDB = libPureMVC.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target TestObserver
@@ -247,6 +276,8 @@ build CMakeFiles/TestObserver.dir/test/Patterns/Observer/ObserverTest.cpp.o: CXX
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestObserver.dir
   OBJECT_FILE_DIR = CMakeFiles/TestObserver.dir/test/Patterns/Observer
+  TARGET_COMPILE_PDB = CMakeFiles/TestObserver.dir/
+  TARGET_PDB = TestObserver.pdb
 
 
 # =============================================================================
@@ -262,8 +293,9 @@ build TestObserver: CXX_EXECUTABLE_LINKER__TestObserver_Debug CMakeFiles/TestObs
   OBJECT_DIR = CMakeFiles/TestObserver.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/TestObserver.dir/
   TARGET_FILE = TestObserver
-  TARGET_PDB = TestObserver.dbg
+  TARGET_PDB = TestObserver.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target TestModel
@@ -280,6 +312,8 @@ build CMakeFiles/TestModel.dir/test/Core/ModelTest.cpp.o: CXX_COMPILER__TestMode
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestModel.dir
   OBJECT_FILE_DIR = CMakeFiles/TestModel.dir/test/Core
+  TARGET_COMPILE_PDB = CMakeFiles/TestModel.dir/
+  TARGET_PDB = TestModel.pdb
 
 build CMakeFiles/TestModel.dir/test/Core/ModelTestProxy.cpp.o: CXX_COMPILER__TestModel_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Core/ModelTestProxy.cpp || cmake_object_order_depends_target_TestModel
   DEP_FILE = CMakeFiles/TestModel.dir/test/Core/ModelTestProxy.cpp.o.d
@@ -287,6 +321,8 @@ build CMakeFiles/TestModel.dir/test/Core/ModelTestProxy.cpp.o: CXX_COMPILER__Tes
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestModel.dir
   OBJECT_FILE_DIR = CMakeFiles/TestModel.dir/test/Core
+  TARGET_COMPILE_PDB = CMakeFiles/TestModel.dir/
+  TARGET_PDB = TestModel.pdb
 
 
 # =============================================================================
@@ -302,8 +338,9 @@ build TestModel: CXX_EXECUTABLE_LINKER__TestModel_Debug CMakeFiles/TestModel.dir
   OBJECT_DIR = CMakeFiles/TestModel.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/TestModel.dir/
   TARGET_FILE = TestModel
-  TARGET_PDB = TestModel.dbg
+  TARGET_PDB = TestModel.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target TestMacroCommand
@@ -320,6 +357,8 @@ build CMakeFiles/TestMacroCommand.dir/test/Patterns/Command/MacroCommandTest.cpp
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestMacroCommand.dir
   OBJECT_FILE_DIR = CMakeFiles/TestMacroCommand.dir/test/Patterns/Command
+  TARGET_COMPILE_PDB = CMakeFiles/TestMacroCommand.dir/
+  TARGET_PDB = TestMacroCommand.pdb
 
 build CMakeFiles/TestMacroCommand.dir/test/Patterns/Command/MacroCommandTestCommand.cpp.o: CXX_COMPILER__TestMacroCommand_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Command/MacroCommandTestCommand.cpp || cmake_object_order_depends_target_TestMacroCommand
   DEP_FILE = CMakeFiles/TestMacroCommand.dir/test/Patterns/Command/MacroCommandTestCommand.cpp.o.d
@@ -327,6 +366,8 @@ build CMakeFiles/TestMacroCommand.dir/test/Patterns/Command/MacroCommandTestComm
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestMacroCommand.dir
   OBJECT_FILE_DIR = CMakeFiles/TestMacroCommand.dir/test/Patterns/Command
+  TARGET_COMPILE_PDB = CMakeFiles/TestMacroCommand.dir/
+  TARGET_PDB = TestMacroCommand.pdb
 
 build CMakeFiles/TestMacroCommand.dir/test/Patterns/Command/MacroCommandTestSub1Command.cpp.o: CXX_COMPILER__TestMacroCommand_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Command/MacroCommandTestSub1Command.cpp || cmake_object_order_depends_target_TestMacroCommand
   DEP_FILE = CMakeFiles/TestMacroCommand.dir/test/Patterns/Command/MacroCommandTestSub1Command.cpp.o.d
@@ -334,6 +375,8 @@ build CMakeFiles/TestMacroCommand.dir/test/Patterns/Command/MacroCommandTestSub1
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestMacroCommand.dir
   OBJECT_FILE_DIR = CMakeFiles/TestMacroCommand.dir/test/Patterns/Command
+  TARGET_COMPILE_PDB = CMakeFiles/TestMacroCommand.dir/
+  TARGET_PDB = TestMacroCommand.pdb
 
 build CMakeFiles/TestMacroCommand.dir/test/Patterns/Command/MacroCommandTestSub2Command.cpp.o: CXX_COMPILER__TestMacroCommand_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Command/MacroCommandTestSub2Command.cpp || cmake_object_order_depends_target_TestMacroCommand
   DEP_FILE = CMakeFiles/TestMacroCommand.dir/test/Patterns/Command/MacroCommandTestSub2Command.cpp.o.d
@@ -341,6 +384,8 @@ build CMakeFiles/TestMacroCommand.dir/test/Patterns/Command/MacroCommandTestSub2
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestMacroCommand.dir
   OBJECT_FILE_DIR = CMakeFiles/TestMacroCommand.dir/test/Patterns/Command
+  TARGET_COMPILE_PDB = CMakeFiles/TestMacroCommand.dir/
+  TARGET_PDB = TestMacroCommand.pdb
 
 build CMakeFiles/TestMacroCommand.dir/test/Patterns/Command/MacroCommandTestVO.cpp.o: CXX_COMPILER__TestMacroCommand_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Command/MacroCommandTestVO.cpp || cmake_object_order_depends_target_TestMacroCommand
   DEP_FILE = CMakeFiles/TestMacroCommand.dir/test/Patterns/Command/MacroCommandTestVO.cpp.o.d
@@ -348,6 +393,8 @@ build CMakeFiles/TestMacroCommand.dir/test/Patterns/Command/MacroCommandTestVO.c
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestMacroCommand.dir
   OBJECT_FILE_DIR = CMakeFiles/TestMacroCommand.dir/test/Patterns/Command
+  TARGET_COMPILE_PDB = CMakeFiles/TestMacroCommand.dir/
+  TARGET_PDB = TestMacroCommand.pdb
 
 
 # =============================================================================
@@ -363,8 +410,9 @@ build TestMacroCommand: CXX_EXECUTABLE_LINKER__TestMacroCommand_Debug CMakeFiles
   OBJECT_DIR = CMakeFiles/TestMacroCommand.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/TestMacroCommand.dir/
   TARGET_FILE = TestMacroCommand
-  TARGET_PDB = TestMacroCommand.dbg
+  TARGET_PDB = TestMacroCommand.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target TestFacade
@@ -381,6 +429,8 @@ build CMakeFiles/TestFacade.dir/test/Patterns/Facade/FacadeTest.cpp.o: CXX_COMPI
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestFacade.dir
   OBJECT_FILE_DIR = CMakeFiles/TestFacade.dir/test/Patterns/Facade
+  TARGET_COMPILE_PDB = CMakeFiles/TestFacade.dir/
+  TARGET_PDB = TestFacade.pdb
 
 build CMakeFiles/TestFacade.dir/test/Patterns/Facade/FacadeTestCommand.cpp.o: CXX_COMPILER__TestFacade_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Facade/FacadeTestCommand.cpp || cmake_object_order_depends_target_TestFacade
   DEP_FILE = CMakeFiles/TestFacade.dir/test/Patterns/Facade/FacadeTestCommand.cpp.o.d
@@ -388,6 +438,8 @@ build CMakeFiles/TestFacade.dir/test/Patterns/Facade/FacadeTestCommand.cpp.o: CX
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestFacade.dir
   OBJECT_FILE_DIR = CMakeFiles/TestFacade.dir/test/Patterns/Facade
+  TARGET_COMPILE_PDB = CMakeFiles/TestFacade.dir/
+  TARGET_PDB = TestFacade.pdb
 
 
 # =============================================================================
@@ -403,8 +455,9 @@ build TestFacade: CXX_EXECUTABLE_LINKER__TestFacade_Debug CMakeFiles/TestFacade.
   OBJECT_DIR = CMakeFiles/TestFacade.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/TestFacade.dir/
   TARGET_FILE = TestFacade
-  TARGET_PDB = TestFacade.dbg
+  TARGET_PDB = TestFacade.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target TestView
@@ -421,6 +474,8 @@ build CMakeFiles/TestView.dir/test/Core/ViewTest.cpp.o: CXX_COMPILER__TestView_D
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestView.dir
   OBJECT_FILE_DIR = CMakeFiles/TestView.dir/test/Core
+  TARGET_COMPILE_PDB = CMakeFiles/TestView.dir/
+  TARGET_PDB = TestView.pdb
 
 build CMakeFiles/TestView.dir/test/Core/ViewTestMediator.cpp.o: CXX_COMPILER__TestView_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Core/ViewTestMediator.cpp || cmake_object_order_depends_target_TestView
   DEP_FILE = CMakeFiles/TestView.dir/test/Core/ViewTestMediator.cpp.o.d
@@ -428,6 +483,8 @@ build CMakeFiles/TestView.dir/test/Core/ViewTestMediator.cpp.o: CXX_COMPILER__Te
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestView.dir
   OBJECT_FILE_DIR = CMakeFiles/TestView.dir/test/Core
+  TARGET_COMPILE_PDB = CMakeFiles/TestView.dir/
+  TARGET_PDB = TestView.pdb
 
 build CMakeFiles/TestView.dir/test/Core/ViewTestMediator2.cpp.o: CXX_COMPILER__TestView_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Core/ViewTestMediator2.cpp || cmake_object_order_depends_target_TestView
   DEP_FILE = CMakeFiles/TestView.dir/test/Core/ViewTestMediator2.cpp.o.d
@@ -435,6 +492,8 @@ build CMakeFiles/TestView.dir/test/Core/ViewTestMediator2.cpp.o: CXX_COMPILER__T
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestView.dir
   OBJECT_FILE_DIR = CMakeFiles/TestView.dir/test/Core
+  TARGET_COMPILE_PDB = CMakeFiles/TestView.dir/
+  TARGET_PDB = TestView.pdb
 
 build CMakeFiles/TestView.dir/test/Core/ViewTestMediator3.cpp.o: CXX_COMPILER__TestView_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Core/ViewTestMediator3.cpp || cmake_object_order_depends_target_TestView
   DEP_FILE = CMakeFiles/TestView.dir/test/Core/ViewTestMediator3.cpp.o.d
@@ -442,6 +501,8 @@ build CMakeFiles/TestView.dir/test/Core/ViewTestMediator3.cpp.o: CXX_COMPILER__T
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestView.dir
   OBJECT_FILE_DIR = CMakeFiles/TestView.dir/test/Core
+  TARGET_COMPILE_PDB = CMakeFiles/TestView.dir/
+  TARGET_PDB = TestView.pdb
 
 build CMakeFiles/TestView.dir/test/Core/ViewTestMediator4.cpp.o: CXX_COMPILER__TestView_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Core/ViewTestMediator4.cpp || cmake_object_order_depends_target_TestView
   DEP_FILE = CMakeFiles/TestView.dir/test/Core/ViewTestMediator4.cpp.o.d
@@ -449,6 +510,8 @@ build CMakeFiles/TestView.dir/test/Core/ViewTestMediator4.cpp.o: CXX_COMPILER__T
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestView.dir
   OBJECT_FILE_DIR = CMakeFiles/TestView.dir/test/Core
+  TARGET_COMPILE_PDB = CMakeFiles/TestView.dir/
+  TARGET_PDB = TestView.pdb
 
 build CMakeFiles/TestView.dir/test/Core/ViewTestMediator5.cpp.o: CXX_COMPILER__TestView_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Core/ViewTestMediator5.cpp || cmake_object_order_depends_target_TestView
   DEP_FILE = CMakeFiles/TestView.dir/test/Core/ViewTestMediator5.cpp.o.d
@@ -456,6 +519,8 @@ build CMakeFiles/TestView.dir/test/Core/ViewTestMediator5.cpp.o: CXX_COMPILER__T
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestView.dir
   OBJECT_FILE_DIR = CMakeFiles/TestView.dir/test/Core
+  TARGET_COMPILE_PDB = CMakeFiles/TestView.dir/
+  TARGET_PDB = TestView.pdb
 
 build CMakeFiles/TestView.dir/test/Core/ViewTestMediator6.cpp.o: CXX_COMPILER__TestView_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Core/ViewTestMediator6.cpp || cmake_object_order_depends_target_TestView
   DEP_FILE = CMakeFiles/TestView.dir/test/Core/ViewTestMediator6.cpp.o.d
@@ -463,6 +528,8 @@ build CMakeFiles/TestView.dir/test/Core/ViewTestMediator6.cpp.o: CXX_COMPILER__T
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestView.dir
   OBJECT_FILE_DIR = CMakeFiles/TestView.dir/test/Core
+  TARGET_COMPILE_PDB = CMakeFiles/TestView.dir/
+  TARGET_PDB = TestView.pdb
 
 
 # =============================================================================
@@ -478,8 +545,9 @@ build TestView: CXX_EXECUTABLE_LINKER__TestView_Debug CMakeFiles/TestView.dir/te
   OBJECT_DIR = CMakeFiles/TestView.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/TestView.dir/
   TARGET_FILE = TestView
-  TARGET_PDB = TestView.dbg
+  TARGET_PDB = TestView.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target TestSimpleCommand
@@ -496,6 +564,8 @@ build CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTest.c
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestSimpleCommand.dir
   OBJECT_FILE_DIR = CMakeFiles/TestSimpleCommand.dir/test/patterns/command
+  TARGET_COMPILE_PDB = CMakeFiles/TestSimpleCommand.dir/
+  TARGET_PDB = TestSimpleCommand.pdb
 
 build CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestCommand.cpp.o: CXX_COMPILER__TestSimpleCommand_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/patterns/command/SimpleCommandTestCommand.cpp || cmake_object_order_depends_target_TestSimpleCommand
   DEP_FILE = CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestCommand.cpp.o.d
@@ -503,6 +573,8 @@ build CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestCo
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestSimpleCommand.dir
   OBJECT_FILE_DIR = CMakeFiles/TestSimpleCommand.dir/test/patterns/command
+  TARGET_COMPILE_PDB = CMakeFiles/TestSimpleCommand.dir/
+  TARGET_PDB = TestSimpleCommand.pdb
 
 build CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestVO.cpp.o: CXX_COMPILER__TestSimpleCommand_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/patterns/command/SimpleCommandTestVO.cpp || cmake_object_order_depends_target_TestSimpleCommand
   DEP_FILE = CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestVO.cpp.o.d
@@ -510,6 +582,8 @@ build CMakeFiles/TestSimpleCommand.dir/test/patterns/command/SimpleCommandTestVO
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestSimpleCommand.dir
   OBJECT_FILE_DIR = CMakeFiles/TestSimpleCommand.dir/test/patterns/command
+  TARGET_COMPILE_PDB = CMakeFiles/TestSimpleCommand.dir/
+  TARGET_PDB = TestSimpleCommand.pdb
 
 
 # =============================================================================
@@ -525,8 +599,9 @@ build TestSimpleCommand: CXX_EXECUTABLE_LINKER__TestSimpleCommand_Debug CMakeFil
   OBJECT_DIR = CMakeFiles/TestSimpleCommand.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/TestSimpleCommand.dir/
   TARGET_FILE = TestSimpleCommand
-  TARGET_PDB = TestSimpleCommand.dbg
+  TARGET_PDB = TestSimpleCommand.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target TestNotification
@@ -543,6 +618,8 @@ build CMakeFiles/TestNotification.dir/test/Patterns/Observer/NotificationTest.cp
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestNotification.dir
   OBJECT_FILE_DIR = CMakeFiles/TestNotification.dir/test/Patterns/Observer
+  TARGET_COMPILE_PDB = CMakeFiles/TestNotification.dir/
+  TARGET_PDB = TestNotification.pdb
 
 
 # =============================================================================
@@ -558,8 +635,9 @@ build TestNotification: CXX_EXECUTABLE_LINKER__TestNotification_Debug CMakeFiles
   OBJECT_DIR = CMakeFiles/TestNotification.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/TestNotification.dir/
   TARGET_FILE = TestNotification
-  TARGET_PDB = TestNotification.dbg
+  TARGET_PDB = TestNotification.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target TestController
@@ -576,6 +654,8 @@ build CMakeFiles/TestController.dir/test/Core/ControllerTest.cpp.o: CXX_COMPILER
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestController.dir
   OBJECT_FILE_DIR = CMakeFiles/TestController.dir/test/Core
+  TARGET_COMPILE_PDB = CMakeFiles/TestController.dir/
+  TARGET_PDB = TestController.pdb
 
 build CMakeFiles/TestController.dir/test/Core/ControllerTestCommand.cpp.o: CXX_COMPILER__TestController_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Core/ControllerTestCommand.cpp || cmake_object_order_depends_target_TestController
   DEP_FILE = CMakeFiles/TestController.dir/test/Core/ControllerTestCommand.cpp.o.d
@@ -583,6 +663,8 @@ build CMakeFiles/TestController.dir/test/Core/ControllerTestCommand.cpp.o: CXX_C
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestController.dir
   OBJECT_FILE_DIR = CMakeFiles/TestController.dir/test/Core
+  TARGET_COMPILE_PDB = CMakeFiles/TestController.dir/
+  TARGET_PDB = TestController.pdb
 
 build CMakeFiles/TestController.dir/test/Core/ControllerTestCommand2.cpp.o: CXX_COMPILER__TestController_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Core/ControllerTestCommand2.cpp || cmake_object_order_depends_target_TestController
   DEP_FILE = CMakeFiles/TestController.dir/test/Core/ControllerTestCommand2.cpp.o.d
@@ -590,6 +672,8 @@ build CMakeFiles/TestController.dir/test/Core/ControllerTestCommand2.cpp.o: CXX_
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestController.dir
   OBJECT_FILE_DIR = CMakeFiles/TestController.dir/test/Core
+  TARGET_COMPILE_PDB = CMakeFiles/TestController.dir/
+  TARGET_PDB = TestController.pdb
 
 build CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestCommand.cpp.o: CXX_COMPILER__TestController_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Command/MacroCommandTestCommand.cpp || cmake_object_order_depends_target_TestController
   DEP_FILE = CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestCommand.cpp.o.d
@@ -597,6 +681,8 @@ build CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestComman
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestController.dir
   OBJECT_FILE_DIR = CMakeFiles/TestController.dir/test/Patterns/Command
+  TARGET_COMPILE_PDB = CMakeFiles/TestController.dir/
+  TARGET_PDB = TestController.pdb
 
 build CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestSub1Command.cpp.o: CXX_COMPILER__TestController_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Command/MacroCommandTestSub1Command.cpp || cmake_object_order_depends_target_TestController
   DEP_FILE = CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestSub1Command.cpp.o.d
@@ -604,6 +690,8 @@ build CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestSub1Co
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestController.dir
   OBJECT_FILE_DIR = CMakeFiles/TestController.dir/test/Patterns/Command
+  TARGET_COMPILE_PDB = CMakeFiles/TestController.dir/
+  TARGET_PDB = TestController.pdb
 
 build CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestSub2Command.cpp.o: CXX_COMPILER__TestController_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Command/MacroCommandTestSub2Command.cpp || cmake_object_order_depends_target_TestController
   DEP_FILE = CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestSub2Command.cpp.o.d
@@ -611,13 +699,8 @@ build CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestSub2Co
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestController.dir
   OBJECT_FILE_DIR = CMakeFiles/TestController.dir/test/Patterns/Command
-
-build CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestVO.cpp.o: CXX_COMPILER__TestController_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Command/MacroCommandTestVO.cpp || cmake_object_order_depends_target_TestController
-  DEP_FILE = CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestVO.cpp.o.d
-  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -std=gnu++2a
-  INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
-  OBJECT_DIR = CMakeFiles/TestController.dir
-  OBJECT_FILE_DIR = CMakeFiles/TestController.dir/test/Patterns/Command
+  TARGET_COMPILE_PDB = CMakeFiles/TestController.dir/
+  TARGET_PDB = TestController.pdb
 
 
 # =============================================================================
@@ -627,14 +710,15 @@ build CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestVO.cpp
 #############################################
 # Link the executable TestController
 
-build TestController: CXX_EXECUTABLE_LINKER__TestController_Debug CMakeFiles/TestController.dir/test/Core/ControllerTest.cpp.o CMakeFiles/TestController.dir/test/Core/ControllerTestCommand.cpp.o CMakeFiles/TestController.dir/test/Core/ControllerTestCommand2.cpp.o CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestCommand.cpp.o CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestSub1Command.cpp.o CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestSub2Command.cpp.o CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestVO.cpp.o | libPureMVC.a || libPureMVC.a
+build TestController: CXX_EXECUTABLE_LINKER__TestController_Debug CMakeFiles/TestController.dir/test/Core/ControllerTest.cpp.o CMakeFiles/TestController.dir/test/Core/ControllerTestCommand.cpp.o CMakeFiles/TestController.dir/test/Core/ControllerTestCommand2.cpp.o CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestCommand.cpp.o CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestSub1Command.cpp.o CMakeFiles/TestController.dir/test/Patterns/Command/MacroCommandTestSub2Command.cpp.o | libPureMVC.a || libPureMVC.a
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk
   LINK_LIBRARIES = libPureMVC.a
   OBJECT_DIR = CMakeFiles/TestController.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/TestController.dir/
   TARGET_FILE = TestController
-  TARGET_PDB = TestController.dbg
+  TARGET_PDB = TestController.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target TestNotifier
@@ -651,6 +735,8 @@ build CMakeFiles/TestNotifier.dir/test/Patterns/Facade/TestNotifier.cpp.o: CXX_C
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestNotifier.dir
   OBJECT_FILE_DIR = CMakeFiles/TestNotifier.dir/test/Patterns/Facade
+  TARGET_COMPILE_PDB = CMakeFiles/TestNotifier.dir/
+  TARGET_PDB = TestNotifier.pdb
 
 build CMakeFiles/TestNotifier.dir/test/Patterns/Facade/FacadeTestCommand.cpp.o: CXX_COMPILER__TestNotifier_Debug /Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/test/Patterns/Facade/FacadeTestCommand.cpp || cmake_object_order_depends_target_TestNotifier
   DEP_FILE = CMakeFiles/TestNotifier.dir/test/Patterns/Facade/FacadeTestCommand.cpp.o.d
@@ -658,6 +744,8 @@ build CMakeFiles/TestNotifier.dir/test/Patterns/Facade/FacadeTestCommand.cpp.o: 
   INCLUDES = -I/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/src
   OBJECT_DIR = CMakeFiles/TestNotifier.dir
   OBJECT_FILE_DIR = CMakeFiles/TestNotifier.dir/test/Patterns/Facade
+  TARGET_COMPILE_PDB = CMakeFiles/TestNotifier.dir/
+  TARGET_PDB = TestNotifier.pdb
 
 
 # =============================================================================
@@ -673,8 +761,9 @@ build TestNotifier: CXX_EXECUTABLE_LINKER__TestNotifier_Debug CMakeFiles/TestNot
   OBJECT_DIR = CMakeFiles/TestNotifier.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/TestNotifier.dir/
   TARGET_FILE = TestNotifier
-  TARGET_PDB = TestNotifier.dbg
+  TARGET_PDB = TestNotifier.pdb
 
 # =============================================================================
 # Target aliases.
@@ -698,14 +787,14 @@ build all: phony TestProxy TestMediator libPureMVC.a TestObserver TestModel Test
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckIncludeFile.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckLibraryExists.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Clang.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GNU.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageMessage.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindThreads.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin-Initialize.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCCompiler.cmake.in /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCCompilerABI.c /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXCompiler.cmake.in /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCompilerIdDetection.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDetermineCCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDetermineCXXCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDetermineCompileFeatures.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDetermineCompilerABI.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDetermineCompilerId.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDetermineSystem.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeFindBinUtils.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeParseImplicitIncludeInfo.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeParseImplicitLinkInfo.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeParseLibraryArchitecture.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystem.cmake.in /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeTestCCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeTestCXXCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeTestCompilerCommon.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckIncludeFile.c.in /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckIncludeFile.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckLibraryExists.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/ADSP-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Borland-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Clang-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Clang.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Cray-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GHS-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GNU.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/HP-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/IAR-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Intel-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/MSVC-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/PGI-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/PathScale-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/ROCMClang-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/SCO-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/TI-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Watcom-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/XL-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageMessage.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindThreads.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Internal/FeatureTesting.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin-Determine-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin-Initialize.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckIncludeFile.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckLibraryExists.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Clang.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GNU.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageMessage.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindThreads.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin-Initialize.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake: phony
+build ../CMakeLists.txt /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCCompiler.cmake.in /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCCompilerABI.c /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXCompiler.cmake.in /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCXXInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeCompilerIdDetection.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDetermineCCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDetermineCXXCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDetermineCompileFeatures.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDetermineCompilerABI.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDetermineCompilerId.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeDetermineSystem.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeFindBinUtils.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeGenericSystem.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeParseImplicitIncludeInfo.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeParseImplicitLinkInfo.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeParseLibraryArchitecture.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystem.cmake.in /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeTestCCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeTestCXXCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CMakeTestCompilerCommon.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckIncludeFile.c.in /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckIncludeFile.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/CheckLibraryExists.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/ADSP-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Borland-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Clang-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Clang.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Cray-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GHS-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/GNU.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/HP-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/IAR-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Intel-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/MSVC-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/PGI-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/PathScale-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/ROCMClang-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/SCO-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/TI-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/Watcom-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/XL-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindPackageMessage.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/FindThreads.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Internal/CheckSourceCompiles.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Internal/FeatureTesting.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-C.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Apple-Clang.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin-Determine-CXX.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin-Initialize.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin.cmake /Users/sshams/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake: phony
 
 
 #############################################

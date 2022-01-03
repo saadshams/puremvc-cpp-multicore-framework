@@ -71,7 +71,7 @@ rule CXX_COMPILER__PureMVC_Debug
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__PureMVC_Debug
-  command = $PRE_LINK && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f $TARGET_FILE && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib $TARGET_FILE && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E touch $TARGET_FILE && $POST_BUILD
+  command = $PRE_LINK && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E rm -f $TARGET_FILE && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib $TARGET_FILE && "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E touch $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
 
@@ -251,7 +251,7 @@ rule CXX_EXECUTABLE_LINKER__TestNotifier_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework -B/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug
+  command = "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework -B/Users/sshams/Documents/PureMVC/puremvc-cpp-multicore-framework/cmake-build-debug
   description = Re-running CMake...
   generator = 1
 
@@ -260,7 +260,7 @@ rule RERUN_CMAKE
 # Rule for cleaning all built files.
 
 rule CLEAN
-  command = "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/ninja/mac/ninja" $FILE_ARG -t clean $TARGETS
+  command = "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/ninja/mac/ninja" $FILE_ARG -t clean $TARGETS
   description = Cleaning all built files...
 
 
@@ -268,6 +268,6 @@ rule CLEAN
 # Rule for printing all primary targets available.
 
 rule HELP
-  command = "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.46/CLion.app/Contents/bin/ninja/mac/ninja" -t targets
+  command = "/Users/sshams/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/CLion.app/Contents/bin/ninja/mac/ninja" -t targets
   description = All primary targets available:
 

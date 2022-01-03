@@ -83,6 +83,14 @@ void Facade::sendNotification(const std::string &name, const void *body, const s
     notifyObservers(new Notification(name, body, type));
 }
 
+void Facade::sendNotification(const std::string &name, const void *body) {
+    sendNotification(name, body, "");
+}
+
+void Facade::sendNotification(const std::string &name) {
+    sendNotification(name, nullptr, "");
+}
+
 void Facade::notifyObservers(Notification *notification) {
     _view->notifyObservers(notification);
 }

@@ -48,6 +48,8 @@ void testRegisterAndRemoveCommandAndSendNotification() {
     facade->sendNotification("FacadeTestNote", &vo);
 
     assert(vo.result != 64);
+
+    facade->sendNotification("");
 }
 
 void testRegisterAndRetrieveProxy() {

@@ -27,7 +27,6 @@ list(APPEND TestController test/Core/ControllerTestVO.hpp)
 list(APPEND TestController test/Patterns/Command/MacroCommandTestCommand.cpp)
 list(APPEND TestController test/Patterns/Command/MacroCommandTestSub1Command.cpp)
 list(APPEND TestController test/Patterns/Command/MacroCommandTestSub2Command.cpp)
-list(APPEND TestController test/Patterns/Command/MacroCommandTestVO.cpp)
 add_executable(TestController ${TestController})
 target_link_libraries(TestController PureMVC)
 

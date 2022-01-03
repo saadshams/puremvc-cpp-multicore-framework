@@ -56,7 +56,11 @@ namespace PureMVC::Patterns {
 
         virtual bool hasMediator(const std::string &mediatorName);
 
-        virtual void sendNotification(const std::string &name, const void *body = nullptr, const std::string &type = "");
+        virtual void sendNotification(const std::string &name, const void *body, const std::string &type);
+
+        virtual void sendNotification(const std::string &name, const void *body);
+
+        virtual void sendNotification(const std::string &name);
 
         virtual void notifyObservers(Notification *notification);
 
