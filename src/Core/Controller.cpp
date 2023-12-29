@@ -23,7 +23,9 @@ void Controller::initializeController() {
 
 void Controller::executeCommand(Notification *notification) {
     if (commandMap.contains(notification->getName())) {
-        auto *commandInstance = commandMap[notification->getName()]();
+        auto factory = commandMap[notification->getName()];
+        if (factory == nullptr) return;
+        auto *commandInstance = factory();
         commandInstance->initializeNotifier(multitonKey);
         commandInstance->execute(notification);
     }
