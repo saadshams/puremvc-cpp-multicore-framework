@@ -5,7 +5,7 @@ using PureMVC::Patterns::Facade;
 using PureMVC::Patterns::Notifier;
 
 void Notifier::initializeNotifier(const std::string &key) {
-    _multitonKey = key;
+    multitonKey = key;
 }
 
 void Notifier::sendNotification(const std::string &name, const void *body, const std::string &type) {
@@ -21,7 +21,7 @@ void Notifier::sendNotification(const std::string &name) {
 }
 
 Facade *Notifier::getFacade() {
-    return Facade::getInstance(_multitonKey, [](const std::string &k) { return new Facade(k); });
+    return Facade::getInstance(multitonKey, [](const std::string &k) { return new Facade(k); });
 }
 
 Notifier::~Notifier() = default;

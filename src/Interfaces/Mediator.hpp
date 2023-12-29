@@ -9,8 +9,8 @@
 namespace PureMVC::Patterns {
     class Mediator : public Notifier {
     protected:
-        std::string _mediatorName;
-        const void *_viewComponent;
+        std::string mediatorName;
+        const void *viewComponent;
     public:
         explicit Mediator(const std::string &mediatorName = NAME, const void *viewComponent = nullptr);
 
@@ -22,11 +22,11 @@ namespace PureMVC::Patterns {
 
         virtual void handleNotification(Notification *notification);
 
-        [[nodiscard]] virtual const std::string &getMediatorName() const;
+        virtual const std::string &getMediatorName() const;
 
         virtual void setViewComponent(const void *viewComponent);
 
-        [[nodiscard]] virtual const void *getViewComponent() const;
+        virtual const void *getViewComponent() const;
 
         ~Mediator() override;
 

@@ -9,7 +9,7 @@ namespace PureMVC::Patterns {
 
     class Notifier {
     protected:
-        std::string _multitonKey;
+        std::string multitonKey;
     public:
         virtual void initializeNotifier(const std::string &key);
 

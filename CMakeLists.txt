@@ -1,85 +1,22 @@
-cmake_minimum_required(VERSION 3.21)
+cmake_minimum_required(VERSION 3.26)
 project(PureMVC)
 
 set(CMAKE_CXX_STANDARD 23)
 
-set(SOURCES src/Core/Controller.cpp)
-list(APPEND SOURCES src/Core/Model.cpp)
-list(APPEND SOURCES src/Core/View.cpp)
-
-list(APPEND SOURCES src/Patterns/Command/MacroCommand.cpp)
-list(APPEND SOURCES src/Patterns/Command/SimpleCommand.cpp)
-list(APPEND SOURCES src/Patterns/Facade/Facade.cpp)
-list(APPEND SOURCES src/Patterns/Facade/Notifier.cpp)
-list(APPEND SOURCES src/Patterns/Observer/Notification.cpp)
-list(APPEND SOURCES src/Patterns/Observer/Observer.cpp)
-list(APPEND SOURCES src/Patterns/Mediator/Mediator.cpp)
-list(APPEND SOURCES src/Patterns/Proxy/Proxy.cpp)
-add_library(PureMVC ${SOURCES})
+add_library(PureMVC src/Core/Controller.cpp
+        src/Core/Model.cpp
+        src/Core/View.cpp
+        src/Patterns/Command/MacroCommand.cpp
+        src/Patterns/Command/SimpleCommand.cpp
+        src/Patterns/Facade/Facade.cpp
+        src/Patterns/Facade/Notifier.cpp
+        src/Patterns/Observer/Notification.cpp
+        src/Patterns/Observer/Observer.cpp
+        src/Patterns/Mediator/Mediator.cpp
+        src/Patterns/Proxy/Proxy.cpp)
 find_package(Threads)
 target_link_libraries(PureMVC ${CMAKE_THREAD_LIBS_INIT})
 target_include_directories(PureMVC PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
-set(TestController test/Core/ControllerTest.cpp)
-list(APPEND TestController test/Core/ControllerTestCommand.cpp)
-list(APPEND TestController test/Core/ControllerTestCommand2.cpp)
-list(APPEND TestController test/Core/ControllerTestVO.hpp)
-list(APPEND TestController test/Patterns/Command/MacroCommandTestCommand.cpp)
-list(APPEND TestController test/Patterns/Command/MacroCommandTestSub1Command.cpp)
-list(APPEND TestController test/Patterns/Command/MacroCommandTestSub2Command.cpp)
-add_executable(TestController ${TestController})
-target_link_libraries(TestController PureMVC)
-
-set(TestModel test/Core/ModelTest.cpp)
-list(APPEND TestModel test/Core/ModelTestProxy.cpp)
-add_executable(TestModel ${TestModel})
-target_link_libraries(TestModel PureMVC)
-
-set(TestView test/Core/ViewTest.cpp)
-list(APPEND TestView test/Core/ViewTestMediator.cpp)
-list(APPEND TestView test/Core/ViewTestMediator2.cpp)
-list(APPEND TestView test/Core/ViewTestMediator3.cpp)
-list(APPEND TestView test/Core/ViewTestMediator4.cpp)
-list(APPEND TestView test/Core/ViewTestMediator5.cpp)
-list(APPEND TestView test/Core/ViewTestMediator6.cpp)
-list(APPEND TestView test/Core/ViewTestObject.hpp)
-add_executable(TestView ${TestView})
-target_link_libraries(TestView PureMVC)
-
-set(TestMacroCommand test/Patterns/Command/MacroCommandTest.cpp)
-list(APPEND TestMacroCommand test/Patterns/Command/MacroCommandTestCommand.cpp)
-list(APPEND TestMacroCommand test/Patterns/Command/MacroCommandTestSub1Command.cpp)
-list(APPEND TestMacroCommand test/Patterns/Command/MacroCommandTestSub2Command.cpp)
-list(APPEND TestMacroCommand test/Patterns/Command/MacroCommandTestVO.cpp)
-add_executable(TestMacroCommand ${TestMacroCommand})
-target_link_libraries(TestMacroCommand PureMVC)
-
-set(TestSimpleCommand test/patterns/command/SimpleCommandTest.cpp)
-list(APPEND TestSimpleCommand test/patterns/command/SimpleCommandTestCommand.cpp)
-list(APPEND TestSimpleCommand test/patterns/command/SimpleCommandTestVO.cpp)
-add_executable(TestSimpleCommand ${TestSimpleCommand})
-target_link_libraries(TestSimpleCommand PureMVC)
-
-set(TestFacade test/Patterns/Facade/FacadeTest.cpp)
-list(APPEND TestFacade test/Patterns/Facade/FacadeTestCommand.cpp)
-list(APPEND TestFacade test/Patterns/Facade/FacadeTestVO.hpp)
-add_executable(TestFacade ${TestFacade})
-target_link_libraries(TestFacade PureMVC)
-
-set(TestNotifier test/Patterns/Facade/TestNotifier.cpp)
-list(APPEND TestNotifier test/Patterns/Facade/FacadeTestCommand.cpp)
-list(APPEND TestNotifier test/Patterns/Facade/FacadeTestVO.hpp)
-add_executable(TestNotifier ${TestNotifier})
-target_link_libraries(TestNotifier PureMVC)
-
-add_executable(TestNotification test/Patterns/Observer/NotificationTest.cpp)
-target_link_libraries(TestNotification PureMVC)
-
-add_executable(TestObserver test/Patterns/Observer/ObserverTest.cpp)
-target_link_libraries(TestObserver PureMVC)
-
-add_executable(TestMediator test/Patterns/Mediator/MediatorTest.cpp)
-target_link_libraries(TestMediator PureMVC)
-
-add_executable(TestProxy test/Patterns/Proxy/ProxyTest.cpp)
-target_link_libraries(TestProxy PureMVC)
+enable_testing()
+add_subdirectory(test)

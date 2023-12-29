@@ -14,5 +14,5 @@ void ViewTestMediator6::handleNotification(Notification *notification) {
 }
 
 void ViewTestMediator6::onRemove() {
-    ((ViewTestObject *) _viewComponent)->counter++;
+    ((ViewTestObject *) viewComponent)->counter++;
 }

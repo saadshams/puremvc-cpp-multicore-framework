@@ -3,8 +3,8 @@
 using PureMVC::Patterns::Mediator;
 
 Mediator::Mediator(const std::string &mediatorName, const void *viewComponent) {
-    this->_mediatorName = mediatorName;
-    this->_viewComponent = viewComponent;
+    this->mediatorName = mediatorName;
+    this->viewComponent = viewComponent;
 }
 
 void Mediator::onRegister() {
@@ -24,15 +24,15 @@ void Mediator::handleNotification(Notification *notification) {
 }
 
 const std::string &Mediator::getMediatorName() const {
-    return this->_mediatorName;
+    return this->mediatorName;
 }
 
 void Mediator::setViewComponent(const void *viewComponent) {
-    this->_viewComponent = viewComponent;
+    this->viewComponent = viewComponent;
 }
 
 const void *Mediator::getViewComponent() const {
-    return this->_viewComponent;
+    return this->viewComponent;
 }
 
 Mediator::~Mediator() = default;

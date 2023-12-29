@@ -5,13 +5,13 @@ ViewTestMediator4::ViewTestMediator4(const ViewTestObject *object) : Mediator(NA
 }
 
 void ViewTestMediator4::onRegister() {
-    ((ViewTestObject *) _viewComponent)->onRegisterCalled = true;
+    ((ViewTestObject *) viewComponent)->onRegisterCalled = true;
 }
 
 void ViewTestMediator4::onRemove() {
-    ((ViewTestObject *) _viewComponent)->onRemoveCalled = true;
+    ((ViewTestObject *) viewComponent)->onRemoveCalled = true;
 }
 
 const ViewTestObject *ViewTestMediator4::viewTestObject() const {
-    return (ViewTestObject *) _viewComponent;
+    return (ViewTestObject *) viewComponent;
 }

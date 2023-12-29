@@ -3,17 +3,17 @@
 using PureMVC::Core::Model;
 
 Model::Model(const std::string &key) {
-    if (_instanceMap.contains(key)) throw std::runtime_error(MULTITON_MSG);
-    _multitonKey = key;
-    _instanceMap[key] = this;
+    if (instanceMap.contains(key)) throw std::runtime_error(MULTITON_MSG);
+    multitonKey = key;
+    instanceMap[key] = this;
 }
 
 Model *Model::getInstance(const std::string &key, const std::function<Model *(const std::string &k)> &factory) {
-    if (!_instanceMap.contains(key)) {
-        _instanceMap[key] = factory(key);
-        _instanceMap[key]->initializeModel();
+    if (!instanceMap.contains(key)) {
+        instanceMap[key] = factory(key);
+        instanceMap[key]->initializeModel();
     }
-    return _instanceMap[key];
+    return instanceMap[key];
 }
 
 void Model::initializeModel() {
@@ -21,33 +21,33 @@ void Model::initializeModel() {
 }
 
 void Model::registerProxy(Proxy *proxy) {
-    proxy->initializeNotifier(_multitonKey);
-    _proxyMap[proxy->getProxyName()] = proxy;
+    proxy->initializeNotifier(multitonKey);
+    proxyMap[proxy->getProxyName()] = proxy;
     proxy->onRegister();
 }
 
 Proxy *Model::retrieveProxy(const std::string &proxyName) {
-    return _proxyMap[proxyName];
+    return proxyMap[proxyName];
 }
 
 bool Model::hasProxy(const std::string &proxyName) {
-    return _proxyMap.contains(proxyName);
+    return proxyMap.contains(proxyName);
 }
 
 Proxy *Model::removeProxy(const std::string &proxyName) {
-    Proxy *proxy = _proxyMap[proxyName];
+    Proxy *proxy = proxyMap[proxyName];
     if (proxy != nullptr) {
-        _proxyMap.erase(proxyName);
+        proxyMap.erase(proxyName);
         proxy->onRemove();
     }
     return proxy;
 }
 
 void Model::removeModel(const std::string &key) {
-    _instanceMap.erase(_instanceMap.find(key));
+    instanceMap.erase(instanceMap.find(key));
 }
 
 Model::~Model() {
-    removeModel(_multitonKey);
-    _proxyMap.clear();
+    removeModel(multitonKey);
+    proxyMap.clear();
 }

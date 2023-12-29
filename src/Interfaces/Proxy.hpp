@@ -9,8 +9,8 @@ using PureMVC::Patterns::Notifier;
 namespace PureMVC::Patterns {
     class Proxy : public Notifier {
     protected:
-        std::string _proxyName;
-        const void *_data;
+        std::string proxyName;
+        const void *data;
     public:
         explicit Proxy(const std::string &proxyName = NAME, const void *data = nullptr);
 
@@ -18,11 +18,11 @@ namespace PureMVC::Patterns {
 
         virtual void onRemove();
 
-        [[nodiscard]] virtual const std::string &getProxyName() const;
+      virtual const std::string &getProxyName() const;
 
         virtual void setData(const void *data);
 
-        [[nodiscard]] virtual const void *getData() const;
+        virtual const void *getData() const;
 
         ~Proxy() override;
 

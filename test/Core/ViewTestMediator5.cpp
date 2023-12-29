@@ -9,5 +9,5 @@ std::vector<std::string> ViewTestMediator5::listNotificationInterests() {
 }
 
 void ViewTestMediator5::handleNotification(Notification *notification) {
-    ((ViewTestObject *) _viewComponent)->counter++;
+    ((ViewTestObject *) viewComponent)->counter++;
 }

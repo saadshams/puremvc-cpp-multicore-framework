@@ -14,10 +14,10 @@ using PureMVC::Patterns::Observer;
 namespace PureMVC::Core {
     class View {
     protected:
-        std::string _multitonKey;
-        std::map<std::string, Mediator *> _mediatorMap{};
-        std::map<std::string, std::vector<Observer *>> _observerMap{};
-        inline static std::map<std::string, View *> _instanceMap;
+        std::string multitonKey;
+        std::map<std::string, Mediator *> mediatorMap{};
+        std::map<std::string, std::vector<Observer *>> observerMap{};
+        inline static std::map<std::string, View *> instanceMap;
     public:
         explicit View(const std::string &key);
 

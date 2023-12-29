@@ -4,7 +4,7 @@ using PureMVC::Patterns::Facade;
 
 Facade::Facade(const std::string &key) {
     if (_instanceMap.contains(key)) throw std::runtime_error(MULTITON_MSG);
-    _multitonKey = key;
+    multitonKey = key;
     _instanceMap[key] = this;
 }
 
@@ -24,59 +24,59 @@ void Facade::initializeFacade() {
 }
 
 void Facade::initializeModel() {
-    _model = Model::getInstance(_multitonKey, [](const std::string &k) { return new Model(k); });
+    model = Model::getInstance(multitonKey, [](const std::string &k) { return new Model(k); });
 }
 
 void Facade::initializeController() {
-    _controller = Controller::getInstance(_multitonKey, [](const std::string &k) { return new Controller(k); });
+    controller = Controller::getInstance(multitonKey, [](const std::string &k) { return new Controller(k); });
 }
 
 void Facade::initializeView() {
-    _view = View::getInstance(_multitonKey, [](const std::string &k) { return new View(k); });
+    view = View::getInstance(multitonKey, [](const std::string &k) { return new View(k); });
 }
 
 void Facade::registerCommand(const std::string &key, const std::function<SimpleCommand *()> &factory) {
-    _controller->registerCommand(key, factory);
+    controller->registerCommand(key, factory);
 }
 
 void Facade::removeCommand(const std::string &notificationName) {
-    _controller->removeCommand(notificationName);
+    controller->removeCommand(notificationName);
 }
 
 bool Facade::hasCommand(const std::string &notificationName) {
-    return _controller->hasCommand(notificationName);
+    return controller->hasCommand(notificationName);
 }
 
 void Facade::registerProxy(Proxy *proxy) {
-    _model->registerProxy(proxy);
+    model->registerProxy(proxy);
 }
 
 Proxy *Facade::retrieveProxy(const std::string &proxyName) {
-    return _model->retrieveProxy(proxyName);
+    return model->retrieveProxy(proxyName);
 }
 
 Proxy *Facade::removeProxy(const std::string &proxyName) {
-    return _model->removeProxy(proxyName);
+    return model->removeProxy(proxyName);
 }
 
 bool Facade::hasProxy(const std::string &proxyName) {
-    return _model->hasProxy(proxyName);
+    return model->hasProxy(proxyName);
 }
 
 void Facade::registerMediator(Mediator *mediator) {
-    _view->registerMediator(mediator);
+    view->registerMediator(mediator);
 }
 
 Mediator *Facade::retrieveMediator(const std::string &mediatorName) {
-    return _view->retrieveMediator(mediatorName);
+    return view->retrieveMediator(mediatorName);
 }
 
 Mediator *Facade::removeMediator(const std::string &mediatorName) {
-    return _view->removeMediator(mediatorName);
+    return view->removeMediator(mediatorName);
 }
 
 bool Facade::hasMediator(const std::string &mediatorName) {
-    return _view->hasMediator(mediatorName);
+    return view->hasMediator(mediatorName);
 }
 
 void Facade::sendNotification(const std::string &name, const void *body, const std::string &type) {
@@ -92,11 +92,11 @@ void Facade::sendNotification(const std::string &name) {
 }
 
 void Facade::notifyObservers(Notification *notification) {
-    _view->notifyObservers(notification);
+    view->notifyObservers(notification);
 }
 
 void Facade::initializeNotifier(const std::string &key) {
-    _multitonKey = key;
+    multitonKey = key;
 }
 
 bool Facade::hasCore(const std::string &key) {

@@ -12,7 +12,7 @@ using PureMVC::Patterns::Notification;
 namespace PureMVC::Patterns {
     class MacroCommand : public SimpleCommand {
     private:
-        std::list<std::function<SimpleCommand *()>> _subcommands;
+        std::list<std::function<SimpleCommand *()>> subcommands;
     protected:
         virtual void initializeMacroCommand();
 

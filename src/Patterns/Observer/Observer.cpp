@@ -5,32 +5,32 @@ using PureMVC::Patterns::Observer;
 using PureMVC::Patterns::Notification;
 
 Observer::Observer(std::function<void(Notification *)> notify, const void *context) {
-    this->_notify = std::move(notify);
-    this->_context = context;
+    this->notify = std::move(notify);
+    this->context = context;
 }
 
 void Observer::setNotifyContext(const void *context) {
-    this->_context = context;
+    this->context = context;
 }
 
 void Observer::setNotifyMethod(std::function<void(Notification *)> notify) {
-    this->_notify = std::move(notify);
+    this->notify = std::move(notify);
 }
 
 const void *Observer::getNotifyContext() const {
-    return this->_context;
+    return this->context;
 }
 
 std::function<void(Notification *)> Observer::getNotifyMethod() {
-    return this->_notify;
+    return this->notify;
 }
 
 void Observer::notifyObserver(Notification *notification) {
-    this->_notify(notification);
+    this->notify(notification);
 }
 
 bool Observer::compareNotifyContext(const void *object) const {
-    return this->_context == object;
+    return this->context == object;
 }
 
 Observer::~Observer() = default;

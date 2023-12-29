@@ -16,10 +16,10 @@ using PureMVC::Core::View;
 namespace PureMVC::Patterns {
     class Facade {
     protected:
-        std::string _multitonKey;
-        Controller *_controller = nullptr;
-        Model *_model = nullptr;
-        View *_view = nullptr;
+        std::string multitonKey;
+        Controller *controller = nullptr;
+        Model *model = nullptr;
+        View *view = nullptr;
         inline static std::map<std::string, Facade *> _instanceMap;
     public:
         explicit Facade(const std::string &key);

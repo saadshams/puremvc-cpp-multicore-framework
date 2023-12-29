@@ -11,10 +11,10 @@ using PureMVC::Patterns::SimpleCommand;
 namespace PureMVC::Core {
     class Controller {
     protected:
-        View *_view;
-        std::string _multitonKey;
-        std::map<std::string, std::function<SimpleCommand *()>> _commandMap;
-        inline static std::map<std::string, Controller *> _instanceMap;
+        View *view;
+        std::string multitonKey;
+        std::map<std::string, std::function<SimpleCommand *()>> commandMap;
+        inline static std::map<std::string, Controller *> instanceMap;
     public:
         explicit Controller(const std::string &key);
 
@@ -26,7 +26,7 @@ namespace PureMVC::Core {
 
         virtual void registerCommand(const std::string &notification, const std::function<SimpleCommand *()> &factory);
 
-        [[nodiscard]] virtual bool hasCommand(const std::string &notificationName) const;
+        virtual bool hasCommand(const std::string &notificationName) const;
 
         virtual void removeCommand(const std::string &notificationName);
 

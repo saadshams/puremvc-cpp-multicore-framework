@@ -3,17 +3,17 @@
 using PureMVC::Core::View;
 
 View::View(const std::string &key) {
-    if (_instanceMap.contains(key)) throw std::runtime_error(MULTITON_MSG);
-    _multitonKey = key;
-    _instanceMap[key] = this;
+    if (instanceMap.contains(key)) throw std::runtime_error(MULTITON_MSG);
+    multitonKey = key;
+    instanceMap[key] = this;
 }
 
 View *View::getInstance(const std::string &key, const std::function<View *(const std::string &k)> &factory) {
-    if (!_instanceMap.contains(key)) {
-        _instanceMap[key] = factory(key);
-        _instanceMap[key]->initializeView();
+    if (!instanceMap.contains(key)) {
+        instanceMap[key] = factory(key);
+        instanceMap[key]->initializeView();
     }
-    return _instanceMap[key];
+    return instanceMap[key];
 }
 
 void View::initializeView() {
@@ -21,12 +21,12 @@ void View::initializeView() {
 }
 
 void View::registerObserver(const std::string &notificationName, Observer *observer) {
-    _observerMap[notificationName].push_back(observer);
+    observerMap[notificationName].push_back(observer);
 }
 
 void View::notifyObservers(Notification *notification) {
-    if (_observerMap.contains(notification->getName())) {
-        auto observers = _observerMap[notification->getName()];
+    if (observerMap.contains(notification->getName())) {
+        auto observers = observerMap[notification->getName()];
 
         std::for_each(observers.begin(), observers.end(), [notification](auto *observer) {
             observer->notifyObserver(notification);
@@ -35,7 +35,7 @@ void View::notifyObservers(Notification *notification) {
 }
 
 void View::removeObserver(const std::string &notificationName, const void *notifyContext) {
-    auto observers = _observerMap[notificationName];
+    auto observers = observerMap[notificationName];
 
     for (unsigned int i = 0; i < observers.size(); i++) {
         if (observers[i]->compareNotifyContext(notifyContext)) {
@@ -45,16 +45,16 @@ void View::removeObserver(const std::string &notificationName, const void *notif
     }
 
     if (observers.empty()) {
-        _observerMap.erase(_observerMap.find(notificationName));
+        observerMap.erase(observerMap.find(notificationName));
     }
 }
 
 void View::registerMediator(Mediator *mediator) {
-    if (_mediatorMap.contains(mediator->getMediatorName())) return;
+    if (mediatorMap.contains(mediator->getMediatorName())) return;
 
-    mediator->initializeNotifier(_multitonKey);
+    mediator->initializeNotifier(multitonKey);
 
-    _mediatorMap[mediator->getMediatorName()] = mediator;
+    mediatorMap[mediator->getMediatorName()] = mediator;
 
     auto interests = mediator->listNotificationInterests();
 
@@ -72,33 +72,33 @@ void View::registerMediator(Mediator *mediator) {
 }
 
 Mediator *View::retrieveMediator(const std::string &mediatorName) {
-    auto position = _mediatorMap.find(mediatorName);
-    return position == _mediatorMap.end() ? nullptr : position->second;
+    auto position = mediatorMap.find(mediatorName);
+    return position == mediatorMap.end() ? nullptr : position->second;
 }
 
 Mediator *View::removeMediator(const std::string &mediatorName) {
-    auto *mediator = _mediatorMap[mediatorName];
+    auto *mediator = mediatorMap[mediatorName];
     if (mediator) {
         auto interests = mediator->listNotificationInterests();
         for (auto &interest: interests) {
             removeObserver(interest, mediator);
         }
-        _mediatorMap.erase(_mediatorMap.find(mediatorName));
+        mediatorMap.erase(mediatorMap.find(mediatorName));
         mediator->onRemove();
     }
     return mediator;
 }
 
 bool View::hasMediator(const std::string &mediatorName) {
-    return _mediatorMap.contains(mediatorName);
+    return mediatorMap.contains(mediatorName);
 }
 
 void View::removeView(const std::string &key) {
-    _instanceMap.erase(_instanceMap.find(key));
+    instanceMap.erase(instanceMap.find(key));
 }
 
 View::~View() {
-    removeView(_multitonKey);
-    _observerMap.clear();
-    _mediatorMap.clear();
+    removeView(multitonKey);
+    observerMap.clear();
+    mediatorMap.clear();
 }

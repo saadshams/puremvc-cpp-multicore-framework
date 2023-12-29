@@ -6,8 +6,8 @@
 namespace PureMVC::Patterns {
     class Observer {
     protected:
-        std::function<void(Notification * notification)> _notify;
-        const void *_context;
+        std::function<void(Notification * notification)> notify;
+        const void *context;
     public:
         explicit Observer(std::function<void(Notification * )> notify = nullptr, const void *context = nullptr);
 
@@ -19,9 +19,9 @@ namespace PureMVC::Patterns {
 
         virtual void setNotifyMethod(std::function<void(Notification * )> notify);
 
-        [[nodiscard]] virtual const void *getNotifyContext() const;
+        virtual const void *getNotifyContext() const;
 
-        [[nodiscard]] virtual std::function<void(Notification * )> getNotifyMethod();
+        virtual std::function<void(Notification * )> getNotifyMethod();
 
         virtual ~Observer();
     };

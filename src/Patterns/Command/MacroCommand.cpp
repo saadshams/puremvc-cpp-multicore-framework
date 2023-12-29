@@ -9,24 +9,24 @@ void MacroCommand::initializeMacroCommand() {
 }
 
 void MacroCommand::addSubCommand(const std::function<SimpleCommand *()> &factory) {
-    _subcommands.push_back(factory);
+    subcommands.push_back(factory);
 }
 
 void MacroCommand::execute(Notification *notification) {
     this->initializeMacroCommand();
-    auto iterator = _subcommands.begin();
+    auto iterator = subcommands.begin();
 
-    while (iterator != _subcommands.end()) {
+    while (iterator != subcommands.end()) {
         auto commandInstance = (*iterator)();
-        commandInstance->initializeNotifier(_multitonKey);
+        commandInstance->initializeNotifier(multitonKey);
         commandInstance->execute(notification);
 
         delete commandInstance;
-        _subcommands.erase(iterator);
-        iterator = _subcommands.begin();
+        subcommands.erase(iterator);
+        iterator = subcommands.begin();
     }
 }
 
 MacroCommand::~MacroCommand() {
-    _subcommands.clear();
+    subcommands.clear();
 }

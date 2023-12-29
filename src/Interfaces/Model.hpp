@@ -10,9 +10,9 @@ using PureMVC::Patterns::Proxy;
 namespace PureMVC::Core {
     class Model {
     protected:
-        std::string _multitonKey;
-        std::map<std::string, Proxy *> _proxyMap;
-        inline static std::map<std::string, Model *> _instanceMap;
+        std::string multitonKey;
+        std::map<std::string, Proxy *> proxyMap;
+        inline static std::map<std::string, Model *> instanceMap;
     public:
         explicit Model(const std::string &key);
 
