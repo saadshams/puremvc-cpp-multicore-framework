@@ -18,7 +18,7 @@ namespace PureMVC::Patterns {
 
         virtual void onRemove();
 
-      virtual const std::string &getProxyName() const;
+        virtual const std::string &getProxyName() const;
 
         virtual void setData(const void *data);
 
